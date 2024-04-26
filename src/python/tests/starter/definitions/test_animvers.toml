@@ -1,6 +1,0 @@
-[default]
-value = """\
-
-"""
-[default.params]
-anim_vers = 44
