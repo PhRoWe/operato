@@ -20,6 +20,7 @@ from ..common import (
 # /NODE                       /NONLOCAL/MAT               /PARAMETER
 #
 
+
 # --- /MONVOL/GAS ------------------------------------------------------
 @dataclass
 class MonvolGas(Keyword):
@@ -193,7 +194,7 @@ class Node(Keyword):
                     IntField("node_ids", 1),
                     FloatField("xc_yc_zc:xc|0", 2),
                     FloatField("xc_yc_zc:yc|1", 4),
-                    FloatField("xc_yc_zc:xc|2", 6),
+                    FloatField("xc_yc_zc:zc|2", 6),
                 )
             )
         ]

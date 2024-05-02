@@ -1,15 +1,26 @@
 #!/usr/bin/env python3
 
 from dataclasses import dataclass
+from typing import List, Literal, Sequence, Tuple, get_args
 
-from ..common import FloatField, IntField, Keyword, StringField
+from numpy.typing import NDArray
+
+from ..common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    ArrayOfAtomicFields,
+    KeywordStructureType,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /PROP/TYPE35                /PROP/TYPE36                /PROP/TYPE43                
-# /PROP/TYPE44                /PROP/TYPE45                /PROP/TYPE46                
-# /PROP/TYPE51                /QUAD                       /RADIATION                  
+# /PROP/TYPE35                /PROP/TYPE36                /PROP/TYPE43
+# /PROP/TYPE44                /PROP/TYPE45                /PROP/TYPE46
+# /PROP/TYPE51                /QUAD                       /RADIATION
 #
+
 
 # --- /PROP/TYPE35 ------------------------------------------------------
 @dataclass
@@ -30,11 +41,9 @@ class PropType35(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE36 ------------------------------------------------------
@@ -56,11 +65,9 @@ class PropType36(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE43 ------------------------------------------------------
@@ -82,11 +89,9 @@ class PropType43(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE44 ------------------------------------------------------
@@ -108,11 +113,9 @@ class PropType44(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE45 ------------------------------------------------------
@@ -134,11 +137,9 @@ class PropType45(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE46 ------------------------------------------------------
@@ -160,11 +161,9 @@ class PropType46(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE51 ------------------------------------------------------
@@ -186,37 +185,51 @@ class PropType51(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /QUAD ------------------------------------------------------
 @dataclass
 class Quad(Keyword):
-    attr1: int
-    attr2: float
+    """Defines a quadrilateral solid element with 4 nodes
+    The element type and formulation are defined on the /PROP card.
+    """
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/QUAD` is not implemented.")
+    part_id: int
+    quad_ids: List[int] | NDArray
+    node_ids: List[Tuple[int, ...]] | NDArray
 
     @property
     def keyword(self):
-        return "/QUAD"
+        return f"/QUAD/{self.part_id}"
 
     @property
     def pre_conditions(self):
-        return []
+        # FIXME: Preconditions make no sense (taken from impl. of Bric20)
+        return [
+            (
+                len(self.quad_ids) == len(self.node_ids),
+                "Pre-condition `len(brick_ids) == len(node_ids)` is violated.",
+            ),
+        ]
 
     @property
     def structure(self):
-        structure = [
-
+        structure: KeywordStructureType = [
+            ArrayOfAtomicFields(
+                [
+                    IntField("quad_ids", 1),
+                    IntField("node_ids:ID_1|0", 2),
+                    IntField("node_ids:ID_2|1", 3),
+                    IntField("node_ids:ID_3|2", 4),
+                    IntField("node_ids:ID_4|3", 5),
+                ]
+            )
         ]
 
-        return structure 
+        return structure
 
 
 # --- /RADIATION ------------------------------------------------------
@@ -238,8 +251,6 @@ class Radiation(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

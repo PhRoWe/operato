@@ -3,6 +3,7 @@
 
 """
 from datetime import datetime
+import os
 from pathlib import Path
 from operato.constants import LINE_SEPARATOR
 
@@ -17,13 +18,13 @@ class Engine:
 
     """
 
-    def __init__(self, add_header=True, add_separator=False):
+    def __init__(self, add_header=True, add_separator=False, runname=""):
         """Initializes a new starter instance."""
 
         self.add_header = add_header
         self.add_separator = add_separator
         self._keywords = []
-        self._runname = ""
+        self._runname = runname
 
     @property
     def runname(self) -> str:
@@ -48,7 +49,8 @@ class Engine:
             folder = Path(folder)
 
         filepath = folder.joinpath(f"{self.runname}_{index:04d}.rad")
-
+        if not folder.is_dir():
+            os.mkdir(folder)
         if filepath.is_file() and not assume_yes:
             overwrite_file = input(
                 f"File `{filepath.name}` already exists. Overwrite? [yes/no (default=no)] "
@@ -56,7 +58,6 @@ class Engine:
 
             if not overwrite_file.lower() in ("y", "yes"):
                 return
-
         # Serialize the keywords
         with open(filepath, "w") as fd:
             if self.add_header:

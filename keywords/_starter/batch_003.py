@@ -457,14 +457,6 @@ class Brick(Keyword):
 
         return [
             (
-                len(self.brick_ids) > 0,
-                "Pre-condition `len(brick_ids) > 0` is violated.",
-            ),
-            (
-                len(self.node_ids) > 0,
-                "Pre-condition `len(node_ids) > 0` is violated.",
-            ),
-            (
                 len(self.brick_ids) == len(self.node_ids),
                 "Pre-condition `len(brick_ids) == len(node_ids)` is violated.",
             ),
