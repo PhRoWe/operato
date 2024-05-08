@@ -108,6 +108,8 @@ class Analy(Keyword):
     n_2D3D: Literal[0, 1, 2] = 0
     i_parith: Literal[0, 1, 2] = 0
     i_subcycle: Literal[0, 2] = 0
+    # line added for readability
+    line: str = "#    N2D3D             IPARITH      ISUB"
 
     @property
     def keyword(self):
@@ -133,11 +135,12 @@ class Analy(Keyword):
     @property
     def structure(self):
         return [
+            StringField("line", 1, 10),
             [
                 IntField("n_2D3D", 1),
                 IntField("i_parith", 3),
                 IntField("i_subcycle", 4),
-            ]
+            ],
         ]
 
 

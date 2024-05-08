@@ -70,7 +70,9 @@ class ImplDt2(Keyword):
     dt_scad: float
     dt_scamax: float
     # added commentary line for readability of input deck
-    line: str = "# it_w, l_arc, l_dtn, dt_scad, dt_scamax"
+    line: str = (
+        "#     it_w               l_arc     l_dtn            dt_scad           dt_scamax"
+    )
 
     @property
     def keyword(self):
@@ -84,11 +86,13 @@ class ImplDt2(Keyword):
     def structure(self):
         structure = [
             StringField("line", 1, 10),
-            IntField("it_w", 1),
-            FloatField("l_arc", 2),
-            IntField("l_dtn", 4),
-            FloatField("dt_scad", 5),
-            FloatField("dt_scamax", 7),
+            [
+                IntField("it_w", 1),
+                FloatField("l_arc", 2),
+                IntField("l_dtn", 4),
+                FloatField("dt_scad", 5),
+                FloatField("dt_scamax", 7),
+            ],
         ]
 
         return structure

@@ -237,6 +237,35 @@ class Grquad(Keyword):
         return structure
 
 
+# --- /GRQUAD_QUAD ------------------------------------------------------
+@dataclass
+class Grquadquad(Keyword):
+    grquad_id: int
+    item_ids: List[int]
+    unit_id: int | None = None
+    grquad_title: str | None = None
+
+    @property
+    def keyword(self):
+        if self.unit_id == None:
+            return f"/GRQUAD/{self.grquad_id}"
+        elif self.unit_id != None:
+            return f"/GRQUAD/{self.grquad_id}/{self.unit_id}"
+
+    @property
+    def pre_conditions(self):
+        return []
+
+    @property
+    def structure(self):
+        structure: KeywordStructureType = [
+            StringField("grquad_title", 1, 3),
+            VLSequenceOfAtomicField(IntField("item_ids", 1)),
+        ]
+
+        return structure
+
+
 # --- /GRSH3N ------------------------------------------------------
 @dataclass
 class Grsh3n(Keyword):

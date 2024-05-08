@@ -190,6 +190,7 @@ from ._starter.batch_015 import (
     GrnodNode,
     Grpart,
     Grquad,
+    Grquadquad,
     Grsh3n,
 )
 

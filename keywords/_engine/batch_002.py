@@ -9,6 +9,8 @@ from ..common import (
     StringField,
     VLSequenceOfAtomicField,
     get_literal_values,
+    ArrayOfAtomicFields,
+    KeywordStructureType,
 )
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
@@ -22,12 +24,24 @@ from ..common import (
 # --- /ANIM/BRICK/TENS ------------------------------------------------------
 @dataclass
 class AnimBrickTens(Keyword):
+    """https://help.altair.com/hwsolvers/rad/topics/solvers/rad/anim_brick_tens_engine_r.htm
+    Args:
+        keyword1: (Literal): Definition of requested tens. STRESS for Stress tensor. STRAIN for Strain tensor. EPSP for
+            Plastic strain tensor at integration points, only available for /MAT/LAW24 with Icpre=2.
+        keyword2:(str):  Possible settings: 0 or blank for Mean value in brick element. "ijk" for value in integration
+            Point of brick element where i is Integration point number in direction r. j is Integration point number in direction s.
+            k is integration point number in direction t. "ALL" for values in all the integration points of brick element.
+    """
+
     keyword1: Literal["STRESS", "STRAIN", "EPSP"]
-    keyword2: str
+    keyword2: str | None = None
 
     @property
     def keyword(self):
-        return f"/ANIM/BRICK/TENS/{self.keyword1}/{self.keyword2}"
+        if self.keyword2 is None:
+            return f"/ANIM/BRICK/TENS/{self.keyword1}"
+        else:
+            return f"/ANIM/BRICK/TENS/{self.keyword1}/{self.keyword2}"
 
     @property
     def pre_conditions(self):
@@ -96,9 +110,11 @@ class AnimBrickVdami(Keyword):
 # --- /ANIM/DT ------------------------------------------------------
 @dataclass
 class AnimDt(Keyword):
+    """https://help.altair.com/hwsolvers/rad/topics/solvers/rad/anim_dt_engine_r.htm"""
+
     t_start: float
     t_freq: float
-    t_stop: float = 1e20
+    t_stop: float | None = None
     # added line for readability
     line1 = str = "#    TSTART     TFREQ     TSTOP"
 
@@ -112,10 +128,13 @@ class AnimDt(Keyword):
 
     @property
     def structure(self):
-        structure = [
-            FloatField("t_start", 1),
-            FloatField("t_freq", 2),
-            FloatField("t_stop", 3),
+        structure: KeywordStructureType = [
+            StringField("line1", 1, 10),
+            [
+                FloatField("t_start", 1),
+                FloatField("t_freq", 3),
+                FloatField("t_stop", 5),
+            ],
         ]
 
         return structure

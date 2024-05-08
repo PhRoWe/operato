@@ -456,9 +456,11 @@ class Keyword:
                 nfields = len(line_definition)
                 shrink = True
             else:
+                # 10 - necessary fields + ??? why
                 nfields = NFIELDS - total_span + len(line_definition)
+                # nfields = NFIELDS - total_span
                 shrink = False
-
+            # what is this
             fields_srep = nfields * [FIELDWIDTH * " "]
 
             field_values = []

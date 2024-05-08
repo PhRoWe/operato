@@ -15,12 +15,15 @@ from ..common import FloatField, IntField, Keyword, StringField
 # --- /PRINT ------------------------------------------------------
 @dataclass
 class Print(Keyword):
-    n_line: int = 55
     n_print: int = -1000
+    n_line: int | None = None
 
     @property
     def keyword(self):
-        return f"/PRINT/{self.n_print}/{self.n_line}"
+        if self.n_line == None:
+            return f"/PRINT/{self.n_print}"
+        elif self.n_line != None:
+            return f"/PRINT/{self.n_print}/{self.n_line}"
 
     @property
     def pre_conditions(self):

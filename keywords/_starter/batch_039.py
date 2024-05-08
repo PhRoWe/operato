@@ -188,16 +188,27 @@ class Node(Keyword):
 
     @property
     def structure(self):
-        structure: KeywordStructureType = [
-            ArrayOfAtomicFields(
-                (
-                    IntField("node_ids", 1),
-                    FloatField("xc_yc_zc:xc|0", 2),
-                    FloatField("xc_yc_zc:yc|1", 4),
-                    FloatField("xc_yc_zc:zc|2", 6),
+        if not hasattr(self.xc_yc_zc, "xc"):
+            structure: KeywordStructureType = [
+                ArrayOfAtomicFields(
+                    (
+                        IntField("node_ids", 1),
+                        FloatField("xc_yc_zc:yc|0", 2),
+                        FloatField("xc_yc_zc:zc|1", 4),
+                    )
                 )
-            )
-        ]
+            ]
+        else:
+            structure: KeywordStructureType = [
+                ArrayOfAtomicFields(
+                    (
+                        IntField("node_ids", 1),
+                        FloatField("xc_yc_zc:xc|0", 2),
+                        FloatField("xc_yc_zc:yc|1", 4),
+                        FloatField("xc_yc_zc:zc|2", 6),
+                    )
+                )
+            ]
 
         return structure
 

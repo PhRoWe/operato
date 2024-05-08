@@ -23,15 +23,22 @@ from ..common import (
 # --- /MAT/LAW0 ------------------------------------------------------
 @dataclass
 class MatLaw0(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW0` is not implemented.")
+    mat_id: int
+    mat_title: str
+    rho_i: float
+    E: float
+    nu: float
+    unit_id: int | None = None
+    # line added for readability
+    line: str = "#              RHO                  E                  nu"
+    add_separator: bool = True
 
     @property
     def keyword(self):
-        return "/MAT/LAW0"
+        if self.unit_id == None:
+            return f"/MAT/LAW0/{self.mat_id}"
+        elif self.unit_id != None:
+            return f"/MAT/LAW0/{self.mat_id}/{self.unit_id}"
 
     @property
     def pre_conditions(self):
@@ -39,7 +46,11 @@ class MatLaw0(Keyword):
 
     @property
     def structure(self):
-        structure: KeywordStructureType = []
+        structure: KeywordStructureType = [
+            StringField("mat_title", 1, 10),
+            StringField("line", 1, 10),
+            [FloatField("rho_i", 1), FloatField("E", 3), FloatField("nu", 5)],
+        ]
 
         return structure
 
