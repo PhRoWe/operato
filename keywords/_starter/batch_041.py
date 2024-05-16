@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /PROP/INJECT1               /PROP/INJECT2               /PROP/PCOMPP                
-# /PROP/TYPE0                 /PROP/TYPE1                 /PROP/TYPE2                 
-# /PROP/TYPE3                 /PROP/TYPE4                 /PROP/TYPE6                 
+# /PROP/INJECT1               /PROP/INJECT2               /PROP/PCOMPP
+# /PROP/TYPE0                 /PROP/TYPE1                 /PROP/TYPE2
+# /PROP/TYPE3                 /PROP/TYPE4                 /PROP/TYPE6
 #
+
 
 # --- /PROP/INJECT1 ------------------------------------------------------
 @dataclass
@@ -30,11 +31,9 @@ class PropInject1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/INJECT2 ------------------------------------------------------
@@ -56,11 +55,9 @@ class PropInject2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/PCOMPP ------------------------------------------------------
@@ -82,25 +79,24 @@ class PropPcompp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE0 ------------------------------------------------------
 @dataclass
 class PropType0(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE0` is not implemented.")
+    prop_id: int
+    prop_title: str | None = None
+    unit_id: int | None = None
 
     @property
     def keyword(self):
-        return "/PROP/TYPE0"
+        if self.unit_id is not None:
+            return f"/PROP/TYPE0/{self.prop_id}/{self.unit_id}"
+        else:
+            return f"/PROP/TYPE0/{self.prop_id}"
 
     @property
     def pre_conditions(self):
@@ -108,11 +104,9 @@ class PropType0(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = [StringField("prop_title", 1, 10)]
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE1 ------------------------------------------------------
@@ -134,11 +128,9 @@ class PropType1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE2 ------------------------------------------------------
@@ -160,11 +152,9 @@ class PropType2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE3 ------------------------------------------------------
@@ -186,11 +176,9 @@ class PropType3(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE4 ------------------------------------------------------
@@ -212,11 +200,9 @@ class PropType4(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE6 ------------------------------------------------------
@@ -238,8 +224,6 @@ class PropType6(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

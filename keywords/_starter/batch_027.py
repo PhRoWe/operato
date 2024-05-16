@@ -35,9 +35,9 @@ class MatLaw0(Keyword):
 
     @property
     def keyword(self):
-        if self.unit_id == None:
+        if self.unit_id is None:
             return f"/MAT/LAW0/{self.mat_id}"
-        elif self.unit_id != None:
+        elif self.unit_id is not None:
             return f"/MAT/LAW0/{self.mat_id}/{self.unit_id}"
 
     @property
@@ -72,7 +72,10 @@ class MatLaw1(Keyword):
 
     @property
     def keyword(self):
-        return f"/MAT/LAW1/{self.mat_id}/{self.unit_id}"
+        if self.unit_id is None:
+            return f"/MAT/LAW0/{self.mat_id}"
+        elif self.unit_id is not None:
+            return f"/MAT/LAW0/{self.mat_id}/{self.unit_id}"
 
     @property
     def pre_conditions(self):

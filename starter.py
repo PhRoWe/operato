@@ -83,6 +83,13 @@ class Starter:
 
                 keyword.write(fd)
 
+    def findAmountOfType(self, type_str):
+        count = 0
+        for keyword in self._keywords:
+            if type_str in str(type(keyword)):
+                count += 1
+        return count
+
 
 if __name__ == "__main__":
     pass

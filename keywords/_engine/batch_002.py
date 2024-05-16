@@ -143,19 +143,15 @@ class AnimDt(Keyword):
 # --- /ANIM/Eltyp/FORC ------------------------------------------------------
 @dataclass
 class AnimEltypForc(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/Eltyp/FORC` is not implemented.")
+    eltype: str
 
     @property
     def keyword(self):
-        return "/ANIM/Eltyp/FORC"
+        return f"/ANIM/{self.eltype}/FORC"
 
     @property
     def pre_conditions(self):
-        return []
+        return (self.restype in ["BEAM", "SPRING", "TRUS"], "Unknown response type.")
 
     @property
     def structure(self):
@@ -167,19 +163,52 @@ class AnimEltypForc(Keyword):
 # --- /ANIM/Eltyp/Restype ------------------------------------------------------
 @dataclass
 class AnimEltypRestype(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/Eltyp/Restype` is not implemented.")
+    eltype: str
+    restype: str
 
     @property
     def keyword(self):
-        return "/ANIM/Eltyp/Restype"
+        return f"/ANIM/{self.eltype}/{self.restype}"
 
     @property
     def pre_conditions(self):
-        return []
+        restype_pos = [
+            "AMS",
+            "DAM1",
+            "DAM2",
+            "DAM3",
+            "DENS",
+            "DT",
+            "ENER",
+            "EPSD" "EPSP",
+            "ESPN/N",
+            "ESPN/All",
+            "EPSX",
+            "HOURG",
+            "P",
+            "SIGX",
+            "SIGY",
+            "SIGZ",
+            "SIGXY",
+            "SIGYZ",
+            "SIGZX",
+            "TEMP",
+            "THIC",
+            "TILLOTSON",
+            "USRi",
+            "VONM",
+            "MACH",
+            "OFF",
+            "DAMG",
+            "EPSX",
+        ]
+        return [
+            (
+                self.eltype in ["ELEM", "BEAM", "SPRING", "TRUS"],
+                "Unknown element type specified.",
+            ),
+            (self.restype in restype_pos, "Unknown response type."),
+        ]
 
     @property
     def structure(self):

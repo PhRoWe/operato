@@ -176,6 +176,7 @@ class Bcs(Keyword):
     trarot: Sequence[Literal[0, 1]]
     skew_id: int
     grnd_id: int
+    line: str = "#  Tra rot   skew_ID  grnod_ID"
 
     @property
     def keyword(self):
@@ -189,6 +190,7 @@ class Bcs(Keyword):
     def structure(self):
         structure = [
             StringField("bcs_title", 1, 10),
+            StringField("line", 1, 10),
             [
                 BoolField("trarot", 1, 6, [4, 5, 6, 8, 9, 10]),
                 IntField("skew_id", 2),
