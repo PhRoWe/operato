@@ -573,6 +573,9 @@ class CheckRfileOff(Keyword):
 # --- /CLOAD ------------------------------------------------------
 @dataclass
 class Cload(Keyword):
+    """Defines a concentrated force or moment applied to each node of a prescribed nodal group.
+    Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/cload_starter_r.htm)
+    """
 
     cload_id: int
     cload_title: str

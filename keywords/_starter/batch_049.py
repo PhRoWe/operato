@@ -1,15 +1,25 @@
 #!/usr/bin/env python3
 
 from dataclasses import dataclass
+from typing import List, Literal, Sequence, Tuple, get_args
 
-from ..common import FloatField, IntField, Keyword, StringField
+from numpy.typing import NDArray
+from ..common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    KeywordStructureType,
+    ArrayOfAtomicFields,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /SENSOR/SENS                /SENSOR/TIME                /SENSOR/VEL                 
-# /SENSOR/WORK                /SET                        /SH3N                       
-# /SHELL                      /SHEL16                     /SKEW/FIX                   
+# /SENSOR/SENS                /SENSOR/TIME                /SENSOR/VEL
+# /SENSOR/WORK                /SET                        /SH3N
+# /SHELL                      /SHEL16                     /SKEW/FIX
 #
+
 
 # --- /SENSOR/SENS ------------------------------------------------------
 @dataclass
@@ -30,11 +40,9 @@ class SensorSens(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/TIME ------------------------------------------------------
@@ -56,11 +64,9 @@ class SensorTime(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/VEL ------------------------------------------------------
@@ -82,11 +88,9 @@ class SensorVel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/WORK ------------------------------------------------------
@@ -108,11 +112,9 @@ class SensorWork(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SET ------------------------------------------------------
@@ -134,11 +136,9 @@ class Set(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SH3N ------------------------------------------------------
@@ -160,37 +160,58 @@ class Sh3n(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SHELL ------------------------------------------------------
 @dataclass
 class Shell(Keyword):
-    attr1: int
-    attr2: float
+    """Defines a quadrilateral shell with 4 nodes. Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/shell_starter_r.htm)
+    The element type and formulation are defined on the /PROP card.
+    """
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/SHELL` is not implemented.")
+    part_id: int
+    shell_ids: List[int] | NDArray
+    node_ids: List[Tuple[int, ...]] | NDArray
+    t: List[Tuple[int, ...]] | NDArray
+    phi: List[Tuple[int, ...]] | NDArray
+    unit_id: int | None = None
 
     @property
     def keyword(self):
-        return "/SHELL"
+        if self.unit_id is not None:
+            return f"/SHELL/{self.part_id}/{self.unit_id}"
+        else:
+            return f"/SHELL/{self.part_id}"
 
     @property
     def pre_conditions(self):
-        return []
+        return [
+            (
+                len(self.shell_ids) == len(self.node_ids),
+                "Pre-condition `len(brick_ids) == len(node_ids)` is violated.",
+            ),
+        ]
 
     @property
     def structure(self):
-        structure = [
-
+        structure: KeywordStructureType = [
+            ArrayOfAtomicFields(
+                [
+                    IntField("shell_ids", 1),
+                    IntField("node_ids:ID_1|0", 2),
+                    IntField("node_ids:ID_2|1", 3),
+                    IntField("node_ids:ID_3|2", 4),
+                    IntField("node_ids:ID_4|3", 5),
+                    FloatField("phi", 6),
+                    FloatField("t", 9),
+                ]
+            )
         ]
 
-        return structure 
+        return structure
 
 
 # --- /SHEL16 ------------------------------------------------------
@@ -212,11 +233,9 @@ class Shel16(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SKEW/FIX ------------------------------------------------------
@@ -238,8 +257,6 @@ class SkewFix(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

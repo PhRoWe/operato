@@ -112,15 +112,44 @@ class PropType0(Keyword):
 # --- /PROP/TYPE1 ------------------------------------------------------
 @dataclass
 class PropType1(Keyword):
-    attr1: int
-    attr2: float
+    """Defines Radioss PropType1 (SHELL) Doc:(https://help.altair.com/hwsolvers/rad/topics/solvers/rad/prop_type1_shell_starter_r.htm)"""
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE1` is not implemented.")
+    prop_id: int
+    t: float
+    unit_id: int | None = None
+    prop_title: str = ""
+    i_shell: int | None = None
+    i_smstr: int | None = None
+    i_sh3n: int | None = None
+    i_drill: int | None = None
+    i_thick: int | None = None
+    i_plas: int | None = None
+    p_thick_fail: float | None = None
+    h_m: float | None = None
+    h_f: float | None = None
+    h_r: float | None = None
+    d_m: float | None = None
+    d_n: float | None = None
+    n: int | None = None
+    a_shear: float | None = None
+    # commentary lines for better readability:
+    line1: str = (
+        "#   Ishell    Ismstr     Ish3n    Idrill                            P_thick_fail"
+    )
+    line2: str = (
+        "#                 hm                  hf                  hr                  dm                  dn"
+    )
+    line3: str = (
+        "#        N   Istrain               Thick              Ashear              Ithick     Iplas"
+    )
+    add_separator: bool = True
 
     @property
     def keyword(self):
-        return "/PROP/TYPE1"
+        if self.unit_id is not None:
+            return f"/PROP/TYPE1/{self.prop_id}/{self.unit_id}"
+        else:
+            return f"/PROP/TYPE1/{self.prop_id}"
 
     @property
     def pre_conditions(self):
@@ -128,7 +157,33 @@ class PropType1(Keyword):
 
     @property
     def structure(self):
-        structure = []
+        structure = [
+            StringField("prop_title", 1, 3),
+            StringField("line1", 1, 10),
+            [
+                IntField("i_shell", 1),
+                IntField("i_smstr", 2),
+                IntField("i_sh3n", 3),
+                IntField("i_drill", 4),
+                FloatField("p_thick_fail", 7),
+            ],
+            StringField("line2", 1, 10),
+            [
+                FloatField("h_m", 1),
+                FloatField("h_f", 3),
+                FloatField("h_r", 5),
+                FloatField("d_m", 7),
+                FloatField("d_n", 9),
+            ],
+            StringField("line3", 1, 10),
+            [
+                IntField("n", 1),
+                FloatField("t", 3),
+                FloatField("a_shear", 5),
+                IntField("i_thick", 8),
+                IntField("i_plas", 9),
+            ],
+        ]
 
         return structure
 

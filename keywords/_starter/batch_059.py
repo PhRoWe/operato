@@ -89,7 +89,7 @@ class TransformTra(Keyword):
 @dataclass
 class Tria(Keyword):
     """Describes the 2D solid elements based on 3 nodes. TRIA elements must be
-    defined in the global YZ plane.
+    defined in the global YZ plane. Doc:(https://help.altair.com/hwsolvers/rad/topics/solvers/rad/tria_starter_r.htm)
     """
 
     part_id: int
@@ -131,7 +131,7 @@ class Tria(Keyword):
 class Truss(Keyword):
     """Describes one dimension truss elements, which could be used with
     property /PROP/TYPE2 (TRUSS). Truss could only carry axial load (like for
-    bar).
+    bar). Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/truss_starter_r.htm)
 
     """
 
@@ -171,7 +171,7 @@ class Truss(Keyword):
 # --- /UNIT ------------------------------------------------------
 @dataclass
 class Unit(Keyword):
-    """Defines a local unit system for the keywords listed below."""
+    """Defines a local unit system for the keywords listed below. Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/unit_starter_r.htm)"""
 
     unit_title: str
     mass_unit: VALID_MASS_LITERALS

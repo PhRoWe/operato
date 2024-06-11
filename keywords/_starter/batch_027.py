@@ -58,24 +58,31 @@ class MatLaw0(Keyword):
 # --- /MAT/LAW1 ------------------------------------------------------
 @dataclass
 class MatLaw1(Keyword):
+    """Defines Radioss MatLaw1 (ELAST) Doc:(https://help.altair.com/hwsolvers/rad/topics/solvers/rad/mat_law1_elast_starter_r.htm#mat_law1_elast_starter_r)_"""
+
+    # Material identifier
     mat_id: int
+    # Material title
     mat_title: str
+    # Initial density
     rho_i: float
+    # Young's modulus
     E: float
+    # Poisson ratio
     nu: float
+    # unit identifier (optional)
     unit_id: int | None = None
     # lines added for readability of input deck
     rho_line: str = "#              RHO_I"
     E_line: str = "#                  E                  nu"
     add_separator: bool = True
-    #
 
     @property
     def keyword(self):
         if self.unit_id is None:
-            return f"/MAT/LAW0/{self.mat_id}"
+            return f"/MAT/LAW1/{self.mat_id}"
         elif self.unit_id is not None:
-            return f"/MAT/LAW0/{self.mat_id}/{self.unit_id}"
+            return f"/MAT/LAW1/{self.mat_id}/{self.unit_id}"
 
     @property
     def pre_conditions(self):

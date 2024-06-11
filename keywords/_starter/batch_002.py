@@ -169,7 +169,8 @@ class AnimVers(Keyword):
 # --- /BCS ------------------------------------------------------------------------------------
 @dataclass
 class Bcs(Keyword):
-    """Defines boundary conditions on node groups for translational and rotational motion."""
+    """Defines boundary conditions on node groups for translational and rotational motion.
+    Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/bcs_starter_r.htm)"""
 
     bcs_id: int
     bcs_title: str
@@ -205,7 +206,9 @@ class Bcs(Keyword):
 @dataclass
 class BcsCyclic(Keyword):
     """Defines a cyclic boundary condition on a structure in a fixed
-    cylindrical coordinate system."""
+    cylindrical coordinate system.
+    Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/bcs_cyclic_starter_r.htm)
+    """
 
     bcs_id: int
     bcs_cyclic_title: str
@@ -239,7 +242,9 @@ class BcsCyclic(Keyword):
 @dataclass
 class BcsLagmul(Keyword):
     """Defines boundary conditions on node groups using Lagrange multipliers.
-    This keyword is not available for SPMD computation."""
+    This keyword is not available for SPMD computation.
+    Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/bcs_lagmul_starter_r.htm)
+    """
 
     bcs_id: int
     bcs_title: str
@@ -276,6 +281,7 @@ class Beam(Keyword):
     /PROP/TYPE18 (INT_BEAM)) are available for this beam element. The
     properties describing a beam element are all defined in a local beam
     coordinate system.
+    Doc: (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/beam_starter_r.htm)
     """
 
     part_id: int

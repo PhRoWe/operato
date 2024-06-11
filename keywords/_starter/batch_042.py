@@ -162,27 +162,27 @@ class PropType14(Keyword):
     prop_id: int
     unit_id: int | None = None
     prop_title: str = ""
-    i_solid: int = 1
-    i_smstr: int = 4
-    i_ale: int = 0
-    i_cpre: int = -1
-    i_tetra10: int = 1000
-    i_npts: int = 222
-    i_tetra4: int = 1000
-    i_frame: int = 1
-    d_n: float = 0.1
-    q_a: float = 1.10
-    q_b: float = 0.05
-    h: float = 0.10
-    lambda_v: float = 0.0
-    mu_v: float = 0.0
-    dt_min: float = 0.0
-    Vdef_min: float = 0.0
-    Vdef_max: float = 0.0
-    aps_max: float = 0.0
-    col_min: float = 0.0
-    Ndir: int = None
-    sphpart_id: int = None
+    i_solid: int | None = None
+    i_smstr: int | None = None
+    i_ale: int | None = None
+    i_cpre: int | None = None
+    i_tetra10: int | None = None
+    i_npts: int | None = None
+    i_tetra4: int | None = None
+    i_frame: int | None = None
+    d_n: float | None = None
+    q_a: float | None = None
+    q_b: float | None = None
+    h: float | None = None
+    lambda_v: float | None = None
+    mu_v: float | None = None
+    dt_min: float | None = None
+    Vdef_min: float | None = None
+    Vdef_max: float | None = None
+    aps_max: float | None = None
+    col_min: float | None = None
+    Ndir: int | None = None
+    sphpart_id: int | None = None
     # commentary lines for better readability:
     line1: str = (
         "#   Isolid    Ismstr               Icpre  Itetra10     Inpts   Itetra4    Iframe                  dn"
@@ -190,7 +190,9 @@ class PropType14(Keyword):
     line2: str = (
         "#                q_a                 q_b                   h            LAMBDA_V                MU_V"
     )
-    line3: str = "#             dt_min"
+    line3: str = (
+        "#             dt_min            Vdef_min            Vdef_max             APS_max             COL_min"
+    )
     line4: str = "#              N_dir          sphpart_id"
     add_separator: bool = True
 

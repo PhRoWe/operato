@@ -180,11 +180,16 @@ class GrnodNode(Grnod):
 
     @property
     def structure(self):
-
-        structure: KeywordStructureType = [
-            StringField("grnd_title", 1, 3),
-            VLSequenceOfAtomicField(IntField("item_ids", 1)),
-        ]
+        if type(self.item_ids) == int:
+            structure: KeywordStructureType = [
+                StringField("grnd_title", 1, 3),
+                IntField("item_ids", 1),
+            ]
+        else:
+            structure: KeywordStructureType = [
+                StringField("grnd_title", 1, 3),
+                VLSequenceOfAtomicField(IntField("item_ids", 1)),
+            ]
 
         return structure
 
