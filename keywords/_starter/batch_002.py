@@ -303,15 +303,26 @@ class Beam(Keyword):
 
     @property
     def structure(self):
-        structure = [
-            ArrayOfAtomicFields(
-                [
-                    IntField("beam_ids", 1),
-                    IntField("node_ids:ID_1|0", 2),
-                    IntField("node_ids:ID_2|1", 3),
-                    IntField("node_ids:ID_3|2", 4),
-                ]
-            )
-        ]
+        if len(self.node_ids[0] == 2):
+            structure = [
+                ArrayOfAtomicFields(
+                    [
+                        IntField("beam_ids", 1),
+                        IntField("node_ids:ID_1|0", 2),
+                        IntField("node_ids:ID_2|1", 3),
+                    ]
+                )
+            ]
+        elif len(self.node_ids[0] == 3):
+            structure = [
+                ArrayOfAtomicFields(
+                    [
+                        IntField("beam_ids", 1),
+                        IntField("node_ids:ID_1|0", 2),
+                        IntField("node_ids:ID_2|1", 3),
+                        IntField("node_ids:ID_3|2", 4),
+                    ]
+                )
+            ]
 
         return structure
