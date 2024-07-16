@@ -177,7 +177,7 @@ class Bcs(Keyword):
     trarot: Sequence[Literal[0, 1]]
     skew_id: int
     grnd_id: int
-    line: str = "#  Tra rot   skew_ID  grnod_ID"
+    line: str = "#-tra-rot|--skew_ID|-grnod_ID|"
 
     @property
     def keyword(self):

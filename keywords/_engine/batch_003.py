@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /ANIM/GPS1                  /ANIM/GPS2                  /ANIM/GZIP                  
-# /ANIM/LSENSOR               /ANIM/MASS                  /ANIM/MAT                   
-# /ANIM/NODA                  /ANIM/SENSOR                /ANIM/SHELL/DAMA            
+# /ANIM/GPS1                  /ANIM/GPS2                  /ANIM/GZIP
+# /ANIM/LSENSOR               /ANIM/MASS                  /ANIM/MAT
+# /ANIM/NODA                  /ANIM/SENSOR                /ANIM/SHELL/DAMA
 #
+
 
 # --- /ANIM/GPS1 ------------------------------------------------------
 @dataclass
@@ -30,11 +31,9 @@ class AnimGps1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/GPS2 ------------------------------------------------------
@@ -56,11 +55,9 @@ class AnimGps2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/GZIP ------------------------------------------------------
@@ -82,11 +79,9 @@ class AnimGzip(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/LSENSOR ------------------------------------------------------
@@ -108,21 +103,14 @@ class AnimLsensor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/MASS ------------------------------------------------------
 @dataclass
 class AnimMass(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/MASS` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +122,9 @@ class AnimMass(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/MAT ------------------------------------------------------
@@ -160,11 +146,9 @@ class AnimMat(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/NODA ------------------------------------------------------
@@ -186,11 +170,9 @@ class AnimNoda(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SENSOR ------------------------------------------------------
@@ -212,11 +194,9 @@ class AnimSensor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/DAMA ------------------------------------------------------
@@ -238,8 +218,6 @@ class AnimShellDama(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

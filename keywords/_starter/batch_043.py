@@ -2,7 +2,8 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField
+from ..common import FloatField, IntField, Keyword, StringField, ArrayOfAtomicFields
+from typing import List
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -64,9 +65,9 @@ class PropType17(Keyword):
 @dataclass
 class PropType18(Keyword):
     prop_id: int
+    i_sect: int
     unit_id: int | None = None
     prop_title: str | None = None
-    i_sect: int | None = None
     i_smstr: int | None = None
     d_m: float | None = None
     d_f: float | None = None
@@ -74,10 +75,22 @@ class PropType18(Keyword):
     i_ref: int | None = None
     y_0: float | None = None
     z_0: float | None = None
+    y_i: List[float] | None = None
+    z_i: List[float] | None = None
+    area: float | None = None  # only for i_sect=0
+    nitr: int | None = None
+    l1: float | None = None
+    l2: float | None = None
+    # omega_dof: bool |
     # lines added for readability of input deck
-    line1: str = "#   i_sec      i_smstr"
-    line2: str = "#                  d_m                  d_f"
-    line3: str = "#     NIP        i_ref                  y_0                  z_0"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = "#--i_sect|--i_smstr|"
+    line2: str = "#--------|------d_m|---------|------d_f|"
+    line3: str = "#-----NIP|----i_ref|---------|------y_0|---------|------z_0|"
+    line4: str = "#--------|------y_i|---------|------z_i|---------|-----area|"
+    line5: str = "#----NITR|---------|---------|-------L1|---------|-------L2|"
 
     @property
     def keyword(self):
@@ -88,11 +101,55 @@ class PropType18(Keyword):
 
     @property
     def pre_conditions(self):
-        return []
+        if self.i_sect == 0 and self.i_ref is None:
+            self.i_ref = 0
+        if self.l2 is None:
+            self.l2 = self.l1
+        cond = [
+            (
+                (self.i_sect == 0 and self.NIP is not None)
+                or (self.i_sect != 0 and self.NIP is None),
+                "NIP only to be defined if i_sect==0.",
+            ),
+            (
+                (self.i_sect == 0 and self.i_ref is not None)
+                or (self.i_sect != 0 and self.i_ref is None),
+                "I_ref only to be defined if i_sect==0.",
+            ),
+            (
+                (self.i_ref != 1 and self.y_0 is None and self.z_0 is None)
+                or (self.i_ref == 1 and self.y_0 is not None and self.z_0 is not None),
+                "Define subsection center if I_ref==1.",
+            ),
+            (
+                (self.z_i is not None and self.i_sect == 0 and self.NIP is not None)
+                or (self.z_i is None and self.i_sect != 0 and self.NIP is None),
+                "Z_i needs to be defined if i_sect==0 and NIP>0.",
+            ),
+            (
+                (self.area is not None and self.i_sect == 0 and self.NIP is not None)
+                or (self.area is None and self.i_sect != 0 and self.NIP is None),
+                "area needs to be defined if i_sect==0.",
+            ),
+            (
+                (self.nitr is None and self.i_sect == 0)
+                or (self.nitr is not None and self.i_sect != 0),
+                "Define the integration points since i_sect>0.",
+            ),
+            (
+                (self.l1 is None and self.i_sect == 0)
+                or (self.l1 is not None and self.i_sect != 0),
+                "Define the first size of the predefined section since i_sect>0.",
+            ),
+        ]
+
+        return cond
 
     @property
     def structure(self):
+        # Basic structure
         structure = [
+            StringField("line0", 1, 10),
             StringField("prop_title", 1, 3),
             StringField("line1", 1, 10),
             [
@@ -112,6 +169,22 @@ class PropType18(Keyword):
                 FloatField("z_0", 5),
             ],
         ]
+        if self.NIP is not None:
+            structure.append(StringField("line4", 1, 10))
+            structure.append(
+                ArrayOfAtomicFields(
+                    [
+                        FloatField("y_i", 1),
+                        FloatField("z_i", 3),
+                        FloatField("area", 5),
+                    ]
+                )
+            )
+        if self.nitr is not None:
+            structure.append(StringField("line5", 1, 10))
+            structure.append(
+                [IntField("nitr", 1), FloatField("l1", 3), FloatField("l2", 5)]
+            )
 
         return structure
 
