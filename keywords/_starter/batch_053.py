@@ -1,15 +1,31 @@
 #!/usr/bin/env python3
 
 from dataclasses import dataclass
+from typing import List, Literal, Sequence, Tuple, get_args
 
-from ..common import FloatField, IntField, Keyword, StringField
+from numpy.typing import NDArray
+from ..common import (
+    ArrayOfAtomicFields,
+    FloatField,
+    IntField,
+    Keyword,
+    KeywordPreconditionsType,
+    KeywordStructureType,
+    MultiLineArrayOfAtomicFields,
+    StringField,
+    TextAlignment,
+    VLSequenceOfAtomicField,
+    check_if_all_values_are_present,
+    get_literal_values,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /SURF/SEG                   /SURF/SUBMODEL              /SURF/SUBSET                
-# /SURF/SURF                  /TABLE/0                    /TABLE/1                    
-# /TETRA4                     /TETRA10                    /TH                         
+# /SURF/SEG                   /SURF/SUBMODEL              /SURF/SUBSET
+# /SURF/SURF                  /TABLE/0                    /TABLE/1
+# /TETRA4                     /TETRA10                    /TH
 #
+
 
 # --- /SURF/SEG ------------------------------------------------------
 @dataclass
@@ -30,11 +46,9 @@ class SurfSeg(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/SUBMODEL ------------------------------------------------------
@@ -56,11 +70,9 @@ class SurfSubmodel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/SUBSET ------------------------------------------------------
@@ -82,11 +94,9 @@ class SurfSubset(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/SURF ------------------------------------------------------
@@ -108,11 +118,9 @@ class SurfSurf(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TABLE/0 ------------------------------------------------------
@@ -134,11 +142,9 @@ class Table0(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TABLE/1 ------------------------------------------------------
@@ -160,25 +166,21 @@ class Table1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TETRA4 ------------------------------------------------------
 @dataclass
 class Tetra4(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/TETRA4` is not implemented.")
+    part_id: int
+    tetra_ids: List[int] | NDArray
+    node_ids: List[Tuple[int, ...]] | NDArray
 
     @property
     def keyword(self):
-        return "/TETRA4"
+        return f"/TETRA4/{self.part_id}"
 
     @property
     def pre_conditions(self):
@@ -186,11 +188,19 @@ class Tetra4(Keyword):
 
     @property
     def structure(self):
-        structure = [
-
+        structure: KeywordStructureType = [
+            ArrayOfAtomicFields(
+                [
+                    IntField("tetra_ids", 1),
+                    IntField("node_ids:ID_1|0", 2),
+                    IntField("node_ids:ID_2|1", 3),
+                    IntField("node_ids:ID_3|2", 4),
+                    IntField("node_ids:ID_4|3", 5),
+                ]
+            )
         ]
 
-        return structure 
+        return structure
 
 
 # --- /TETRA10 ------------------------------------------------------
@@ -212,11 +222,9 @@ class Tetra10(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH ------------------------------------------------------
@@ -238,8 +246,6 @@ class Th(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
