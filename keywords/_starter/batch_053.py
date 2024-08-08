@@ -206,15 +206,13 @@ class Tetra4(Keyword):
 # --- /TETRA10 ------------------------------------------------------
 @dataclass
 class Tetra10(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/TETRA10` is not implemented.")
+    part_id: int
+    tetra_ids: List[int] | NDArray
+    node_ids: List[Tuple[int, ...]] | NDArray
 
     @property
     def keyword(self):
-        return "/TETRA10"
+        return f"/TETRA10/{self.part_id}"
 
     @property
     def pre_conditions(self):
@@ -222,7 +220,27 @@ class Tetra10(Keyword):
 
     @property
     def structure(self):
-        structure = []
+        structure: KeywordStructureType = [
+            MultiLineArrayOfAtomicFields(
+                [
+                    ArrayOfAtomicFields([IntField("tetra_ids", 1)]),
+                    ArrayOfAtomicFields(
+                        [
+                            IntField("node_ids:ID_1|0", 1),
+                            IntField("node_ids:ID_2|1", 2),
+                            IntField("node_ids:ID_3|2", 3),
+                            IntField("node_ids:ID_4|3", 4),
+                            IntField("node_ids:ID_5|4", 5),
+                            IntField("node_ids:ID_6|5", 6),
+                            IntField("node_ids:ID_7|6", 7),
+                            IntField("node_ids:ID_8|7", 8),
+                            IntField("node_ids:ID_9|8", 9),
+                            IntField("node_ids:ID_10|9", 10),
+                        ]
+                    ),
+                ]
+            ),
+        ]
 
         return structure
 
