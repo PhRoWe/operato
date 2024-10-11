@@ -81,23 +81,37 @@ class PropType18(Keyword):
     nitr: int | None = None
     l1: float | None = None
     l2: float | None = None
-    # omega_dof: bool |
+    omega_dof: str | None = "   000 000"
     # lines added for readability of input deck
+    line00: str = "#/PROP/TYPE18/prop_ID/unit_ID\n"
     line0: str = (
         "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
     )
-    line1: str = "#--i_sect|--i_smstr|"
-    line2: str = "#--------|------d_m|---------|------d_f|"
-    line3: str = "#-----NIP|----i_ref|---------|------y_0|---------|------z_0|"
-    line4: str = "#--------|------y_i|---------|------z_i|---------|-----area|"
-    line5: str = "#----NITR|---------|---------|-------L1|---------|-------L2|"
+    line1: str = (
+        "#--i_sect|--i_smstr|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line2: str = (
+        "#---------------d_m|----------------d_f|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line3: str = (
+        "#-----NIP|----i_ref|----------------y_0|----------------z_0|----7----|----8----|----9----|----10---|"
+    )
+    line4: str = (
+        "#---------------y_i|----------------z_i|---------------area|----7----|----8----|----9----|----10---|"
+    )
+    line5: str = (
+        "#----NITR|---------|-----------------L1|-----------------L2|----7----|----8----|----9----|----10---|"
+    )
+    line6: str = (
+        "#omegadof|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
         if self.unit_id is not None:
-            return f"/PROP/TYPE18/{self.prop_id}/{self.unit_id}"
+            return self.line00 + f"/PROP/TYPE18/{self.prop_id}/{self.unit_id}"
         else:
-            return f"/PROP/TYPE18/{self.prop_id}"
+            return self.line00 + f"/PROP/TYPE18/{self.prop_id}"
 
     @property
     def pre_conditions(self):
@@ -185,6 +199,8 @@ class PropType18(Keyword):
             structure.append(
                 [IntField("nitr", 1), FloatField("l1", 3), FloatField("l2", 5)]
             )
+        structure.append(StringField("line6", 1, 10))
+        structure.append(StringField("omega_dof", 1, 10))
 
         return structure
 

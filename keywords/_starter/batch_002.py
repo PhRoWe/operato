@@ -287,10 +287,17 @@ class Beam(Keyword):
     part_id: int
     beam_ids: List[int]
     node_ids: NDArray
+    line00: str = "#/BEAM/part_ID\n"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#-beam_id|-node_id1|-node_id2|-node_id3|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
-        return f"/BEAM/{self.part_id}"
+        return self.line00 + f"/BEAM/{self.part_id}"
 
     @property
     def pre_conditions(self):

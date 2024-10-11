@@ -3,13 +3,15 @@
 from dataclasses import dataclass
 
 from ..common import FloatField, IntField, Keyword, StringField
+from typing import List
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /SPRING                     /STACK                      /STAMPING                   
-# /STATE/STR_FILE             //SUBMODEL                  /SUBSET                     
-# /SURF                       /SURF/BOX                   /SURF/DSURF                 
+# /SPRING                     /STACK                      /STAMPING
+# /STATE/STR_FILE             //SUBMODEL                  /SUBSET
+# /SURF                       /SURF/BOX                   /SURF/DSURF
 #
+
 
 # --- /SPRING ------------------------------------------------------
 @dataclass
@@ -30,11 +32,9 @@ class Spring(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STACK ------------------------------------------------------
@@ -56,11 +56,9 @@ class Stack(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STAMPING ------------------------------------------------------
@@ -82,11 +80,9 @@ class Stamping(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/STR_FILE ------------------------------------------------------
@@ -108,11 +104,9 @@ class StateStrFile(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- //SUBMODEL ------------------------------------------------------
@@ -134,11 +128,9 @@ class Submodel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SUBSET ------------------------------------------------------
@@ -160,11 +152,9 @@ class Subset(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF ------------------------------------------------------
@@ -186,25 +176,35 @@ class Surf(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/BOX ------------------------------------------------------
 @dataclass
 class SurfBox(Keyword):
-    attr1: int
-    attr2: float
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/SURF/BOX` is not implemented.")
+    surf_id: int
+    box_id: int
+    surf_title: str | None = None
+    unit_id: int | None = None
+    box2: bool | None = False
+
+    # added commentary lines for readability of deck
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#--box_id|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
-        return "/SURF/BOX"
+        if self.box2 == False:
+            return f"/SURF/BOX/ALL/{self.surf_id}/{self.unit_id}"
+        elif self.box2 == True:
+            return f"/SURF/BOX2/ALL/{self.surf_id}/{self.unit_id}"
 
     @property
     def pre_conditions(self):
@@ -213,10 +213,11 @@ class SurfBox(Keyword):
     @property
     def structure(self):
         structure = [
-
+            StringField("surf_title", 1, 10),
+            StringField("line1", 1, 10),
+            IntField("box_id", 1),
         ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/DSURF ------------------------------------------------------
@@ -238,8 +239,6 @@ class SurfDsurf(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

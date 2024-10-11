@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
 from dataclasses import dataclass
-
-from ..common import FloatField, IntField, Keyword, StringField
+from typing import List, Literal
+from ..common import FloatField, IntField, Keyword, StringField, VLSequenceOfAtomicField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /DYNAIN/SHELL/STRESS/FULL   /DYREL                      /DYREL/1                    
-# /END/ENGINE                 /FUNCT                      /FVMBAG/MODIF               
-# /FXINP                      /H3D/BEAM                   /H3D/COMPRESS               
+# /DYNAIN/SHELL/STRESS/FULL   /DYREL                      /DYREL/1
+# /END/ENGINE                 /FUNCT                      /FVMBAG/MODIF
+# /FXINP                      /H3D/BEAM                   /H3D/COMPRESS
 #
+
 
 # --- /DYNAIN/SHELL/STRESS/FULL ------------------------------------------------------
 @dataclass
@@ -18,7 +19,9 @@ class DynainShellStressFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DYNAIN/SHELL/STRESS/FULL` is not implemented.")
+        raise NotImplementedError(
+            "Keyword `/DYNAIN/SHELL/STRESS/FULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -30,11 +33,9 @@ class DynainShellStressFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DYREL ------------------------------------------------------
@@ -56,11 +57,9 @@ class Dyrel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DYREL/1 ------------------------------------------------------
@@ -82,11 +81,9 @@ class Dyrel1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /END/ENGINE ------------------------------------------------------
@@ -108,11 +105,9 @@ class EndEngine(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FUNCT ------------------------------------------------------
@@ -134,11 +129,9 @@ class Funct(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FVMBAG/MODIF ------------------------------------------------------
@@ -160,11 +153,9 @@ class FvmbagModif(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FXINP ------------------------------------------------------
@@ -186,25 +177,24 @@ class Fxinp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/BEAM ------------------------------------------------------
 @dataclass
 class H3dBeam(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/BEAM` is not implemented.")
+    key3: str
+    key4: None | str = None
+    part_id: None | List[int] = None
 
     @property
     def keyword(self):
-        return "/H3D/BEAM"
+        if self.key4 is not None:
+            return f"/H3D/Beam/{self.key3}/{self.key4}"
+        elif self.key4 is None:
+            return f"/H3D/SOLID/{self.key3}"
 
     @property
     def pre_conditions(self):
@@ -212,11 +202,14 @@ class H3dBeam(Keyword):
 
     @property
     def structure(self):
-        structure = [
-
-        ]
-
-        return structure 
+        structure = []
+        if self.part_id is not None:
+            structure = [
+                VLSequenceOfAtomicField(
+                    IntField("part_id", 1),
+                )
+            ]
+        return structure
 
 
 # --- /H3D/COMPRESS ------------------------------------------------------
@@ -238,8 +231,6 @@ class H3dCompress(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

@@ -139,20 +139,31 @@ class MatPlasJohns(Keyword):
     rho_c_p: float | None = None
     T_r: float = 298
     unit_id: int | None = None
-    line0 = "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    line1 = "#--------|----rho_i|"
-    line2 = "#--------|--------E|---------|-------nu|---I_flag|"
-    line3 = "#--------|--------a|---------|--------b|---------|--------n|---------|--e_p^max|---------|-sig_max0|"
-    line4 = "#--------|--sigma_y|---------|------UTS|---------|--eps_UTS|---------|--e_p^max|---------|-sig_max0|"
-    line5 = "#--------|--------c|---------|eps_dot_0|------ICC|-F_smooth|---------|----F_cut|---------|---C_hard|"
-    line6 = "#--------|--------m|---------|---T_melt|---------|---rhoC_p|---------|------T_r|---------|---------|"
+    line00: str = "# /MAT/PLAS_JOHNS/mat_ID/unit_ID\n"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = "#-------------rho_i|"
+    line2: str = "#-----------------E|-----------------nu|---I_flag|"
+    line3: str = (
+        "#-----------------a|------------------b|------------------n|------------e_p^max|-----------sig_max0|"
+    )
+    line4: str = (
+        "#-----------sigma_y|----------------UTS|------------eps_UTS|------------e_p^max|-----------sig_max0|"
+    )
+    line5: str = (
+        "#-----------------c|----------eps_dot_0|------ICC|-F_smooth|--------------F_cut|-------------C_hard|"
+    )
+    line6: str = (
+        "#-----------------m|-------------T_melt|-------------rhoC_p|----------------T_r|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
         if self.unit_id:
-            return f"/MAT/PLAS_JOHNS/{self.mat_id}/{self.unit_id}"
+            return self.line00 + f"/MAT/PLAS_JOHNS/{self.mat_id}/{self.unit_id}"
         else:
-            return f"/MAT/PLAS_JOHNS/{self.mat_id}"
+            return self.line00 + f"/MAT/PLAS_JOHNS/{self.mat_id}"
 
     @property
     def pre_conditions(self):

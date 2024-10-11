@@ -425,6 +425,7 @@ class BoxBox(Keyword):
 
     @property
     def pre_conditions(self):
+
         return []
 
     @property
@@ -433,6 +434,106 @@ class BoxBox(Keyword):
             StringField("box_title", 1, 10),
             VLSequenceOfAtomicField(IntField("box_ids", 1)),
         ]
+
+        return structure
+
+
+# --- /BOX/RECTA ------------------------------------------------------
+@dataclass
+class BoxRecta(Keyword):
+    """Describes a rectangle box for entities selection.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/box_recta_starter_r.htm)
+    """
+
+    box_id: int
+    unit_id: int | None = None
+    box_title: str | None = None
+    node1: int | None = None
+    node2: int | None = None
+    skew_id: int | None = None
+    x_p1: float | None = None
+    y_p1: float | None = None
+    z_p1: float | None = None
+    x_p2: float | None = None
+    y_p2: float | None = None
+    z_p2: float | None = None
+    # added line for readability
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#------N1|-------N2|--skew_ID|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line2: str = (
+        "#--------------x_p1|---------------y_p1|---------------z_p1|----7----|----8----|----9----|----10---|"
+    )
+    line3: str = (
+        "#--------------x_p2|---------------y_p2|---------------z_p2|----7----|----8----|----9----|----10---|"
+    )
+
+    @property
+    def keyword(self):
+        if self.unit_id is not None:
+            return f"/BOX/RECTA/{self.box_id}/{self.unit_id}"
+        else:
+            return f"/BOX/RECTA/{self.box_id}"
+
+    @property
+    def pre_conditions(self):
+        conditions: KeywordPreconditionsType = []
+        # FIXME: can probably be solved more elegantly.
+        if self.node1 is None:
+            conditions.append((self.node2 is None, "Node2 is defined but Node1 isn't!"))
+        if self.node2 is None:
+            conditions.append((self.node1 is None, "Node1 is defined but Node2 isn't!"))
+        if self.node1 is not None and self.node2 is not None:
+            conditions.append(
+                (
+                    (self.x_p1 is None)
+                    and (self.y_p1 is None)
+                    and (self.z_p1 is None)
+                    and (self.x_p2 is None)
+                    and (self.y_p2 is None)
+                    and (self.z_p2 is None),
+                    "Either define nodes or the coordinates of points. Not both!",
+                )
+            )
+        if self.node1 is None and self.node2 is None:
+            conditions.append(
+                (
+                    (self.x_p1 is not None)
+                    and (self.y_p1 is not None)
+                    and (self.z_p1 is not None)
+                    and (self.x_p2 is not None)
+                    and (self.y_p2 is not None)
+                    and (self.z_p2 is not None),
+                    "Missing some coordinates for the points!",
+                )
+            )
+        return conditions
+
+    @property
+    def structure(self):
+        structure: KeywordStructureType = [
+            StringField("line0", 1, 10),
+            StringField("box_title", 1, 10),
+        ]
+        if self.node1 is not None and self.node2 is not None:
+            structure.append(StringField("line1", 1, 10))
+            structure.append(
+                IntField("node1", 1),
+                IntField("node2", 2),
+                IntField("skew_id", 3),
+            )
+        else:
+            structure.append(StringField("line2", 1, 10))
+            structure.append(
+                [FloatField("x_p1", 1), FloatField("y_p1", 3), FloatField("z_p1", 5)]
+            )
+            structure.append(StringField("line3", 1, 10))
+            structure.append(
+                [FloatField("x_p2", 1), FloatField("y_p2", 3), FloatField("z_p2", 5)]
+            )
 
         return structure
 
@@ -603,8 +704,11 @@ class Cload(Keyword):
     a_scale_x: float = 1.0
     f_scale_y: float = 1.0
     # added commentary lines for readability of deck
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
     line1: str = (
-        "#   Fct_ID       Dir   skew_ID   sens_ID   grnd_ID                       Ascalex             Fscaley"
+        "#--Fct_ID|------Dir|--skew_ID|--sens_ID|--grnd_ID|----6----|-----------Ascale_x|-----------Fscale_y|"
     )
     add_separator: bool = True
 

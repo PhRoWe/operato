@@ -1,28 +1,40 @@
 #!/usr/bin/env python3
 
 from dataclasses import dataclass
-
-from ..common import FloatField, IntField, Keyword, StringField
+from typing import List, Literal
+from ..common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    ArrayOfAtomicFields,
+    VLSequenceOfAtomicField,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /H3D/SOLID                  /H3D/SPH                    /H3D/SPRING                 
-# /H3D/TITLE                  /H3D/TRUSS                  /IMPL/AUTOSPC               
-# /IMPL/BUCKL/1               /IMPL/BUCKL/2               /IMPL/CHECK                 
+# /H3D/SOLID                  /H3D/SPH                    /H3D/SPRING
+# /H3D/TITLE                  /H3D/TRUSS                  /IMPL/AUTOSPC
+# /IMPL/BUCKL/1               /IMPL/BUCKL/2               /IMPL/CHECK
 #
+
 
 # --- /H3D/SOLID ------------------------------------------------------
 @dataclass
 class H3dSolid(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/SOLID` is not implemented.")
+    key3: str
+    key4: None | str = None
+    key5: None | str = None
+    part_id: None | List[int] = None
 
     @property
     def keyword(self):
-        return "/H3D/SOLID"
+        if self.key4 is not None and self.key5 is not None:
+            return f"/H3D/SOLID/{self.key3}/{self.key4}/{self.key5}"
+        elif self.key4 is not None and self.key5 is None:
+            return f"/H3D/SOLID/{self.key3}/{self.key4}"
+        elif self.key4 is None and self.key5 is None:
+            return f"/H3D/SOLID/{self.key3}"
 
     @property
     def pre_conditions(self):
@@ -30,11 +42,14 @@ class H3dSolid(Keyword):
 
     @property
     def structure(self):
-        structure = [
-
-        ]
-
-        return structure 
+        structure = []
+        if self.part_id is not None:
+            structure = [
+                VLSequenceOfAtomicField(
+                    IntField("part_id", 1),
+                )
+            ]
+        return structure
 
 
 # --- /H3D/SPH ------------------------------------------------------
@@ -56,11 +71,9 @@ class H3dSph(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/SPRING ------------------------------------------------------
@@ -82,11 +95,9 @@ class H3dSpring(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/TITLE ------------------------------------------------------
@@ -108,11 +119,9 @@ class H3dTitle(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/TRUSS ------------------------------------------------------
@@ -134,11 +143,9 @@ class H3dTruss(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/AUTOSPC ------------------------------------------------------
@@ -160,11 +167,9 @@ class ImplAutospc(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/BUCKL/1 ------------------------------------------------------
@@ -186,11 +191,9 @@ class ImplBuckl1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/BUCKL/2 ------------------------------------------------------
@@ -212,11 +215,9 @@ class ImplBuckl2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/CHECK ------------------------------------------------------
@@ -238,8 +239,6 @@ class ImplCheck(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

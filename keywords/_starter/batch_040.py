@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField
+from ..common import FloatField, IntField, Keyword, StringField, KeywordStructureType
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -39,7 +39,7 @@ class Part(Keyword):
         structure = [StringField("part_title", 1, 3)]
         structure2 = [IntField("prop_id", 1), IntField("mat_id", 2)]
         if self.subset_id is not None:
-            structure2.append(IntField(subset_id, 3))
+            structure2.append(IntField("subset_id", 3))
         if self.Thick is not None:
             structure2.append(FloatField("Thick", 5))
         structure = [structure, structure2]
@@ -170,24 +170,55 @@ class PerturbPartSolid(Keyword):
 # --- /PLOAD ------------------------------------------------------
 @dataclass
 class Pload(Keyword):
-    attr1: int
-    attr2: float
+    """Defines pressure load on a surface.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/pload_starter_r.htm)
+    """
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/PLOAD` is not implemented.")
+    pload_id: int
+    unit_id: int
+    surf_id: int
+    fct_id_t: int
+    sens_id: int
+    pload_title: str | None = None
+    I_del: int | None = None
+    a_scale_x: float | None = 1.0
+    f_scale_y: float | None = 1.0
+    # added line for readability
+    line00: str = "#/PLOAD/pload_ID/unit_ID\n"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#-surf_ID|-fct_ID_T|--sens_ID|----4----|----I_del|----6----|-----------Ascale_x|-----------Fscale_y|"
+    )
 
     @property
     def keyword(self):
-        return "/PLOAD"
+        return self.line00 + f"/PLOAD/{self.pload_id}/{self.unit_id}"
 
     @property
     def pre_conditions(self):
-        return []
+        conditions = []
+        if self.I_del is not None:
+            conditions = [
+                [(self.I_del == 1 or self.I_del == 2, "Unknown setting for I_del!")]
+            ]
+        return conditions
 
     @property
     def structure(self):
-        structure = []
-
+        structure: KeywordStructureType = [
+            StringField("pload_title", 1, 10),
+            StringField("line1", 1, 10),
+            [
+                IntField("surf_id", 1),
+                IntField("fct_id_t", 2),
+                IntField("sens_id", 3),
+                IntField("I_del", 5),
+                FloatField("a_scale_x", 7),
+                FloatField("f_scale_y", 9),
+            ],
+        ]
         return structure
 
 

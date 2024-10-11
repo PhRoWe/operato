@@ -2,14 +2,23 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField
+from ..common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    KeywordStructureType,
+    TextAlignment,
+)
+from typing import Literal
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /GRSHEL                     /GRSPRI                     /GRTRIA                     
-# /GRTRUS                     /HEAT/MAT                   /IMPACC                     
-# /IMPDISP                    /IMPDISP/FGEO               /IMPFLUX                    
+# /GRSHEL                     /GRSPRI                     /GRTRIA
+# /GRTRUS                     /HEAT/MAT                   /IMPACC
+# /IMPDISP                    /IMPDISP/FGEO               /IMPFLUX
 #
+
 
 # --- /GRSHEL ------------------------------------------------------
 @dataclass
@@ -30,11 +39,9 @@ class Grshel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /GRSPRI ------------------------------------------------------
@@ -56,11 +63,9 @@ class Grspri(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /GRTRIA ------------------------------------------------------
@@ -82,11 +87,9 @@ class Grtria(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /GRTRUS ------------------------------------------------------
@@ -108,11 +111,9 @@ class Grtrus(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /HEAT/MAT ------------------------------------------------------
@@ -134,11 +135,9 @@ class HeatMat(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPACC ------------------------------------------------------
@@ -160,21 +159,54 @@ class Impacc(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPDISP ------------------------------------------------------
 @dataclass
 class Impdisp(Keyword):
-    attr1: int
-    attr2: float
+    impdisp_id: int
+    fct_id_t: int
+    dir: Literal[
+        "X",
+        "Y",
+        "Z",
+        "XY",
+        "XZ",
+        "YZ",
+        "XYZ",
+        "XX",
+        "YY",
+        "ZZ",
+        "XXYY",
+        "XXZZ",
+        "YYZZ",
+        "XXYYZZ",
+    ]
+    skew_id: int
+    sens_id: int
+    grnd_id: int
+    t_start: float
+    t_stop: float | None = None
+    icoor: int | None = 0
+    """defaults to 0 (cartesian coordinates)"""
+    unit_id: int | None = None
+    title: str | None = ""
+    a_scale_x: float | None = None
+    f_scale_y: float | None = None
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPDISP` is not implemented.")
+    # added commentary lines for readability of deck
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#--Fct_ID|------Dir|--skew_ID|--sens_ID|--grnd_ID|----6----|----icoor|----8----|----9----|----10---|"
+    )
+    line2: str = (
+        "#----------Ascale_x|-----------Fscale_y|------------T_start|-------------T_stop|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
@@ -186,11 +218,27 @@ class Impdisp(Keyword):
 
     @property
     def structure(self):
-        structure = [
-
+        structure: KeywordStructureType = [
+            StringField("title", 1, 10),
+            StringField("line1", 1, 10),
+            [
+                IntField("fct_id_t", 1),
+                StringField("dir", 2, 1, alignment=TextAlignment.CENTER),
+                IntField("skew_id", 3),
+                IntField("sens_id", 4),
+                IntField("grnd_id", 5),
+                IntField("icoor", 7),
+            ],
+            StringField("line2", 1, 10),
+            [
+                FloatField("a_scale_x", 1),
+                FloatField("f_scale_y", 3),
+                FloatField("t_start", 5),
+                FloatField("t_stop", 7),
+            ],
         ]
 
-        return structure 
+        return structure
 
 
 # --- /IMPDISP/FGEO ------------------------------------------------------
@@ -212,11 +260,9 @@ class ImpdispFgeo(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPFLUX ------------------------------------------------------
@@ -238,8 +284,6 @@ class Impflux(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

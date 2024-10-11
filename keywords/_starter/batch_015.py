@@ -122,11 +122,7 @@ class Grbeam(Keyword):
 # --- /GRBRIC ------------------------------------------------------
 @dataclass
 class Grbric(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRBRIC` is not implemented.")
+    grbric_id: int
 
     @property
     def keyword(self):
@@ -139,6 +135,44 @@ class Grbric(Keyword):
     @property
     def structure(self):
         structure = []
+
+        return structure
+
+
+# --- /GRBRICBRIC ------------------------------------------------------
+@dataclass
+class GrbricBric(Keyword):
+    grbric_id: int
+    item_ids: List[int]
+    unit_id: int | None = int
+    grbric_title: str | None = "Standard"
+    # added commentary lines for readability of deck
+    line00: str = "#/GRBRIC/BRIC/grbric_ID/unit_ID\n"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#item_id1|-item_id2|-item_id3|-item_id4|-item_id5|-item_id6|-item_id7|-item_id8|-item_id9|item_id10|"
+    )
+
+    @property
+    def keyword(self):
+        if self.unit_id is None:
+            return self.line00 + f"/GRBRIC/BRIC/{self.grbric_id}"
+        else:
+            return self.line00 + f"/GRBRIC/BRIC/{self.grbric_id}/{self.unit_id}"
+
+    @property
+    def pre_conditions(self):
+        return []
+
+    @property
+    def structure(self):
+        structure = [StringField("grbric_title", 1, 10), StringField("line1", 1, 10)]
+        if type(self.item_ids) == int:
+            structure.append(IntField("item_ids", 1))
+        else:
+            structure.append(VLSequenceOfAtomicField(IntField("item_ids", 1)))
 
         return structure
 
@@ -169,10 +203,14 @@ class GrnodNode(Grnod):
     grnd_title: str
     item_ids: List[int]
     unit_id: int | None = None
+    line00: str = "#/GRNOD/NODE/grnd_ID/unit_ID\n"
 
     @property
     def keyword(self):
-        return f"/GRNOD/NODE/{self.grnd_id}/{self.unit_id}"
+        if self.unit_id is not None:
+            return self.line00 + f"/GRNOD/NODE/{self.grnd_id}/{self.unit_id}"
+        else:
+            return self.line00 + f"/GRNOD/NODE/{self.grnd_id}"
 
     @property
     def pre_conditions(self):

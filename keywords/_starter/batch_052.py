@@ -2,14 +2,23 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField
+from ..common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    ArrayOfAtomicFields,
+    VLSequenceOfAtomicField,
+)
+from typing import List
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /SURF/ELLIPS                /SURF/GRBRIC/EXT            /SURF/GRBRIC/FREE           
-# /SURF/GRSH3N                /SURF/GRSHEL                /SURF/MAT                   
-# /SURF/PART                  /SURF/PLANE                 /SURF/PROP                  
+# /SURF/ELLIPS                /SURF/GRBRIC/EXT            /SURF/GRBRIC/FREE
+# /SURF/GRSH3N                /SURF/GRSHEL                /SURF/MAT
+# /SURF/PART                  /SURF/PLANE                 /SURF/PROP
 #
+
 
 # --- /SURF/ELLIPS ------------------------------------------------------
 @dataclass
@@ -30,25 +39,34 @@ class SurfEllips(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/GRBRIC/EXT ------------------------------------------------------
 @dataclass
 class SurfGrbricExt(Keyword):
-    attr1: int
-    attr2: float
+    surf_id: int
+    item_ids: List[int]
+    surf_title: str | None = "Standard"
+    unit_id: int | int = None
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/SURF/GRBRIC/EXT` is not implemented.")
+    # added commentary lines for readability of deck
+    line00: str = "#/SURF/GRBRIC/EXT/surf_ID/unit_ID\n"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#item_id1|-item_id2|-item_id3|-item_id4|-item_id5|-item_id6|-item_id7|-item_id8|-item_id9|item_id10|"
+    )
 
     @property
     def keyword(self):
-        return "/SURF/GRBRIC/EXT"
+        if self.unit_id is None:
+            return self.line00 + f"/SURF/GRBRIC/EXT/{self.surf_id}"
+        else:
+            return self.line00 + f"/SURF/GRBRIC/EXT/{self.surf_id}/{self.unit_id}"
 
     @property
     def pre_conditions(self):
@@ -56,11 +74,13 @@ class SurfGrbricExt(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = [StringField("surf_title", 1, 10), StringField("line1", 1, 10)]
+        if type(self.item_ids) == int:
+            structure.append(IntField("item_ids", 1))
+        else:
+            structure.append(VLSequenceOfAtomicField(IntField("item_ids", 1)))
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/GRBRIC/FREE ------------------------------------------------------
@@ -82,11 +102,9 @@ class SurfGrbricFree(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/GRSH3N ------------------------------------------------------
@@ -108,11 +126,9 @@ class SurfGrsh3n(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/GRSHEL ------------------------------------------------------
@@ -134,11 +150,9 @@ class SurfGrshel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/MAT ------------------------------------------------------
@@ -160,11 +174,9 @@ class SurfMat(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/PART ------------------------------------------------------
@@ -186,11 +198,9 @@ class SurfPart(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/PLANE ------------------------------------------------------
@@ -212,11 +222,9 @@ class SurfPlane(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SURF/PROP ------------------------------------------------------
@@ -238,8 +246,6 @@ class SurfProp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

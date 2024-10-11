@@ -2,23 +2,25 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField
+from ..common import FloatField, IntField, Keyword, StringField, KeywordStructureType
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /H3D/DT                     /H3D/LSENSOR                /H3D/NODA                   
-# /H3D/PART                   /H3D/QUAD                   /H3D/RBE2/SINGLE_PART       
-# /H3D/RBE3/SINGLE_PART       /H3D/RBODY/SINGLE_PART      /H3D/SHELL                  
+# /H3D/DT                     /H3D/LSENSOR                /H3D/NODA
+# /H3D/PART                   /H3D/QUAD                   /H3D/RBE2/SINGLE_PART
+# /H3D/RBE3/SINGLE_PART       /H3D/RBODY/SINGLE_PART      /H3D/SHELL
 #
+
 
 # --- /H3D/DT ------------------------------------------------------
 @dataclass
 class H3dDt(Keyword):
-    attr1: int
-    attr2: float
+    """https://2021.help.altair.com/2021/hwsolvers/rad/topics/solvers/rad/h3d_dt_engine_r.htm"""
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/DT` is not implemented.")
+    t_start: float
+    t_freq: float
+    # added line for readability
+    line1 = str = "#    TSTART     TFREQ"
 
     @property
     def keyword(self):
@@ -30,11 +32,15 @@ class H3dDt(Keyword):
 
     @property
     def structure(self):
-        structure = [
-
+        structure: KeywordStructureType = [
+            StringField("line1", 1, 10),
+            [
+                FloatField("t_start", 1),
+                FloatField("t_freq", 3),
+            ],
         ]
 
-        return structure 
+        return structure
 
 
 # --- /H3D/LSENSOR ------------------------------------------------------
@@ -56,11 +62,9 @@ class H3dLsensor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/NODA ------------------------------------------------------
@@ -82,11 +86,9 @@ class H3dNoda(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/PART ------------------------------------------------------
@@ -108,11 +110,9 @@ class H3dPart(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/QUAD ------------------------------------------------------
@@ -134,11 +134,9 @@ class H3dQuad(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/RBE2/SINGLE_PART ------------------------------------------------------
@@ -160,11 +158,9 @@ class H3dRbe2SinglePart(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/RBE3/SINGLE_PART ------------------------------------------------------
@@ -186,11 +182,9 @@ class H3dRbe3SinglePart(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/RBODY/SINGLE_PART ------------------------------------------------------
@@ -200,7 +194,9 @@ class H3dRbodySinglePart(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/RBODY/SINGLE_PART` is not implemented.")
+        raise NotImplementedError(
+            "Keyword `/H3D/RBODY/SINGLE_PART` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -212,11 +208,9 @@ class H3dRbodySinglePart(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /H3D/SHELL ------------------------------------------------------
@@ -238,8 +232,6 @@ class H3dShell(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

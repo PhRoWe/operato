@@ -90,13 +90,14 @@ class PropType0(Keyword):
     prop_id: int
     prop_title: str | None = None
     unit_id: int | None = None
+    line00: str = "#/PROP/TYPE0/prop_ID/unit_ID\n"
 
     @property
     def keyword(self):
         if self.unit_id is not None:
-            return f"/PROP/TYPE0/{self.prop_id}/{self.unit_id}"
+            return self.line00 + f"/PROP/TYPE0/{self.prop_id}/{self.unit_id}"
         else:
-            return f"/PROP/TYPE0/{self.prop_id}"
+            return self.line00 + f"/PROP/TYPE0/{self.prop_id}"
 
     @property
     def pre_conditions(self):
@@ -133,23 +134,27 @@ class PropType1(Keyword):
     n: int | None = None
     a_shear: float | None = None
     # commentary lines for better readability:
+    line00: str = "#/PROP/TYPE1/prop_ID/unit_ID\n"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
     line1: str = (
-        "#   Ishell    Ismstr     Ish3n    Idrill                            P_thick_fail"
+        "#--Ishell|---Ismstr|----Ish3n|---Idrill|----5----|----6----|------P_thick_fail-|----9----|----10---|"
     )
     line2: str = (
-        "#                 hm                  hf                  hr                  dm                  dn"
+        "#----------------hm|-----------------hf|-----------------hr|-----------------dm|-----------------dn|"
     )
     line3: str = (
-        "#        N   Istrain               Thick              Ashear              Ithick     Iplas"
+        "#-------N|--Istrain|--------------Thick|-------------Ashear|----7----|---Ithick|----Iplas|----10---|"
     )
     add_separator: bool = True
 
     @property
     def keyword(self):
         if self.unit_id is not None:
-            return f"/PROP/TYPE1/{self.prop_id}/{self.unit_id}"
+            return self.line00 + f"/PROP/TYPE1/{self.prop_id}/{self.unit_id}"
         else:
-            return f"/PROP/TYPE1/{self.prop_id}"
+            return self.line00 + f"/PROP/TYPE1/{self.prop_id}"
 
     @property
     def pre_conditions(self):

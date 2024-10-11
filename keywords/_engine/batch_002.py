@@ -245,11 +245,13 @@ class AnimEltypTdet(Keyword):
 # --- /ANIM/GPS/STRAIN/TENS ------------------------------------------------------
 @dataclass
 class AnimGpsStrainTens(Keyword):
-    attr1: int
-    attr2: float
+    """Generates animation files containing averaged grip point strain data calculated
+    by bilinear extrapolation using shape functions from the integration point results.
+    The average value at each node is calculated by each element which connected to
+    this node.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/anim_gps_strain_tens_engine_r.htm)
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/GPS/STRAIN/TENS` is not implemented.")
+    """
 
     @property
     def keyword(self):
@@ -269,11 +271,12 @@ class AnimGpsStrainTens(Keyword):
 # --- /ANIM/GPS/STRESS/TENS ------------------------------------------------------
 @dataclass
 class AnimGpsStressTens(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/GPS/STRESS/TENS` is not implemented.")
+    """Generates animation files containing averaged grip point stress data calculated
+    by bilinear extrapolation using shape functions from the integration point results.
+    The average value at each node is calculated by each element which connected to
+    this node.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/anim_gps_tens_engine_r.htm)
+    """
 
     @property
     def keyword(self):
