@@ -220,23 +220,79 @@ class PropType2(Keyword):
 # --- /PROP/TYPE3 ------------------------------------------------------
 @dataclass
 class PropType3(Keyword):
-    attr1: int
-    attr2: float
+    """Describes the beam property for torsion, bending, membrane or axial deformation.
+    https://help.altair.com/hwsolvers/rad/topics/solvers/rad/prop_type3_beam_starter_r.htm#prop_type3_beam_starter_r__section_nvk_khm_n1c
+    """
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE3` is not implemented.")
+    prop_id: int
+    area: float
+    i_yy: float
+    i_zz: float
+    i_xx: float
+    I_shear: int
+    unit_id: int | None = None
+    prop_title: str | None = None
+    I_smstr: int = 0
+    d_m: float | None = None
+    d_f: float | None = None
+
+    omega_dof: str | None = "   000 000"
+    # lines added for readability of input deck
+    line00: str = "#/PROP/TYPE3/prop_ID/unit_ID\n"
+    line0: str = (
+        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line1: str = (
+        "#---1----|--i_smstr|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line2: str = (
+        "#---------------d_m|----------------d_f|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
+    line3: str = (
+        "#--------------area|---------------I_yy|---------------I_zz|---------------I_xx|----9----|----10---|"
+    )
+    line4: str = (
+        "#omegadof|--i_shear|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
-        return "/PROP/TYPE3"
+        if self.unit_id is not None:
+            return self.line00 + f"/PROP/TYPE3/{self.prop_id}/{self.unit_id}"
+        else:
+            return self.line00 + f"/PROP/TYPE3/{self.prop_id}"
 
     @property
     def pre_conditions(self):
-        return []
+        cond = []
+
+        return cond
 
     @property
     def structure(self):
-        structure = []
+        # Basic structure
+        structure = [
+            StringField("line0", 1, 10),
+            StringField("prop_title", 1, 3),
+            StringField("line1", 1, 10),
+            [
+                IntField("I_smstr", 2),
+            ],
+            StringField("line2", 1, 10),
+            [
+                FloatField("d_m", 1),
+                FloatField("d_f", 3),
+            ],
+            StringField("line3", 1, 10),
+            [
+                FloatField("area", 1),
+                FloatField("i_yy", 3),
+                FloatField("i_zz", 5),
+                FloatField("i_xx", 7),
+            ],
+        ]
+        structure.append(StringField("line4", 1, 10))
+        structure.append([StringField("omega_dof", 1, 1), IntField("I_shear", 2)])
 
         return structure
 

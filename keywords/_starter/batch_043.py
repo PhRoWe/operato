@@ -117,8 +117,10 @@ class PropType18(Keyword):
     def pre_conditions(self):
         if self.i_sect == 0 and self.i_ref is None:
             self.i_ref = 0
-        if self.l2 is None:
-            self.l2 = self.l1
+        if self.i_sect > 0:
+            if self.i_sect == 1 or self.i_sect == 3:
+                if self.l2 is None:
+                    self.l2 = self.l1
         cond = [
             (
                 (self.i_sect == 0 and self.NIP is not None)
