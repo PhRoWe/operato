@@ -183,7 +183,14 @@ class ImplPrepat(Keyword):
 # --- /IMPL/PRINT/LINEAR ------------------------------------------------------
 @dataclass
 class ImplPrintLinear(Keyword):
+    """Printout frequency for linear solvers.This keyword is mainly used for iterative
+    solver. When a direct solver has been used, only relative residual will print out
+    and only in case of linear analysis."""
+
     n_print: int
+    """Printout frequency for linear solvers (works also in nonlinear analysis but 
+    rather as debug uses).
+    """
 
     @property
     def keyword(self):

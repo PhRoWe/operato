@@ -111,13 +111,19 @@ class ImplSinit(Keyword):
 # --- /IMPL/SOLVER ------------------------------------------------------
 @dataclass
 class ImplSolver(Keyword):
+    """Selects linear solver.
+    (https://2022.help.altair.com/2022.2/hwsolvers/rad/topics/solvers/rad/impl_solver_engine_r.htm)
+    """
+
     i_prec: int
     it_max: int
     i_tol: int
     tol: float
     n: int = 2
     # added line for readability of input deck
-    line: str = "#     Iprec    It_max      Itol       Tol"
+    line: str = (
+        "#--I_prec|---It_max|--- -Itol|------Tol|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):

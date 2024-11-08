@@ -63,6 +63,12 @@ class ImplDt1(Keyword):
 # --- /IMPL/DT/2 ------------------------------------------------------
 @dataclass
 class ImplDt2(Keyword):
+    """Implicit automatic time step control method 2 (Arc-length).This method is
+    preferred for general nonlinear implicit analysis.
+    Arc-length method is used to accelerate and to control the convergence.
+    The time step is determined by displacement norm control (arc-length).
+    (https://2022.help.altair.com/2022.2/hwsolvers/rad/topics/solvers/rad/impl_dt_2_engine_r.htm)
+    """
 
     it_w: int
     l_arc: float
@@ -70,8 +76,8 @@ class ImplDt2(Keyword):
     dt_scad: float
     dt_scamax: float
     # added commentary line for readability of input deck
-    line: str = (
-        "#     it_w               l_arc     l_dtn            dt_scad           dt_scamax"
+    line0: str = (
+        "#--- it_w|--------------l_arc|----L_dtn|------------dt_scad|----------dt_scamax|----9----|----10---|"
     )
 
     @property
@@ -173,7 +179,14 @@ class ImplDtStop(Keyword):
 # --- /IMPL/DTINI ------------------------------------------------------
 @dataclass
 class ImplDtini(Keyword):
+    """Initial time step for nonlinear implicit analysis.
+    Initial time step determines initial loading increment in this run session.
+    This key should be defined in nonlinear analysis.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/impl_dtini_engine_r.htm)
+    """
+
     dt: float
+    """Initial implicit time step"""
 
     @property
     def keyword(self):

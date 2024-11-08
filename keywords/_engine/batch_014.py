@@ -135,6 +135,8 @@ class ImplLbfgsL(Keyword):
 # --- /IMPL/LINEAR ------------------------------------------------------
 @dataclass
 class ImplLinear(Keyword):
+    """Linear implicit solution will be computed. Required for linear statics, normal
+    modes and linear buckling solution."""
 
     @property
     def keyword(self):

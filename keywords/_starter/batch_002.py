@@ -27,7 +27,9 @@ class ALEMuscl(Keyword):
     """Allows for a second order monotonic upstream-centered scheme for
     conservation laws (MUSCL) reconstruction of volume fraction fields when
     using multi-material laws and for full full second order scheme (time and
-    space) when using material law LAW151."""
+    space) when using material law LAW151.
+    (https://2022.help.altair.com/2022/hwsolvers/rad/topics/solvers/rad/ale_muscl_starter_r.htm)
+    """
 
     beta: float
     iflag: Literal[0, 1] = 0
@@ -54,7 +56,9 @@ class ALEMuscl(Keyword):
 class ALESolverFint(Keyword):
     """This option defines the numerical method for internal force
     integration.  This is relevant only for brick element and ALE legacy solver
-    (momentum equation solved with FEM)."""
+    (momentum equation solved with FEM).
+    (https://2022.help.altair.com/2022/hwsolvers/rad/topics/solvers/rad/ale_solver_fint_starter_r.htm)
+    """
 
     iform: Literal[0, 1, 2, 3] = 3
 
@@ -81,7 +85,9 @@ class ALESolverFint(Keyword):
 # --- /AMS ------------------------------------------------------------------------------------
 @dataclass
 class Ams(Keyword):
-    """Describes the part group on which the advanced mass scaling is applied."""
+    """Describes the part group on which the advanced mass scaling is applied.
+    (https://2022.help.altair.com/2022/hwsolvers/rad/topics/solvers/rad/ams_starter_r.htm)
+    """
 
     grpart_id: int
 
@@ -103,13 +109,20 @@ class Ams(Keyword):
 # --- /ANALY ----------------------------------------------------------------------------------
 @dataclass
 class Analy(Keyword):
-    """Defines the type of analysis and sets analysis flags."""
+    """Defines the type of analysis and sets analysis flags.
+    (https://2022.help.altair.com/2022/hwsolvers/rad/topics/solvers/rad/analy_starter_r.htm)
+    """
 
     n_2D3D: Literal[0, 1, 2] = 0
+    """Analysis type: 0: 3D, 1: Axisymmetric, 2: Plane Strain"""
     i_parith: Literal[0, 1, 2] = 0
     i_subcycle: Literal[0, 2] = 0
+    # FIXME: i_subcycle removed in V2024!
+
     # line added for readability
-    line: str = "#    N2D3D             IPARITH      ISUB"
+    line: str = (
+        "#---N2D3D|-----------I_parith|-----ISUB|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):

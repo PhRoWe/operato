@@ -42,7 +42,9 @@ class Engine:
     def write(
         self, index=1, folder: str | Path | None = None, assume_yes=False
     ) -> None:
-        """Writes the keywords to a file."""
+        """Writes the keywords to a file.
+        "assume_yes"=True does not ask whether existing files should be overwritten
+        """
         if folder is None:
             folder = Path().cwd()
         elif isinstance(folder, str):
