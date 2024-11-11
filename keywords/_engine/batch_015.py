@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from dataclasses import dataclass
+from typing import List
 
 from ..common import FloatField, IntField, Keyword, StringField
 
@@ -87,15 +88,21 @@ class ImplNcycleStop(Keyword):
 # --- /IMPL/NONLIN/N ------------------------------------------------------
 @dataclass
 class ImplNonlinN(Keyword):
-    attr1: int
-    attr2: float
+    """Nonlinear implicit methods.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/impl_nonlin_engine_r.htm)
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/NONLIN/N` is not implemented.")
+    """
+
+    N: int
+    L_A: int
+    Itol: int
+    Toli: float | None = 0.0
+    Tolj: float | None = 0.0
+    Tolk: float | None = 0.0
 
     @property
     def keyword(self):
-        return "/IMPL/NONLIN/N"
+        return f"/IMPL/NONLIN/{self.N}"
 
     @property
     def pre_conditions(self):
@@ -103,7 +110,14 @@ class ImplNonlinN(Keyword):
 
     @property
     def structure(self):
-        structure = []
+        structure = [
+            IntField("N", 1),
+            IntField("L_A", 2),
+            IntField("Itol", 3),
+            IntField("Toli", 4),
+            IntField("Tolj", 5),
+            IntField("Tolk", 6),
+        ]
 
         return structure
 

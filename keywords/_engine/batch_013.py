@@ -76,7 +76,7 @@ class ImplDt2(Keyword):
     dt_scad: float
     dt_scamax: float
     # added commentary line for readability of input deck
-    line0: str = (
+    line: str = (
         "#--- it_w|--------------l_arc|----L_dtn|------------dt_scad|----------dt_scamax|----9----|----10---|"
     )
 
