@@ -31,6 +31,12 @@ class Engine:
         return self._runname
 
     def add(self, keyword: Keyword) -> None:
+        """Adds the kexword to the engine object.
+
+        Args:
+            keyword (Keyword): engine keyword
+
+        """
         if not isinstance(keyword, Keyword):
             raise ValueError(
                 "Argument `keyword` must be an instance of a subclass of `Keyword`"

@@ -110,13 +110,18 @@ class AnimBrickVdami(Keyword):
 # --- /ANIM/DT ------------------------------------------------------
 @dataclass
 class AnimDt(Keyword):
-    """https://help.altair.com/hwsolvers/rad/topics/solvers/rad/anim_dt_engine_r.htm"""
+    """Write animation files (A-files) at a time frequency equal to Tfreq, the first
+    file being written at time Tstart. The animation file name will be RunnameAnnn
+    where Runname is the Run Name and nnn is the file number.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/anim_dt_engine_r.htm)"""
 
     t_start: float
     t_freq: float
     t_stop: float | None = None
     # added line for readability
-    line1 = str = "#    TSTART     TFREQ     TSTOP"
+    line0: str = (
+        "#-----------T_start|-------------T_freq|------------T-stop-|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
@@ -129,7 +134,7 @@ class AnimDt(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("line1", 1, 10),
+            StringField("line0", 1, 10),
             [
                 FloatField("t_start", 1),
                 FloatField("t_freq", 3),

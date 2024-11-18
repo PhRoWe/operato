@@ -99,10 +99,15 @@ class ImplNonlinN(Keyword):
     Toli: float | None = 0.0
     Tolj: float | None = 0.0
     Tolk: float | None = 0.0
+    line0: str = "#/IMPL/NONLIN/N\n"
+    line1: str = (
+        "#-----L_A|-----Itol|---------------Toli|---------------Tolj|---------------Tolk|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
-        return f"/IMPL/NONLIN/{self.N}"
+
+        return self.line0 + f"/IMPL/NONLIN/{self.N}"
 
     @property
     def pre_conditions(self):
@@ -110,15 +115,19 @@ class ImplNonlinN(Keyword):
 
     @property
     def structure(self):
-        structure = [
-            IntField("N", 1),
-            IntField("L_A", 2),
-            IntField("Itol", 3),
-            IntField("Toli", 4),
-            IntField("Tolj", 5),
-            IntField("Tolk", 6),
+        substructure = [
+            IntField("L_A", 1),
+            IntField("Itol", 2),
         ]
-
+        if self.Itol in [1, 2, 3]:
+            substructure.append(FloatField("Toli", 3))
+        elif self.Itol in [12, 13, 23]:
+            substructure.append([FloatField("Toli", 3), FloatField("Toli", 5)])
+        elif self.Itol == 123:
+            substructure.append(
+                [FloatField("Toli", 3), FloatField("Tolj", 5), FloatField("Tolk", 7)]
+            )
+        structure = [StringField("line1", 1, 10), substructure]
         return structure
 
 

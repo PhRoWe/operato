@@ -30,6 +30,11 @@ class Starter:
         return self._runname
 
     def add(self, keyword: Keyword) -> None:
+        """Adds the keyword to the engine object.
+
+        Args:
+            keyword (Keyword): starter keyword
+        """
         if not isinstance(keyword, Keyword):
             raise ValueError(
                 "Argument `keyword` must be an instance of a subclass of `Keyword`"
@@ -49,7 +54,14 @@ class Starter:
     def write(
         self, index=0, folder: str | Path | None = None, assume_yes=False
     ) -> None:
-        """Writes the keywords to a file."""
+        """Writes the keywords to a file.
+
+        Args:
+            index (int, optional): Starter file index. Defaults to 0.
+            folder (str | Path | None, optional): folder to write to. Defaults to None.
+            assume_yes (bool, optional): if True: existing files are overwritten without
+              asking. Defaults to False.
+        """
         if folder is None:
             folder = Path().cwd()
         elif isinstance(folder, str):

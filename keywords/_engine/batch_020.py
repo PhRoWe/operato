@@ -15,15 +15,21 @@ from ..common import FloatField, IntField, Keyword, StringField
 # --- /PRINT ------------------------------------------------------
 @dataclass
 class Print(Keyword):
+    """Sets printout frequency for output file.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/print_engine_r.htm)
+    """
+
     n_print: int = -1000
     n_line: int | None = None
+    # added line for readability
+    line0: str = "#/PRINT/Nprint(/N_line)\n"
 
     @property
     def keyword(self):
         if self.n_line == None:
-            return f"/PRINT/{self.n_print}"
+            return self.line0 + f"/PRINT/{self.n_print}"
         elif self.n_line != None:
-            return f"/PRINT/{self.n_print}/{self.n_line}"
+            return self.line0 + f"/PRINT/{self.n_print}/{self.n_line}"
 
     @property
     def pre_conditions(self):

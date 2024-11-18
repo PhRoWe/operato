@@ -135,6 +135,10 @@ class StopLsensor(Keyword):
 # --- /TFILE ------------------------------------------------------
 @dataclass
 class Tfile(Keyword):
+    """Defines the frequency of writing the time history file of T-file "RunnameTnn".
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/tfile_engine_r.htm)
+    """
+
     dt_his: float
     _type: int = 4
 

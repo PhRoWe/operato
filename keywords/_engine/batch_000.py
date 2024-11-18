@@ -11,12 +11,14 @@ from ..common import FloatField, IntField, Keyword, KeywordCategory, StringField
 # /ALE/GRID/ZERO              /ALE/LINK/OFF               /ALE/LINK/ON
 #
 
+
 # --- /ABF ------------------------------------------------------
 @dataclass
 class Abf(Keyword):
     """Describes the output of .abf files. (.abf [binary] files are optimized
     for fast plotting of very large data sets and is intended for creating 2D
     and 3D plots using HyperGraph and HyperGraph 3D).
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/abf_engine_r.htm?zoom_highlight=abf)
     """
 
     dt_abf: float
@@ -40,7 +42,8 @@ class Abf(Keyword):
 # --- /ADYREL ------------------------------------------------------
 @dataclass
 class Adyrel(Keyword):
-    """Dynamic relaxation with auto-defined adaptive damping."""
+    """Dynamic relaxation with auto-defined adaptive damping.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/adyrel_engine_r.htm)"""
 
     t_start: float = 0.0
     t_stop: float | None = None
@@ -68,6 +71,10 @@ class Adyrel(Keyword):
 # --- /ALE/GRID/DISP ------------------------------------------------------
 @dataclass
 class AleGridDisp(Keyword):
+    """The displacement of a grid node depends on the displacements of the neighboring grid nodes.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/ale_grid_disp_starter_r.htm)
+    """
+
     u_max: float
     v_min: float
 
@@ -81,7 +88,7 @@ class AleGridDisp(Keyword):
 
     @property
     def structure(self):
-        structure = [[FloatField("u_max", 1), FloatField("v_min", 3)]]
+        structure = [[FloatField("u_max", 1)], [FloatField("v_min", 1)]]
 
         return structure
 
@@ -89,6 +96,11 @@ class AleGridDisp(Keyword):
 # --- /ALE/GRID/DONEA ------------------------------------------------------
 @dataclass
 class AleGridDonea(Keyword):
+    """With this keyword it is possible to modify grid formulation parameters, which
+    initially were set in Starter keyword /ALE/GRID/DONEA.
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/ale_grid_donea_engine_r.htm)
+    """
+
     alpha: float
     gamma: float
     fscale_x: float
@@ -128,11 +140,17 @@ class AleGridDonea(Keyword):
 # --- /ALE/GRID/SPRING ------------------------------------------------------
 @dataclass
 class AleGridSpring(Keyword):
-    attr1: int
-    attr2: float
+    """With this keyword it is possible to modify grid formulation parameters which
+    initially be set in Starter keyword /ALE/GRID/SPRING.
+      (Altair bar method for grid velocity computation).
+      (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/ale_grid_spring_engine_r.htm)
+    """
 
-    def __post_init__(self):
-        raise NotImplementedError("Keyword `/ALE/GRID/SPRING` is not implemented.")
+    Dt_0: float
+    gamma: float
+    eta: float
+    nu: float
+    v_min: float
 
     @property
     def keyword(self):
@@ -144,7 +162,16 @@ class AleGridSpring(Keyword):
 
     @property
     def structure(self):
-        structure = []
+
+        structure = [
+            [
+                FloatField("Dt_0", 1),
+                FloatField("gamma", 3),
+                FloatField("eta", 5),
+                FloatField("nu", 7),
+                FloatField("v_min", 9),
+            ]
+        ]
 
         return structure
 
@@ -152,6 +179,20 @@ class AleGridSpring(Keyword):
 # --- /ALE/GRID/STANDARD ------------------------------------------------------
 @dataclass
 class AleGridStandard(Keyword):
+    """With this keyword it is possible to modify grid formulation parameters,
+    which initially were set in Starter keyword /ALE/GRID/STANDARD.
+    (Altair standard method for grid velocity computation). (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/ale_grid_standard_engine_r.htm)
+
+    Args:
+        Keyword (_type_): _description_
+
+    Raises:
+        NotImplementedError: _description_
+
+    Returns:
+        _type_: _description_
+    """
+
     attr1: int
     attr2: float
 

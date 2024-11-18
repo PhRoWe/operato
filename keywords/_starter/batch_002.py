@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 from typing import Literal, List, Sequence
 from numpy.typing import NDArray
+from constants import LINE_SEPARATOR
 
 from ..common import (
     ArrayOfAtomicFields,
@@ -86,7 +87,7 @@ class ALESolverFint(Keyword):
 @dataclass
 class Ams(Keyword):
     """Describes the part group on which the advanced mass scaling is applied.
-    (https://2022.help.altair.com/2022/hwsolvers/rad/topics/solvers/rad/ams_starter_r.htm)
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/ams_starter_r.htm)
     """
 
     grpart_id: int
@@ -301,9 +302,6 @@ class Beam(Keyword):
     beam_ids: List[int]
     node_ids: NDArray
     line00: str = "#/BEAM/part_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
     line1: str = (
         "#-beam_id|-node_id1|-node_id2|-node_id3|----5----|----6----|----7----|----8----|----9----|----10---|"
     )
@@ -323,26 +321,31 @@ class Beam(Keyword):
 
     @property
     def structure(self):
-        if len(self.node_ids[0] == 2):
-            structure = [
-                ArrayOfAtomicFields(
-                    [
-                        IntField("beam_ids", 1),
-                        IntField("node_ids:ID_1|0", 2),
-                        IntField("node_ids:ID_2|1", 3),
-                    ]
-                )
-            ]
-        elif len(self.node_ids[0] == 3):
-            structure = [
-                ArrayOfAtomicFields(
-                    [
-                        IntField("beam_ids", 1),
-                        IntField("node_ids:ID_1|0", 2),
-                        IntField("node_ids:ID_2|1", 3),
-                        IntField("node_ids:ID_3|2", 4),
-                    ]
-                )
-            ]
+        structure = [FloatField("line1", 1, 10)]
+        if len(self.node_ids[0]) == 2:
+            structure.append(
+                [
+                    ArrayOfAtomicFields(
+                        [
+                            IntField("beam_ids", 1),
+                            IntField("node_ids:ID_1|0", 2),
+                            IntField("node_ids:ID_2|1", 3),
+                        ]
+                    )
+                ]
+            )
+        elif len(self.node_ids[0]) == 3:
+            structure.append(
+                [
+                    ArrayOfAtomicFields(
+                        [
+                            IntField("beam_ids", 1),
+                            IntField("node_ids:ID_1|0", 2),
+                            IntField("node_ids:ID_2|1", 3),
+                            IntField("node_ids:ID_3|2", 4),
+                        ]
+                    )
+                ]
+            )
 
         return structure
