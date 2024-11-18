@@ -27,7 +27,8 @@ class Grshel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRSHEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRSHEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -51,7 +52,8 @@ class Grspri(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRSPRI` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRSPRI` is not implemented.")
 
     @property
     def keyword(self):
@@ -75,7 +77,8 @@ class Grtria(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRTRIA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRTRIA` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +102,8 @@ class Grtrus(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRTRUS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRTRUS` is not implemented.")
 
     @property
     def keyword(self):
@@ -123,7 +127,8 @@ class HeatMat(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/HEAT/MAT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/HEAT/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -147,6 +152,7 @@ class Impacc(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/IMPACC` is not implemented.")
 
     @property
@@ -248,7 +254,8 @@ class ImpdispFgeo(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPDISP/FGEO` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPDISP/FGEO` is not implemented.")
 
     @property
     def keyword(self):
@@ -272,7 +279,8 @@ class Impflux(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPFLUX` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPFLUX` is not implemented.")
 
     @property
     def keyword(self):

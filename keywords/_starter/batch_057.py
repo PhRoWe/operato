@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /TH/TRIA                    /TH/TRUSS                   /THERM_STRESS/MAT           
-# /THPART                     /THPART/GRBEAM              /THPART/GRBRIC              
-# /THPART/GRQUAD              /THPART/GRSH3N              /THPART/GRSHEL              
+# /TH/TRIA                    /TH/TRUSS                   /THERM_STRESS/MAT
+# /THPART                     /THPART/GRBEAM              /THPART/GRBRIC
+# /THPART/GRQUAD              /THPART/GRSH3N              /THPART/GRSHEL
 #
+
 
 # --- /TH/TRIA ------------------------------------------------------
 @dataclass
@@ -18,6 +19,7 @@ class ThTria(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/TRIA` is not implemented.")
 
     @property
@@ -30,11 +32,9 @@ class ThTria(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/TRUSS ------------------------------------------------------
@@ -44,6 +44,7 @@ class ThTruss(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/TRUSS` is not implemented.")
 
     @property
@@ -56,11 +57,9 @@ class ThTruss(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /THERM_STRESS/MAT ------------------------------------------------------
@@ -70,6 +69,7 @@ class ThermStressMat(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/THERM_STRESS/MAT` is not implemented.")
 
     @property
@@ -82,11 +82,9 @@ class ThermStressMat(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /THPART ------------------------------------------------------
@@ -96,6 +94,7 @@ class Thpart(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/THPART` is not implemented.")
 
     @property
@@ -108,11 +107,9 @@ class Thpart(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /THPART/GRBEAM ------------------------------------------------------
@@ -122,6 +119,7 @@ class ThpartGrbeam(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/THPART/GRBEAM` is not implemented.")
 
     @property
@@ -134,11 +132,9 @@ class ThpartGrbeam(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /THPART/GRBRIC ------------------------------------------------------
@@ -148,6 +144,7 @@ class ThpartGrbric(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/THPART/GRBRIC` is not implemented.")
 
     @property
@@ -160,11 +157,9 @@ class ThpartGrbric(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /THPART/GRQUAD ------------------------------------------------------
@@ -174,6 +169,7 @@ class ThpartGrquad(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/THPART/GRQUAD` is not implemented.")
 
     @property
@@ -186,11 +182,9 @@ class ThpartGrquad(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /THPART/GRSH3N ------------------------------------------------------
@@ -200,6 +194,7 @@ class ThpartGrsh3n(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/THPART/GRSH3N` is not implemented.")
 
     @property
@@ -212,11 +207,9 @@ class ThpartGrsh3n(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /THPART/GRSHEL ------------------------------------------------------
@@ -226,6 +219,7 @@ class ThpartGrshel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/THPART/GRSHEL` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class ThpartGrshel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

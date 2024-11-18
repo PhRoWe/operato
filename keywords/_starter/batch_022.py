@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /INITEMP                    /INITRUSS/FULL              /INIVEL                     
-# /INIVEL/AXIS                /INIVEL/FVM                 /INIVEL/NODE                
-# /INIVOL                     /INTER/HERTZ/TYPE17         /INTER/LAGDT/TYPE7          
+# /INITEMP                    /INITRUSS/FULL              /INIVEL
+# /INIVEL/AXIS                /INIVEL/FVM                 /INIVEL/NODE
+# /INIVOL                     /INTER/HERTZ/TYPE17         /INTER/LAGDT/TYPE7
 #
+
 
 # --- /INITEMP ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Initemp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INITEMP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INITEMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Initemp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INITRUSS/FULL ------------------------------------------------------
@@ -44,7 +44,8 @@ class InitrussFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INITRUSS/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INITRUSS/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class InitrussFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIVEL ------------------------------------------------------
@@ -70,7 +69,8 @@ class Inivel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIVEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIVEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Inivel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIVEL/AXIS ------------------------------------------------------
@@ -96,7 +94,8 @@ class InivelAxis(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIVEL/AXIS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIVEL/AXIS` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class InivelAxis(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIVEL/FVM ------------------------------------------------------
@@ -122,7 +119,8 @@ class InivelFvm(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIVEL/FVM` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIVEL/FVM` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class InivelFvm(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIVEL/NODE ------------------------------------------------------
@@ -148,7 +144,8 @@ class InivelNode(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIVEL/NODE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIVEL/NODE` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class InivelNode(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIVOL ------------------------------------------------------
@@ -174,7 +169,8 @@ class Inivol(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIVOL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIVOL` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class Inivol(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/HERTZ/TYPE17 ------------------------------------------------------
@@ -200,7 +194,8 @@ class InterHertzType17(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/HERTZ/TYPE17` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/HERTZ/TYPE17` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class InterHertzType17(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/LAGDT/TYPE7 ------------------------------------------------------
@@ -226,6 +219,7 @@ class InterLagdtType7(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/INTER/LAGDT/TYPE7` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class InterLagdtType7(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

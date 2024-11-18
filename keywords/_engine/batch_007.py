@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /BCSR/ROT                   /BCSR/TRA                   /DAMP                       
-# /DEL                        /DEL/Eltyp/1                /DEL/INTER                  
-# /DELINT                     /DT                         /DT/AIRBAG/Keyword3         
+# /BCSR/ROT                   /BCSR/TRA                   /DAMP
+# /DEL                        /DEL/Eltyp/1                /DEL/INTER
+# /DELINT                     /DT                         /DT/AIRBAG/Keyword3
 #
+
 
 # --- /BCSR/ROT ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class BcsrRot(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/BCSR/ROT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/BCSR/ROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class BcsrRot(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /BCSR/TRA ------------------------------------------------------
@@ -44,7 +44,8 @@ class BcsrTra(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/BCSR/TRA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/BCSR/TRA` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class BcsrTra(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DAMP ------------------------------------------------------
@@ -70,7 +69,8 @@ class Damp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DAMP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DAMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Damp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DEL ------------------------------------------------------
@@ -96,7 +94,8 @@ class Del(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class Del(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DEL/Eltyp/1 ------------------------------------------------------
@@ -122,7 +119,8 @@ class DelEltyp1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DEL/Eltyp/1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DEL/Eltyp/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class DelEltyp1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DEL/INTER ------------------------------------------------------
@@ -148,7 +144,8 @@ class DelInter(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DEL/INTER` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DEL/INTER` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class DelInter(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DELINT ------------------------------------------------------
@@ -174,7 +169,8 @@ class Delint(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DELINT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DELINT` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class Delint(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DT ------------------------------------------------------
@@ -200,7 +194,8 @@ class Dt(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class Dt(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DT/AIRBAG/Keyword3 ------------------------------------------------------
@@ -226,6 +219,7 @@ class DtAirbagKeyword3(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/DT/AIRBAG/Keyword3` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class DtAirbagKeyword3(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

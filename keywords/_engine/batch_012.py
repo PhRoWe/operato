@@ -59,7 +59,8 @@ class H3dSph(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/SPH` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/SPH` is not implemented.")
 
     @property
     def keyword(self):
@@ -83,7 +84,8 @@ class H3dSpring(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/SPRING` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/SPRING` is not implemented.")
 
     @property
     def keyword(self):
@@ -107,7 +109,8 @@ class H3dTitle(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/TITLE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/TITLE` is not implemented.")
 
     @property
     def keyword(self):
@@ -131,7 +134,8 @@ class H3dTruss(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/TRUSS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/TRUSS` is not implemented.")
 
     @property
     def keyword(self):
@@ -155,7 +159,8 @@ class ImplAutospc(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/AUTOSPC` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/AUTOSPC` is not implemented.")
 
     @property
     def keyword(self):
@@ -179,7 +184,8 @@ class ImplBuckl1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/BUCKL/1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/BUCKL/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +209,8 @@ class ImplBuckl2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/BUCKL/2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/BUCKL/2` is not implemented.")
 
     @property
     def keyword(self):
@@ -227,6 +234,7 @@ class ImplCheck(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/IMPL/CHECK` is not implemented.")
 
     @property

@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /MAT/LAW33                  /MAT/LAW34                  /MAT/LAW35                  
-# /MAT/LAW36                  /MAT/LAW37                  /MAT/LAW38                  
-# /MAT/LAW40                  /MAT/LAW41                  /MAT/LAW42                  
+# /MAT/LAW33                  /MAT/LAW34                  /MAT/LAW35
+# /MAT/LAW36                  /MAT/LAW37                  /MAT/LAW38
+# /MAT/LAW40                  /MAT/LAW41                  /MAT/LAW42
 #
+
 
 # --- /MAT/LAW33 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class MatLaw33(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW33` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW33` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class MatLaw33(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW34 ------------------------------------------------------
@@ -44,7 +44,8 @@ class MatLaw34(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW34` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW34` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class MatLaw34(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW35 ------------------------------------------------------
@@ -70,7 +69,8 @@ class MatLaw35(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW35` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW35` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class MatLaw35(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW36 ------------------------------------------------------
@@ -96,7 +94,8 @@ class MatLaw36(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW36` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW36` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class MatLaw36(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW37 ------------------------------------------------------
@@ -122,7 +119,8 @@ class MatLaw37(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW37` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW37` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class MatLaw37(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW38 ------------------------------------------------------
@@ -148,7 +144,8 @@ class MatLaw38(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW38` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW38` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class MatLaw38(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW40 ------------------------------------------------------
@@ -174,7 +169,8 @@ class MatLaw40(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW40` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW40` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class MatLaw40(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW41 ------------------------------------------------------
@@ -200,7 +194,8 @@ class MatLaw41(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW41` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW41` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class MatLaw41(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/LAW42 ------------------------------------------------------
@@ -226,6 +219,7 @@ class MatLaw42(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/MAT/LAW42` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class MatLaw42(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

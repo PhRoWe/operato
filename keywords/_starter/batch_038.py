@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /MAT/LAW200                 /MAT/PLAS_PREDEF            /MAT/USERij                 
-# /MERGE/RBODY                /MONVOL/AIRBAG1             /MONVOL/AREA                
-# /MONVOL/COMMU1              /MONVOL/FVMBAG1             /MONVOL/FVMBAG2             
+# /MAT/LAW200                 /MAT/PLAS_PREDEF            /MAT/USERij
+# /MERGE/RBODY                /MONVOL/AIRBAG1             /MONVOL/AREA
+# /MONVOL/COMMU1              /MONVOL/FVMBAG1             /MONVOL/FVMBAG2
 #
+
 
 # --- /MAT/LAW200 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class MatLaw200(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/LAW200` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/LAW200` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class MatLaw200(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/PLAS_PREDEF ------------------------------------------------------
@@ -44,7 +44,8 @@ class MatPlasPredef(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/PLAS_PREDEF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/PLAS_PREDEF` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class MatPlasPredef(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/USERij ------------------------------------------------------
@@ -70,7 +69,8 @@ class MatUserij(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/USERij` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/USERij` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class MatUserij(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MERGE/RBODY ------------------------------------------------------
@@ -96,7 +94,8 @@ class MergeRbody(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MERGE/RBODY` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MERGE/RBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class MergeRbody(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MONVOL/AIRBAG1 ------------------------------------------------------
@@ -122,7 +119,8 @@ class MonvolAirbag1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MONVOL/AIRBAG1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MONVOL/AIRBAG1` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class MonvolAirbag1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MONVOL/AREA ------------------------------------------------------
@@ -148,7 +144,8 @@ class MonvolArea(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MONVOL/AREA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MONVOL/AREA` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class MonvolArea(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MONVOL/COMMU1 ------------------------------------------------------
@@ -174,7 +169,8 @@ class MonvolCommu1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MONVOL/COMMU1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MONVOL/COMMU1` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class MonvolCommu1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MONVOL/FVMBAG1 ------------------------------------------------------
@@ -200,7 +194,8 @@ class MonvolFvmbag1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MONVOL/FVMBAG1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MONVOL/FVMBAG1` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class MonvolFvmbag1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MONVOL/FVMBAG2 ------------------------------------------------------
@@ -226,6 +219,7 @@ class MonvolFvmbag2(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/MONVOL/FVMBAG2` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class MonvolFvmbag2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

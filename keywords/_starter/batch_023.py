@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /INTER/LAGMUL/TYPE2         /INTER/LAGMUL/TYPE7         /INTER/LAGMUL/TYPE16        
-# /INTER/LAGMUL/TYPE17        /INTER/SUB                  /INTER/TYPE1                
-# /INTER/TYPE2                /INTER/TYPE3                /INTER/TYPE5                
+# /INTER/LAGMUL/TYPE2         /INTER/LAGMUL/TYPE7         /INTER/LAGMUL/TYPE16
+# /INTER/LAGMUL/TYPE17        /INTER/SUB                  /INTER/TYPE1
+# /INTER/TYPE2                /INTER/TYPE3                /INTER/TYPE5
 #
+
 
 # --- /INTER/LAGMUL/TYPE2 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class InterLagmulType2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/LAGMUL/TYPE2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/LAGMUL/TYPE2` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class InterLagmulType2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/LAGMUL/TYPE7 ------------------------------------------------------
@@ -44,7 +44,8 @@ class InterLagmulType7(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/LAGMUL/TYPE7` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/LAGMUL/TYPE7` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class InterLagmulType7(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/LAGMUL/TYPE16 ------------------------------------------------------
@@ -70,7 +69,8 @@ class InterLagmulType16(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/LAGMUL/TYPE16` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/LAGMUL/TYPE16` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class InterLagmulType16(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/LAGMUL/TYPE17 ------------------------------------------------------
@@ -96,7 +94,8 @@ class InterLagmulType17(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/LAGMUL/TYPE17` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/LAGMUL/TYPE17` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class InterLagmulType17(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/SUB ------------------------------------------------------
@@ -122,7 +119,8 @@ class InterSub(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/SUB` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/SUB` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class InterSub(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE1 ------------------------------------------------------
@@ -148,7 +144,8 @@ class InterType1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE1` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class InterType1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE2 ------------------------------------------------------
@@ -174,7 +169,8 @@ class InterType2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE2` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class InterType2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE3 ------------------------------------------------------
@@ -200,7 +194,8 @@ class InterType3(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE3` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE3` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class InterType3(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE5 ------------------------------------------------------
@@ -226,6 +219,7 @@ class InterType5(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/INTER/TYPE5` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class InterType5(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

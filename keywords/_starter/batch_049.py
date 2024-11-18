@@ -28,7 +28,8 @@ class SensorSens(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/SENS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/SENS` is not implemented.")
 
     @property
     def keyword(self):
@@ -52,7 +53,8 @@ class SensorTime(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/TIME` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/TIME` is not implemented.")
 
     @property
     def keyword(self):
@@ -76,7 +78,8 @@ class SensorVel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/VEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/VEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -100,7 +103,8 @@ class SensorWork(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/WORK` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/WORK` is not implemented.")
 
     @property
     def keyword(self):
@@ -124,7 +128,8 @@ class Set(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SET` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SET` is not implemented.")
 
     @property
     def keyword(self):
@@ -148,7 +153,8 @@ class Sh3n(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SH3N` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SH3N` is not implemented.")
 
     @property
     def keyword(self):
@@ -221,7 +227,8 @@ class Shel16(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SHEL16` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SHEL16` is not implemented.")
 
     @property
     def keyword(self):
@@ -245,6 +252,7 @@ class SkewFix(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SKEW/FIX` is not implemented.")
 
     @property

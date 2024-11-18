@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /IMPL/PSTIF/OFF             /IMPL/QSTAT                 /IMPL/QSTAT/DTSCAL          
-# /IMPL/QSTAT/MRIGM           /IMPL/RREF/INTERF/n         /IMPL/RREF/LIMIT            
-# /IMPL/RREF/OFF              /IMPL/SBCS/MSGLV            /IMPL/SBCS/ORDER            
+# /IMPL/PSTIF/OFF             /IMPL/QSTAT                 /IMPL/QSTAT/DTSCAL
+# /IMPL/QSTAT/MRIGM           /IMPL/RREF/INTERF/n         /IMPL/RREF/LIMIT
+# /IMPL/RREF/OFF              /IMPL/SBCS/MSGLV            /IMPL/SBCS/ORDER
 #
+
 
 # --- /IMPL/PSTIF/OFF ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class ImplPstifOff(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/PSTIF/OFF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/PSTIF/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class ImplPstifOff(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/QSTAT ------------------------------------------------------
@@ -44,7 +44,8 @@ class ImplQstat(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/QSTAT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/QSTAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class ImplQstat(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/QSTAT/DTSCAL ------------------------------------------------------
@@ -70,7 +69,8 @@ class ImplQstatDtscal(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/QSTAT/DTSCAL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/QSTAT/DTSCAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class ImplQstatDtscal(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/QSTAT/MRIGM ------------------------------------------------------
@@ -96,7 +94,8 @@ class ImplQstatMrigm(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/QSTAT/MRIGM` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/QSTAT/MRIGM` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class ImplQstatMrigm(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/RREF/INTERF/n ------------------------------------------------------
@@ -122,7 +119,8 @@ class ImplRrefInterfN(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/RREF/INTERF/n` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/RREF/INTERF/n` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class ImplRrefInterfN(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/RREF/LIMIT ------------------------------------------------------
@@ -148,7 +144,8 @@ class ImplRrefLimit(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/RREF/LIMIT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/RREF/LIMIT` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class ImplRrefLimit(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/RREF/OFF ------------------------------------------------------
@@ -174,7 +169,8 @@ class ImplRrefOff(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/RREF/OFF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/RREF/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class ImplRrefOff(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/SBCS/MSGLV ------------------------------------------------------
@@ -200,7 +194,8 @@ class ImplSbcsMsglv(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/SBCS/MSGLV` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/SBCS/MSGLV` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class ImplSbcsMsglv(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPL/SBCS/ORDER ------------------------------------------------------
@@ -226,6 +219,7 @@ class ImplSbcsOrder(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/IMPL/SBCS/ORDER` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class ImplSbcsOrder(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

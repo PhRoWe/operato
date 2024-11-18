@@ -28,7 +28,8 @@ class MonvolGas(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MONVOL/GAS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MONVOL/GAS` is not implemented.")
 
     @property
     def keyword(self):
@@ -52,7 +53,8 @@ class MonvolLfluid(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MONVOL/LFLUID` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MONVOL/LFLUID` is not implemented.")
 
     @property
     def keyword(self):
@@ -76,7 +78,8 @@ class MonvolPres(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MONVOL/PRES` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MONVOL/PRES` is not implemented.")
 
     @property
     def keyword(self):
@@ -100,7 +103,8 @@ class MoveFunct(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MOVE_FUNCT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MOVE_FUNCT` is not implemented.")
 
     @property
     def keyword(self):
@@ -124,7 +128,8 @@ class Mpc(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MPC` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MPC` is not implemented.")
 
     @property
     def keyword(self):
@@ -148,7 +153,8 @@ class Nbcs(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/NBCS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/NBCS` is not implemented.")
 
     @property
     def keyword(self):
@@ -220,7 +226,8 @@ class NonlocalMat(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/NONLOCAL/MAT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/NONLOCAL/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -244,6 +251,7 @@ class Parameter(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/PARAMETER` is not implemented.")
 
     @property

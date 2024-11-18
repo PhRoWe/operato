@@ -20,6 +20,7 @@ class Spring(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SPRING` is not implemented.")
 
     @property
@@ -44,6 +45,7 @@ class Stack(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/STACK` is not implemented.")
 
     @property
@@ -68,6 +70,7 @@ class Stamping(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/STAMPING` is not implemented.")
 
     @property
@@ -92,6 +95,7 @@ class StateStrFile(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/STATE/STR_FILE` is not implemented.")
 
     @property
@@ -116,6 +120,7 @@ class Submodel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `//SUBMODEL` is not implemented.")
 
     @property
@@ -140,6 +145,7 @@ class Subset(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SUBSET` is not implemented.")
 
     @property
@@ -164,6 +170,7 @@ class Surf(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF` is not implemented.")
 
     @property
@@ -227,6 +234,7 @@ class SurfDsurf(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/DSURF` is not implemented.")
 
     @property

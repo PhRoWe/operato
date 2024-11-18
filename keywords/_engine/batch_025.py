@@ -17,7 +17,8 @@ class VelRot(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/VEL/ROT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/VEL/ROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -41,6 +42,7 @@ class VelTra(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/VEL/TRA` is not implemented.")
 
     @property

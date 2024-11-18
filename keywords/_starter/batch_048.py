@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /SENSOR/DIST_SURF           /SENSOR/ENERGY              /SENSOR/GAUGE               
-# /SENSOR/HIC                 /SENSOR/INTER               /SENSOR/NOT                 
-# /SENSOR/RBODY               /SENSOR/RWALL               /SENSOR/SECT                
+# /SENSOR/DIST_SURF           /SENSOR/ENERGY              /SENSOR/GAUGE
+# /SENSOR/HIC                 /SENSOR/INTER               /SENSOR/NOT
+# /SENSOR/RBODY               /SENSOR/RWALL               /SENSOR/SECT
 #
+
 
 # --- /SENSOR/DIST_SURF ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class SensorDistSurf(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/DIST_SURF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/DIST_SURF` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class SensorDistSurf(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/ENERGY ------------------------------------------------------
@@ -44,7 +44,8 @@ class SensorEnergy(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/ENERGY` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/ENERGY` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class SensorEnergy(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/GAUGE ------------------------------------------------------
@@ -70,7 +69,8 @@ class SensorGauge(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/GAUGE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/GAUGE` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class SensorGauge(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/HIC ------------------------------------------------------
@@ -96,7 +94,8 @@ class SensorHic(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/HIC` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/HIC` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class SensorHic(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/INTER ------------------------------------------------------
@@ -122,7 +119,8 @@ class SensorInter(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/INTER` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/INTER` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class SensorInter(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/NOT ------------------------------------------------------
@@ -148,7 +144,8 @@ class SensorNot(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/NOT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/NOT` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class SensorNot(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/RBODY ------------------------------------------------------
@@ -174,7 +169,8 @@ class SensorRbody(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/RBODY` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/RBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class SensorRbody(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/RWALL ------------------------------------------------------
@@ -200,7 +194,8 @@ class SensorRwall(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/RWALL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/RWALL` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class SensorRwall(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/SECT ------------------------------------------------------
@@ -226,6 +219,7 @@ class SensorSect(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SENSOR/SECT` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class SensorSect(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

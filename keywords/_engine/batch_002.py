@@ -65,6 +65,8 @@ class AnimBrickTensDama(Keyword):
     attr1: int
     attr2: float
 
+    # TODO: Implementation
+
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ANIM/BRICK/TENS/DAMA` is not implemented.")
 
@@ -88,6 +90,8 @@ class AnimBrickTensDama(Keyword):
 class AnimBrickVdami(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ANIM/BRICK/VDAMi` is not implemented.")
@@ -228,6 +232,8 @@ class AnimEltypRestype(Keyword):
 class AnimEltypTdet(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ANIM/Eltyp/TDET` is not implemented.")

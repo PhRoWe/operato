@@ -54,7 +54,8 @@ class Penta6(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PENTA6` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PENTA6` is not implemented.")
 
     @property
     def keyword(self):
@@ -78,7 +79,8 @@ class Perturb(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PERTURB` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PERTURB` is not implemented.")
 
     @property
     def keyword(self):
@@ -102,7 +104,8 @@ class PerturbFailBiquad(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PERTURB/FAIL/BIQUAD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PERTURB/FAIL/BIQUAD` is not implemented.")
 
     @property
     def keyword(self):
@@ -126,7 +129,8 @@ class PerturbPartShell(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PERTURB/PART/SHELL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PERTURB/PART/SHELL` is not implemented.")
 
     @property
     def keyword(self):
@@ -150,7 +154,8 @@ class PerturbPartSolid(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PERTURB/PART/SOLID` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PERTURB/PART/SOLID` is not implemented.")
 
     @property
     def keyword(self):
@@ -229,7 +234,8 @@ class Ply(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PLY` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PLY` is not implemented.")
 
     @property
     def keyword(self):
@@ -253,6 +259,7 @@ class Preload(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/PRELOAD` is not implemented.")
 
     @property

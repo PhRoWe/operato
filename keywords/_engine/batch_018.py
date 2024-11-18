@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /INIV/AXIS/Keyword3/2       /INIV/ROT                   /INIV/ROT/Keyword3/1        
-# /INIV/ROT/Keyword3/2        /INIV/TRA                   /INIV/TRA/Keyword3/1        
-# /INIV/TRA/Keyword3/2        /INTER                      /KEREL                      
+# /INIV/AXIS/Keyword3/2       /INIV/ROT                   /INIV/ROT/Keyword3/1
+# /INIV/ROT/Keyword3/2        /INIV/TRA                   /INIV/TRA/Keyword3/1
+# /INIV/TRA/Keyword3/2        /INTER                      /KEREL
 #
+
 
 # --- /INIV/AXIS/Keyword3/2 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class InivAxisKeyword32(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIV/AXIS/Keyword3/2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIV/AXIS/Keyword3/2` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class InivAxisKeyword32(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIV/ROT ------------------------------------------------------
@@ -44,7 +44,8 @@ class InivRot(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIV/ROT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIV/ROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class InivRot(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIV/ROT/Keyword3/1 ------------------------------------------------------
@@ -70,7 +69,8 @@ class InivRotKeyword31(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIV/ROT/Keyword3/1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIV/ROT/Keyword3/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class InivRotKeyword31(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIV/ROT/Keyword3/2 ------------------------------------------------------
@@ -96,7 +94,8 @@ class InivRotKeyword32(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIV/ROT/Keyword3/2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIV/ROT/Keyword3/2` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class InivRotKeyword32(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIV/TRA ------------------------------------------------------
@@ -122,7 +119,8 @@ class InivTra(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIV/TRA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIV/TRA` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class InivTra(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIV/TRA/Keyword3/1 ------------------------------------------------------
@@ -148,7 +144,8 @@ class InivTraKeyword31(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIV/TRA/Keyword3/1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIV/TRA/Keyword3/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class InivTraKeyword31(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIV/TRA/Keyword3/2 ------------------------------------------------------
@@ -174,7 +169,8 @@ class InivTraKeyword32(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIV/TRA/Keyword3/2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIV/TRA/Keyword3/2` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class InivTraKeyword32(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER ------------------------------------------------------
@@ -200,7 +194,8 @@ class Inter(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class Inter(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /KEREL ------------------------------------------------------
@@ -226,6 +219,7 @@ class Kerel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/KEREL` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class Kerel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

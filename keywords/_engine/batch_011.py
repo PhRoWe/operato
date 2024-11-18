@@ -50,7 +50,8 @@ class H3dLsensor(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/LSENSOR` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/LSENSOR` is not implemented.")
 
     @property
     def keyword(self):
@@ -74,7 +75,8 @@ class H3dNoda(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/NODA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/NODA` is not implemented.")
 
     @property
     def keyword(self):
@@ -98,7 +100,8 @@ class H3dPart(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/PART` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/PART` is not implemented.")
 
     @property
     def keyword(self):
@@ -122,7 +125,8 @@ class H3dQuad(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/QUAD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/QUAD` is not implemented.")
 
     @property
     def keyword(self):
@@ -146,7 +150,8 @@ class H3dRbe2SinglePart(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/RBE2/SINGLE_PART` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/RBE2/SINGLE_PART` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +175,8 @@ class H3dRbe3SinglePart(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/RBE3/SINGLE_PART` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/RBE3/SINGLE_PART` is not implemented.")
 
     @property
     def keyword(self):
@@ -194,9 +200,8 @@ class H3dRbodySinglePart(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError(
-            "Keyword `/H3D/RBODY/SINGLE_PART` is not implemented."
-        )
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/RBODY/SINGLE_PART` is not implemented.")
 
     @property
     def keyword(self):
@@ -220,6 +225,7 @@ class H3dShell(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/H3D/SHELL` is not implemented.")
 
     @property

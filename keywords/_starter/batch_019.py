@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /INIQUA/STRESS              /INISHE/AUX                 /INISH3/AUX                 
-# /INISHE/EPSP                /INISH3/EPSP                /INISHE/EPSP_F              
-# /INISH3/EPSP_F              /INISHE/FAIL                /INISHE/ORTH_LOC            
+# /INIQUA/STRESS              /INISHE/AUX                 /INISH3/AUX
+# /INISHE/EPSP                /INISH3/EPSP                /INISHE/EPSP_F
+# /INISH3/EPSP_F              /INISHE/FAIL                /INISHE/ORTH_LOC
 #
+
 
 # --- /INIQUA/STRESS ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class IniquaStress(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIQUA/STRESS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIQUA/STRESS` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class IniquaStress(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/AUX ------------------------------------------------------
@@ -44,7 +44,8 @@ class InisheAux(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISHE/AUX` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISHE/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class InisheAux(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISH3/AUX ------------------------------------------------------
@@ -70,7 +69,8 @@ class Inish3Aux(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISH3/AUX` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISH3/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Inish3Aux(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/EPSP ------------------------------------------------------
@@ -96,7 +94,8 @@ class InisheEpsp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISHE/EPSP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISHE/EPSP` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class InisheEpsp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISH3/EPSP ------------------------------------------------------
@@ -122,7 +119,8 @@ class Inish3Epsp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISH3/EPSP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISH3/EPSP` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class Inish3Epsp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/EPSP_F ------------------------------------------------------
@@ -148,7 +144,8 @@ class InisheEpspF(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISHE/EPSP_F` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISHE/EPSP_F` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class InisheEpspF(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISH3/EPSP_F ------------------------------------------------------
@@ -174,7 +169,8 @@ class Inish3EpspF(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISH3/EPSP_F` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISH3/EPSP_F` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class Inish3EpspF(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/FAIL ------------------------------------------------------
@@ -200,7 +194,8 @@ class InisheFail(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISHE/FAIL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISHE/FAIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class InisheFail(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/ORTH_LOC ------------------------------------------------------
@@ -226,6 +219,7 @@ class InisheOrthLoc(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/INISHE/ORTH_LOC` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class InisheOrthLoc(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /EOS/MURNAGHAN              /EOS/NASG                   /EOS/NOBLE-ABEL             
-# /EOS/OSBORNE                /EOS/POLYNOMIAL             /EOS/PUFF                   
-# /EOS/SESAME                 /EOS/STIFF-GAS              /EOS/TILLOTSON              
+# /EOS/MURNAGHAN              /EOS/NASG                   /EOS/NOBLE-ABEL
+# /EOS/OSBORNE                /EOS/POLYNOMIAL             /EOS/PUFF
+# /EOS/SESAME                 /EOS/STIFF-GAS              /EOS/TILLOTSON
 #
+
 
 # --- /EOS/MURNAGHAN ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class EosMurnaghan(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/MURNAGHAN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/MURNAGHAN` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class EosMurnaghan(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/NASG ------------------------------------------------------
@@ -44,7 +44,8 @@ class EosNasg(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/NASG` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/NASG` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class EosNasg(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/NOBLE-ABEL ------------------------------------------------------
@@ -70,7 +69,8 @@ class EosNobleAbel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/NOBLE-ABEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/NOBLE-ABEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class EosNobleAbel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/OSBORNE ------------------------------------------------------
@@ -96,7 +94,8 @@ class EosOsborne(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/OSBORNE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/OSBORNE` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class EosOsborne(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/POLYNOMIAL ------------------------------------------------------
@@ -122,7 +119,8 @@ class EosPolynomial(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/POLYNOMIAL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/POLYNOMIAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class EosPolynomial(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/PUFF ------------------------------------------------------
@@ -148,7 +144,8 @@ class EosPuff(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/PUFF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/PUFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class EosPuff(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/SESAME ------------------------------------------------------
@@ -174,7 +169,8 @@ class EosSesame(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/SESAME` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/SESAME` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class EosSesame(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/STIFF-GAS ------------------------------------------------------
@@ -200,7 +194,8 @@ class EosStiffGas(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/STIFF-GAS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/STIFF-GAS` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class EosStiffGas(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EOS/TILLOTSON ------------------------------------------------------
@@ -226,6 +219,7 @@ class EosTillotson(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/EOS/TILLOTSON` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class EosTillotson(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

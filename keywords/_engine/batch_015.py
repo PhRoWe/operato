@@ -20,7 +20,8 @@ class ImplLsearchN(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/LSEARCH/n` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/LSEARCH/n` is not implemented.")
 
     @property
     def keyword(self):
@@ -44,7 +45,8 @@ class ImplMonvolOff(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/MONVOL/OFF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/MONVOL/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -68,6 +70,7 @@ class ImplNcycleStop(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/IMPL/NCYCLE/STOP` is not implemented.")
 
     @property
@@ -138,7 +141,8 @@ class ImplNonlinSmdisp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/NONLIN/SMDISP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/NONLIN/SMDISP` is not implemented.")
 
     @property
     def keyword(self):
@@ -162,7 +166,8 @@ class ImplNonlinSolvinfo(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/NONLIN/SOLVINFO` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/NONLIN/SOLVINFO` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,7 +191,8 @@ class ImplPrepat(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/PREPAT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/PREPAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -237,7 +243,8 @@ class ImplPrintNonlin(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/PRINT/NONLIN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/PRINT/NONLIN` is not implemented.")
 
     @property
     def keyword(self):

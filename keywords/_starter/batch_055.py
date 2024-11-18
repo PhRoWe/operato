@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /TH/MODE                    /TH/MONVOL                  /TH/NODE                    
-# /TH/NSTRAND                 /TH/PART                    /TH/QUAD                    
-# /TH/RBODY                   /TH/RETRACTOR               /TH/RWALL                   
+# /TH/MODE                    /TH/MONVOL                  /TH/NODE
+# /TH/NSTRAND                 /TH/PART                    /TH/QUAD
+# /TH/RBODY                   /TH/RETRACTOR               /TH/RWALL
 #
+
 
 # --- /TH/MODE ------------------------------------------------------
 @dataclass
@@ -18,6 +19,7 @@ class ThMode(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/MODE` is not implemented.")
 
     @property
@@ -30,11 +32,9 @@ class ThMode(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/MONVOL ------------------------------------------------------
@@ -44,6 +44,7 @@ class ThMonvol(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/MONVOL` is not implemented.")
 
     @property
@@ -56,11 +57,9 @@ class ThMonvol(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/NODE ------------------------------------------------------
@@ -70,6 +69,7 @@ class ThNode(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/NODE` is not implemented.")
 
     @property
@@ -82,11 +82,9 @@ class ThNode(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/NSTRAND ------------------------------------------------------
@@ -96,6 +94,7 @@ class ThNstrand(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/NSTRAND` is not implemented.")
 
     @property
@@ -108,11 +107,9 @@ class ThNstrand(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/PART ------------------------------------------------------
@@ -122,6 +119,7 @@ class ThPart(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/PART` is not implemented.")
 
     @property
@@ -134,11 +132,9 @@ class ThPart(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/QUAD ------------------------------------------------------
@@ -148,6 +144,7 @@ class ThQuad(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/QUAD` is not implemented.")
 
     @property
@@ -160,11 +157,9 @@ class ThQuad(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/RBODY ------------------------------------------------------
@@ -174,6 +169,7 @@ class ThRbody(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/RBODY` is not implemented.")
 
     @property
@@ -186,11 +182,9 @@ class ThRbody(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/RETRACTOR ------------------------------------------------------
@@ -200,6 +194,7 @@ class ThRetractor(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/RETRACTOR` is not implemented.")
 
     @property
@@ -212,11 +207,9 @@ class ThRetractor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /TH/RWALL ------------------------------------------------------
@@ -226,6 +219,7 @@ class ThRwall(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/RWALL` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class ThRwall(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

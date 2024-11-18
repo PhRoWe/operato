@@ -49,7 +49,8 @@ class Rad2radOn(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RAD2RAD/ON` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RAD2RAD/ON` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +74,8 @@ class Rbody(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RBODY` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -97,7 +99,8 @@ class Report(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/REPORT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/REPORT` is not implemented.")
 
     @property
     def keyword(self):
@@ -121,7 +124,8 @@ class Rerun(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RERUN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RERUN` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +149,8 @@ class RfileOff(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RFILE/OFF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RFILE/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -169,7 +174,8 @@ class RfileN(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RFILE/n` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RFILE/n` is not implemented.")
 
     @property
     def keyword(self):
@@ -219,6 +225,7 @@ class Shsub(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SHSUB` is not implemented.")
 
     @property

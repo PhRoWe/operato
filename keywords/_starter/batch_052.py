@@ -27,6 +27,7 @@ class SurfEllips(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/ELLIPS` is not implemented.")
 
     @property
@@ -90,6 +91,7 @@ class SurfGrbricFree(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/GRBRIC/FREE` is not implemented.")
 
     @property
@@ -114,6 +116,7 @@ class SurfGrsh3n(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/GRSH3N` is not implemented.")
 
     @property
@@ -138,6 +141,7 @@ class SurfGrshel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/GRSHEL` is not implemented.")
 
     @property
@@ -162,6 +166,7 @@ class SurfMat(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/MAT` is not implemented.")
 
     @property
@@ -186,6 +191,7 @@ class SurfPart(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/PART` is not implemented.")
 
     @property
@@ -210,6 +216,7 @@ class SurfPlane(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/PLANE` is not implemented.")
 
     @property
@@ -234,6 +241,7 @@ class SurfProp(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/PROP` is not implemented.")
 
     @property

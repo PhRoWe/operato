@@ -30,7 +30,8 @@ class GaugeSph(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GAUGE/SPH` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GAUGE/SPH` is not implemented.")
 
     @property
     def keyword(self):
@@ -54,7 +55,8 @@ class Gjoint(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GJOINT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GJOINT` is not implemented.")
 
     @property
     def keyword(self):
@@ -78,7 +80,8 @@ class Grav(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRAV` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRAV` is not implemented.")
 
     @property
     def keyword(self):
@@ -102,6 +105,7 @@ class Grbeam(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/GRBEAM` is not implemented.")
 
     @property
@@ -239,7 +243,8 @@ class Grpart(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRPART` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRPART` is not implemented.")
 
     @property
     def keyword(self):
@@ -263,7 +268,8 @@ class Grquad(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRQUAD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRQUAD` is not implemented.")
 
     @property
     def keyword(self):
@@ -316,7 +322,8 @@ class Grsh3n(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/GRSH3N` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/GRSH3N` is not implemented.")
 
     @property
     def keyword(self):

@@ -19,6 +19,7 @@ class DtAle(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/DT/ALE` is not implemented.")
 
     @property
@@ -87,7 +88,8 @@ class DtCstAms(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT/CST_AMS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT/CST_AMS` is not implemented.")
 
     @property
     def keyword(self):
@@ -111,7 +113,8 @@ class DtEltypKeyword3Iflag(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError(
+        # TODO: Implementation
+        raiseNotImplementedError(
             "Keyword `/DT/Eltyp/Keyword3/Iflag` is not implemented."
         )
 
@@ -137,7 +140,8 @@ class DtFvmbagIflag(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT/FVMBAG/Iflag` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT/FVMBAG/Iflag` is not implemented.")
 
     @property
     def keyword(self):
@@ -161,7 +165,8 @@ class DtInterKeyword3Iflag(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError(
+        # TODO: Implementation
+        raiseNotImplementedError(
             "Keyword `/DT/INTER/Keyword3/Iflag` is not implemented."
         )
 
@@ -187,7 +192,8 @@ class DtNodaKeyword3Iflag(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError(
+        # TODO: Implementation
+        raiseNotImplementedError(
             "Keyword `/DT/NODA/Keyword3/Iflag` is not implemented."
         )
 
@@ -213,7 +219,8 @@ class DtShnodKeyword3(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT/SHNOD/Keyword3` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT/SHNOD/Keyword3` is not implemented.")
 
     @property
     def keyword(self):
@@ -237,7 +244,8 @@ class DtSphcelKeyword3(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT/SPHCEL/Keyword3` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT/SPHCEL/Keyword3` is not implemented.")
 
     @property
     def keyword(self):

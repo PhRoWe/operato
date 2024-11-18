@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /ATFILE                     /ATSYMBOLFILE               /ATSYMBOLFILE/Keyword2      
-# /BCS/ALE                    /BCS/LAG                    /BCS/ROT                    
-# /BCS/TRA                    /BCSR/ALE                   /BCSR/LAG                   
+# /ATFILE                     /ATSYMBOLFILE               /ATSYMBOLFILE/Keyword2
+# /BCS/ALE                    /BCS/LAG                    /BCS/ROT
+# /BCS/TRA                    /BCSR/ALE                   /BCSR/LAG
 #
+
 
 # --- /ATFILE ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Atfile(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ATFILE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ATFILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Atfile(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ATSYMBOLFILE ------------------------------------------------------
@@ -44,7 +44,8 @@ class Atsymbolfile(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ATSYMBOLFILE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ATSYMBOLFILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class Atsymbolfile(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ATSYMBOLFILE/Keyword2 ------------------------------------------------------
@@ -70,7 +69,8 @@ class AtsymbolfileKeyword2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ATSYMBOLFILE/Keyword2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ATSYMBOLFILE/Keyword2` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class AtsymbolfileKeyword2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /BCS/ALE ------------------------------------------------------
@@ -96,7 +94,8 @@ class BcsAle(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/BCS/ALE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/BCS/ALE` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class BcsAle(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /BCS/LAG ------------------------------------------------------
@@ -122,7 +119,8 @@ class BcsLag(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/BCS/LAG` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/BCS/LAG` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class BcsLag(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /BCS/ROT ------------------------------------------------------
@@ -148,7 +144,8 @@ class BcsRot(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/BCS/ROT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/BCS/ROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class BcsRot(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /BCS/TRA ------------------------------------------------------
@@ -174,7 +169,8 @@ class BcsTra(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/BCS/TRA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/BCS/TRA` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class BcsTra(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /BCSR/ALE ------------------------------------------------------
@@ -200,7 +194,8 @@ class BcsrAle(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/BCSR/ALE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/BCSR/ALE` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class BcsrAle(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /BCSR/LAG ------------------------------------------------------
@@ -226,6 +219,7 @@ class BcsrLag(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/BCSR/LAG` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class BcsrLag(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

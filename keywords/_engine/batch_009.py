@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /DT/THERM                   /DT1/BRICK/Keyword3/Iflag   /DT1/SHELL                  
-# /DT1TET10                   /DTIX                       /DTSDE                      
-# /DTTSH                      /DYNAIN/DT                  /DYNAIN/SHELL/STRAIN/FULL   
+# /DT/THERM                   /DT1/BRICK/Keyword3/Iflag   /DT1/SHELL
+# /DT1TET10                   /DTIX                       /DTSDE
+# /DTTSH                      /DYNAIN/DT                  /DYNAIN/SHELL/STRAIN/FULL
 #
+
 
 # --- /DT/THERM ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class DtTherm(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT/THERM` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT/THERM` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class DtTherm(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DT1/BRICK/Keyword3/Iflag ------------------------------------------------------
@@ -44,7 +44,10 @@ class Dt1BrickKeyword3Iflag(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT1/BRICK/Keyword3/Iflag` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/DT1/BRICK/Keyword3/Iflag` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -56,11 +59,9 @@ class Dt1BrickKeyword3Iflag(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DT1/SHELL ------------------------------------------------------
@@ -70,7 +71,8 @@ class Dt1Shell(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT1/SHELL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT1/SHELL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +84,9 @@ class Dt1Shell(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DT1TET10 ------------------------------------------------------
@@ -96,7 +96,8 @@ class Dt1tet10(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DT1TET10` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DT1TET10` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +109,9 @@ class Dt1tet10(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DTIX ------------------------------------------------------
@@ -122,7 +121,8 @@ class Dtix(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DTIX` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DTIX` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +134,9 @@ class Dtix(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DTSDE ------------------------------------------------------
@@ -148,7 +146,8 @@ class Dtsde(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DTSDE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DTSDE` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +159,9 @@ class Dtsde(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DTTSH ------------------------------------------------------
@@ -174,7 +171,8 @@ class Dttsh(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DTTSH` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DTTSH` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +184,9 @@ class Dttsh(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DYNAIN/DT ------------------------------------------------------
@@ -200,7 +196,8 @@ class DynainDt(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DYNAIN/DT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DYNAIN/DT` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +209,9 @@ class DynainDt(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /DYNAIN/SHELL/STRAIN/FULL ------------------------------------------------------
@@ -226,7 +221,10 @@ class DynainShellStrainFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DYNAIN/SHELL/STRAIN/FULL` is not implemented.")
+        # TODO: Implementation
+        raise NotImplementedError(
+            "Keyword `/DYNAIN/SHELL/STRAIN/FULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -238,8 +236,6 @@ class DynainShellStrainFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

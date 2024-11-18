@@ -35,7 +35,6 @@ class Engine:
 
         Args:
             keyword (Keyword): engine keyword
-
         """
         if not isinstance(keyword, Keyword):
             raise ValueError(
@@ -48,9 +47,14 @@ class Engine:
     def write(
         self, index=1, folder: str | Path | None = None, assume_yes=False
     ) -> None:
-        """Writes the keywords to a file.
-        "assume_yes"=True does not ask whether existing files should be overwritten
         """
+        Writes the keywords to a file.
+
+        Args:
+            index (int, optional): Starter file index. Defaults to 0.
+            folder (str | Path | None, optional): folder to write to. Defaults to None.
+            assume_yes (bool, optional): if True: existing files are overwritten without
+              asking. Defaults to False."""
         if folder is None:
             folder = Path().cwd()
         elif isinstance(folder, str):

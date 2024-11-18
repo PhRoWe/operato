@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /STATE/SHELL/AUX/FULL       /STATE/SHELL/EPSP/FULL      /STATE/SHELL/FAIL           
+# /STATE/SHELL/AUX/FULL       /STATE/SHELL/EPSP/FULL      /STATE/SHELL/FAIL
 # /STATE/SHELL/ORTHL          /STATE/SHELL/STRAIN/FULL    /STATE/SHELL/STRAIN/GLOBFULL
-# /STATE/SHELL/STRESS/FULL    /STATE/SHELL/STRESS/GLOBFULL/STATE/SHELL/THICK          
+# /STATE/SHELL/STRESS/FULL    /STATE/SHELL/STRESS/GLOBFULL/STATE/SHELL/THICK
 #
+
 
 # --- /STATE/SHELL/AUX/FULL ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class StateShellAuxFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/AUX/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/SHELL/AUX/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class StateShellAuxFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/EPSP/FULL ------------------------------------------------------
@@ -44,7 +44,8 @@ class StateShellEpspFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/EPSP/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/SHELL/EPSP/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class StateShellEpspFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/FAIL ------------------------------------------------------
@@ -70,7 +69,8 @@ class StateShellFail(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/FAIL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/SHELL/FAIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class StateShellFail(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/ORTHL ------------------------------------------------------
@@ -96,7 +94,8 @@ class StateShellOrthl(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/ORTHL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/SHELL/ORTHL` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class StateShellOrthl(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/STRAIN/FULL ------------------------------------------------------
@@ -122,7 +119,10 @@ class StateShellStrainFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/STRAIN/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/SHELL/STRAIN/FULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -134,11 +134,9 @@ class StateShellStrainFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/STRAIN/GLOBFULL ------------------------------------------------------
@@ -148,7 +146,10 @@ class StateShellStrainGlobfull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/STRAIN/GLOBFULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/SHELL/STRAIN/GLOBFULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -160,11 +161,9 @@ class StateShellStrainGlobfull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/STRESS/FULL ------------------------------------------------------
@@ -174,7 +173,10 @@ class StateShellStressFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/STRESS/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/SHELL/STRESS/FULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -186,11 +188,9 @@ class StateShellStressFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/STRESS/GLOBFULL ------------------------------------------------------
@@ -200,7 +200,10 @@ class StateShellStressGlobfull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SHELL/STRESS/GLOBFULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/SHELL/STRESS/GLOBFULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -212,11 +215,9 @@ class StateShellStressGlobfull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/SHELL/THICK ------------------------------------------------------
@@ -226,6 +227,7 @@ class StateShellThick(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/STATE/SHELL/THICK` is not implemented.")
 
     @property
@@ -238,8 +240,6 @@ class StateShellThick(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

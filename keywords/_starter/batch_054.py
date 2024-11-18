@@ -11,6 +11,7 @@ from ..common import FloatField, IntField, Keyword, StringField
 # /TH/FXBODY                  /TH/GAUGE                   /TH/INTER
 #
 
+
 # --- /TH/ACCEL ------------------------------------------------------
 @dataclass
 class ThAccel(Keyword):
@@ -18,6 +19,7 @@ class ThAccel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/ACCEL` is not implemented.")
 
     @property
@@ -42,6 +44,7 @@ class ThBeam(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/BEAM` is not implemented.")
 
     @property
@@ -66,6 +69,7 @@ class ThBric(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/BRIC` is not implemented.")
 
     @property
@@ -90,6 +94,7 @@ class ThCluster(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/CLUSTER` is not implemented.")
 
     @property
@@ -114,6 +119,7 @@ class ThCylJo(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/CYL_JO` is not implemented.")
 
     @property
@@ -138,6 +144,7 @@ class ThFrame(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/FRAME` is not implemented.")
 
     @property
@@ -162,6 +169,7 @@ class ThFxbody(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/FXBODY` is not implemented.")
 
     @property
@@ -186,6 +194,7 @@ class ThGauge(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/GAUGE` is not implemented.")
 
     @property
@@ -210,6 +219,7 @@ class ThInter(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH/INTER` is not implemented.")
 
     @property

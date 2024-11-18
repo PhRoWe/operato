@@ -11,6 +11,7 @@ from ..common import FloatField, IntField, Keyword, StringField
 # /DFS/DETLINE                /DFS/DETLINE/NODE           /DFS/DETPLAN
 #
 
+
 # --- /DEFAULT/INTER/TYPE7 ------------------------------------------------------
 @dataclass
 class DefaultInterType7(Keyword):
@@ -18,6 +19,7 @@ class DefaultInterType7(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/DEFAULT/INTER/TYPE7` is not implemented.")
 
     @property
@@ -42,7 +44,8 @@ class DefaultInterType11(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DEFAULT/INTER/TYPE11` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DEFAULT/INTER/TYPE11` is not implemented.")
 
     @property
     def keyword(self):
@@ -66,7 +69,8 @@ class DefaultInterType19(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DEFAULT/INTER/TYPE19` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DEFAULT/INTER/TYPE19` is not implemented.")
 
     @property
     def keyword(self):
@@ -90,7 +94,8 @@ class DefaultInterType24(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DEFAULT/INTER/TYPE24` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DEFAULT/INTER/TYPE24` is not implemented.")
 
     @property
     def keyword(self):
@@ -114,7 +119,8 @@ class DefaultInterType25(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DEFAULT/INTER/TYPE25` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DEFAULT/INTER/TYPE25` is not implemented.")
 
     @property
     def keyword(self):
@@ -138,7 +144,8 @@ class DfsDetcord(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DFS/DETCORD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DFS/DETCORD` is not implemented.")
 
     @property
     def keyword(self):
@@ -162,7 +169,8 @@ class DfsDetline(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DFS/DETLINE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DFS/DETLINE` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,7 +194,8 @@ class DfsDetlineNode(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DFS/DETLINE/NODE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DFS/DETLINE/NODE` is not implemented.")
 
     @property
     def keyword(self):
@@ -210,7 +219,8 @@ class DfsDetplan(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DFS/DETPLAN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DFS/DETPLAN` is not implemented.")
 
     @property
     def keyword(self):

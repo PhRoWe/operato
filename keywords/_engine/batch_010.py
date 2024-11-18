@@ -19,7 +19,8 @@ class DynainShellStressFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError(
+        # TODO: Implementation
+        raiseNotImplementedError(
             "Keyword `/DYNAIN/SHELL/STRESS/FULL` is not implemented."
         )
 
@@ -45,7 +46,8 @@ class Dyrel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DYREL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DYREL` is not implemented.")
 
     @property
     def keyword(self):
@@ -69,7 +71,8 @@ class Dyrel1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DYREL/1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DYREL/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -93,6 +96,7 @@ class EndEngine(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/END/ENGINE` is not implemented.")
 
     @property
@@ -117,7 +121,8 @@ class Funct(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FUNCT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FUNCT` is not implemented.")
 
     @property
     def keyword(self):
@@ -141,7 +146,8 @@ class FvmbagModif(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FVMBAG/MODIF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FVMBAG/MODIF` is not implemented.")
 
     @property
     def keyword(self):
@@ -165,7 +171,8 @@ class Fxinp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FXINP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FXINP` is not implemented.")
 
     @property
     def keyword(self):
@@ -219,7 +226,8 @@ class H3dCompress(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/H3D/COMPRESS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/H3D/COMPRESS` is not implemented.")
 
     @property
     def keyword(self):

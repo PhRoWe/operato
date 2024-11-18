@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /FAIL/MULLINS_OR            /FAIL/NXT                   /FAIL/ORTHBIQUAD            
-# /FAIL/ORTHSTRAIN            /FAIL/PUCK                  /FAIL/RTCL                  
-# /FAIL/SAHRAEI               /FAIL/SNCONNECT             /FAIL/SPALLING              
+# /FAIL/MULLINS_OR            /FAIL/NXT                   /FAIL/ORTHBIQUAD
+# /FAIL/ORTHSTRAIN            /FAIL/PUCK                  /FAIL/RTCL
+# /FAIL/SAHRAEI               /FAIL/SNCONNECT             /FAIL/SPALLING
 #
+
 
 # --- /FAIL/MULLINS_OR ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class FailMullinsOr(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/MULLINS_OR` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/MULLINS_OR` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class FailMullinsOr(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/NXT ------------------------------------------------------
@@ -44,7 +44,8 @@ class FailNxt(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/NXT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/NXT` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class FailNxt(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/ORTHBIQUAD ------------------------------------------------------
@@ -70,7 +69,8 @@ class FailOrthbiquad(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/ORTHBIQUAD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/ORTHBIQUAD` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class FailOrthbiquad(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/ORTHSTRAIN ------------------------------------------------------
@@ -96,7 +94,8 @@ class FailOrthstrain(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/ORTHSTRAIN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/ORTHSTRAIN` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class FailOrthstrain(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/PUCK ------------------------------------------------------
@@ -122,7 +119,8 @@ class FailPuck(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/PUCK` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/PUCK` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class FailPuck(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/RTCL ------------------------------------------------------
@@ -148,7 +144,8 @@ class FailRtcl(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/RTCL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/RTCL` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class FailRtcl(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/SAHRAEI ------------------------------------------------------
@@ -174,7 +169,8 @@ class FailSahraei(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/SAHRAEI` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/SAHRAEI` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class FailSahraei(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/SNCONNECT ------------------------------------------------------
@@ -200,7 +194,8 @@ class FailSnconnect(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/SNCONNECT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/SNCONNECT` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class FailSnconnect(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/SPALLING ------------------------------------------------------
@@ -226,6 +219,7 @@ class FailSpalling(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/FAIL/SPALLING` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class FailSpalling(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

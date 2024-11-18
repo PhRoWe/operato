@@ -19,7 +19,8 @@ class StateSpringFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/SPRING/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/SPRING/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -43,7 +44,8 @@ class StateStrFile(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/STR_FILE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/STR_FILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -67,7 +69,8 @@ class StateTrussFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/TRUSS/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/TRUSS/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -91,7 +94,8 @@ class Stop(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STOP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STOP` is not implemented.")
 
     @property
     def keyword(self):
@@ -115,6 +119,7 @@ class StopLsensor(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/STOP/LSENSOR` is not implemented.")
 
     @property
@@ -164,7 +169,8 @@ class ThVers(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/TH/VERS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/TH/VERS` is not implemented.")
 
     @property
     def keyword(self):
@@ -188,7 +194,8 @@ class Thermal(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/THERMAL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/THERMAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,7 +219,8 @@ class Title(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/TITLE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/TITLE` is not implemented.")
 
     @property
     def keyword(self):

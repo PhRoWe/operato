@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /EREF                       /EULER/MAT                  /FAIL                       
-# /FAIL/ALTER                 /FAIL/BIQUAD                /FAIL/CHANG                 
-# /FAIL/COCKCROFT             /FAIL/CONNECT               /FAIL/EMC                   
+# /EREF                       /EULER/MAT                  /FAIL
+# /FAIL/ALTER                 /FAIL/BIQUAD                /FAIL/CHANG
+# /FAIL/COCKCROFT             /FAIL/CONNECT               /FAIL/EMC
 #
+
 
 # --- /EREF ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Eref(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EREF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EREF` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Eref(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EULER/MAT ------------------------------------------------------
@@ -44,7 +44,8 @@ class EulerMat(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EULER/MAT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EULER/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class EulerMat(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL ------------------------------------------------------
@@ -70,7 +69,8 @@ class Fail(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Fail(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/ALTER ------------------------------------------------------
@@ -96,7 +94,8 @@ class FailAlter(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/ALTER` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/ALTER` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class FailAlter(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/BIQUAD ------------------------------------------------------
@@ -122,7 +119,8 @@ class FailBiquad(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/BIQUAD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/BIQUAD` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class FailBiquad(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/CHANG ------------------------------------------------------
@@ -148,7 +144,8 @@ class FailChang(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/CHANG` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/CHANG` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class FailChang(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/COCKCROFT ------------------------------------------------------
@@ -174,7 +169,8 @@ class FailCockcroft(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/COCKCROFT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/COCKCROFT` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class FailCockcroft(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/CONNECT ------------------------------------------------------
@@ -200,7 +194,8 @@ class FailConnect(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/CONNECT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/CONNECT` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class FailConnect(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/EMC ------------------------------------------------------
@@ -226,6 +219,7 @@ class FailEmc(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/FAIL/EMC` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class FailEmc(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

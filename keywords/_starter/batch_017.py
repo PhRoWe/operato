@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /IMPLICIT                   /IMPTEMP                    /IMPVEL                     
-# /IMPVEL/FGEO                /IMPVEL/LAGMUL              /INIBEAM/AUX                
-# /INIBEAM/FULL               /INIBRI                     /INICRACK                   
+# /IMPLICIT                   /IMPTEMP                    /IMPVEL
+# /IMPVEL/FGEO                /IMPVEL/LAGMUL              /INIBEAM/AUX
+# /INIBEAM/FULL               /INIBRI                     /INICRACK
 #
+
 
 # --- /IMPLICIT ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Implicit(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPLICIT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPLICIT` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Implicit(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPTEMP ------------------------------------------------------
@@ -44,7 +44,8 @@ class Imptemp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPTEMP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPTEMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class Imptemp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPVEL ------------------------------------------------------
@@ -70,7 +69,8 @@ class Impvel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPVEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPVEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Impvel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPVEL/FGEO ------------------------------------------------------
@@ -96,7 +94,8 @@ class ImpvelFgeo(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPVEL/FGEO` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPVEL/FGEO` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class ImpvelFgeo(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IMPVEL/LAGMUL ------------------------------------------------------
@@ -122,7 +119,8 @@ class ImpvelLagmul(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPVEL/LAGMUL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPVEL/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class ImpvelLagmul(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIBEAM/AUX ------------------------------------------------------
@@ -148,7 +144,8 @@ class InibeamAux(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIBEAM/AUX` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIBEAM/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class InibeamAux(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIBEAM/FULL ------------------------------------------------------
@@ -174,7 +169,8 @@ class InibeamFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIBEAM/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIBEAM/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class InibeamFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIBRI ------------------------------------------------------
@@ -200,7 +194,8 @@ class Inibri(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIBRI` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIBRI` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class Inibri(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INICRACK ------------------------------------------------------
@@ -226,6 +219,7 @@ class Inicrack(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/INICRACK` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class Inicrack(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

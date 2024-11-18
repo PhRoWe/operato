@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /LAGMUL                     /LEAK/MAT                   /LINE                       
-# /LOAD/CENTRI                /LOAD/PBLAST                /LOAD/PFLUID                
-# /MADYMO/EXFEM               /MAT/B-K-EPS                /MAT/GAS                    
+# /LAGMUL                     /LEAK/MAT                   /LINE
+# /LOAD/CENTRI                /LOAD/PBLAST                /LOAD/PFLUID
+# /MADYMO/EXFEM               /MAT/B-K-EPS                /MAT/GAS
 #
+
 
 # --- /LAGMUL ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Lagmul(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/LAGMUL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Lagmul(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /LEAK/MAT ------------------------------------------------------
@@ -44,7 +44,8 @@ class LeakMat(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/LEAK/MAT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/LEAK/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class LeakMat(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /LINE ------------------------------------------------------
@@ -70,7 +69,8 @@ class Line(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/LINE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/LINE` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Line(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /LOAD/CENTRI ------------------------------------------------------
@@ -96,7 +94,8 @@ class LoadCentri(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/LOAD/CENTRI` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/LOAD/CENTRI` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class LoadCentri(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /LOAD/PBLAST ------------------------------------------------------
@@ -122,7 +119,8 @@ class LoadPblast(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/LOAD/PBLAST` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/LOAD/PBLAST` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class LoadPblast(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /LOAD/PFLUID ------------------------------------------------------
@@ -148,7 +144,8 @@ class LoadPfluid(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/LOAD/PFLUID` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/LOAD/PFLUID` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class LoadPfluid(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MADYMO/EXFEM ------------------------------------------------------
@@ -174,7 +169,8 @@ class MadymoExfem(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MADYMO/EXFEM` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MADYMO/EXFEM` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class MadymoExfem(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/B-K-EPS ------------------------------------------------------
@@ -200,7 +194,8 @@ class MatBKEps(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MAT/B-K-EPS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MAT/B-K-EPS` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class MatBKEps(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MAT/GAS ------------------------------------------------------
@@ -226,6 +219,7 @@ class MatGas(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/MAT/GAS` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class MatGas(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

@@ -19,6 +19,7 @@ from ..common import (
 # /EOS/IDEAL-GAS-VT           /EOS/LINEAR                 /EOS/LSZK
 #
 
+
 # --- /EIG ------------------------------------------------------
 @dataclass
 class Eig(Keyword):
@@ -91,7 +92,8 @@ class Encrypt(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ENCRYPT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ENCRYPT` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +127,8 @@ class EosCompaction(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/COMPACTION` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/COMPACTION` is not implemented.")
 
     @property
     def keyword(self):
@@ -149,7 +152,8 @@ class EosGruneisen(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/GRUNEISEN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/GRUNEISEN` is not implemented.")
 
     @property
     def keyword(self):
@@ -173,7 +177,8 @@ class EosIdealGas(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/IDEAL-GAS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/IDEAL-GAS` is not implemented.")
 
     @property
     def keyword(self):
@@ -197,7 +202,8 @@ class EosIdealGasVt(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/IDEAL-GAS-VT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/IDEAL-GAS-VT` is not implemented.")
 
     @property
     def keyword(self):
@@ -221,7 +227,8 @@ class EosLinear(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EOS/LINEAR` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EOS/LINEAR` is not implemented.")
 
     @property
     def keyword(self):
@@ -245,6 +252,7 @@ class EosLszk(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/EOS/LSZK` is not implemented.")
 
     @property

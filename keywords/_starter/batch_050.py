@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /SKEW/MOV                   /SKEW/MOV2                  /SLIPRING/SHELL             
-# /SLIPRING/SPRING            /SPH/INOUT                  /SPH/RESERVE                
-# /SPHBCS                     /SPHCEL                     /SPHGLO                     
+# /SKEW/MOV                   /SKEW/MOV2                  /SLIPRING/SHELL
+# /SLIPRING/SPRING            /SPH/INOUT                  /SPH/RESERVE
+# /SPHBCS                     /SPHCEL                     /SPHGLO
 #
+
 
 # --- /SKEW/MOV ------------------------------------------------------
 @dataclass
@@ -18,6 +19,7 @@ class SkewMov(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SKEW/MOV` is not implemented.")
 
     @property
@@ -30,11 +32,9 @@ class SkewMov(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SKEW/MOV2 ------------------------------------------------------
@@ -44,6 +44,7 @@ class SkewMov2(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SKEW/MOV2` is not implemented.")
 
     @property
@@ -56,11 +57,9 @@ class SkewMov2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SLIPRING/SHELL ------------------------------------------------------
@@ -70,6 +69,7 @@ class SlipringShell(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SLIPRING/SHELL` is not implemented.")
 
     @property
@@ -82,11 +82,9 @@ class SlipringShell(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SLIPRING/SPRING ------------------------------------------------------
@@ -96,6 +94,7 @@ class SlipringSpring(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SLIPRING/SPRING` is not implemented.")
 
     @property
@@ -108,11 +107,9 @@ class SlipringSpring(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SPH/INOUT ------------------------------------------------------
@@ -122,6 +119,7 @@ class SphInout(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SPH/INOUT` is not implemented.")
 
     @property
@@ -134,11 +132,9 @@ class SphInout(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SPH/RESERVE ------------------------------------------------------
@@ -148,6 +144,7 @@ class SphReserve(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SPH/RESERVE` is not implemented.")
 
     @property
@@ -160,11 +157,9 @@ class SphReserve(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SPHBCS ------------------------------------------------------
@@ -174,6 +169,7 @@ class Sphbcs(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SPHBCS` is not implemented.")
 
     @property
@@ -186,11 +182,9 @@ class Sphbcs(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SPHCEL ------------------------------------------------------
@@ -200,6 +194,7 @@ class Sphcel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SPHCEL` is not implemented.")
 
     @property
@@ -212,11 +207,9 @@ class Sphcel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SPHGLO ------------------------------------------------------
@@ -226,6 +219,7 @@ class Sphglo(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SPHGLO` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class Sphglo(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

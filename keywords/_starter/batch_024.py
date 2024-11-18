@@ -19,7 +19,8 @@ class InterType6(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE6` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE6` is not implemented.")
 
     @property
     def keyword(self):
@@ -43,7 +44,8 @@ class InterType7(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE7` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE7` is not implemented.")
 
     @property
     def keyword(self):
@@ -67,7 +69,8 @@ class InterType8(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE8` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE8` is not implemented.")
 
     @property
     def keyword(self):
@@ -91,7 +94,8 @@ class InterType9(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE9` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE9` is not implemented.")
 
     @property
     def keyword(self):
@@ -115,7 +119,8 @@ class InterType10(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE10` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE10` is not implemented.")
 
     @property
     def keyword(self):
@@ -288,7 +293,8 @@ class InterType12(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE12` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE12` is not implemented.")
 
     @property
     def keyword(self):
@@ -312,7 +318,8 @@ class InterType14(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE14` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE14` is not implemented.")
 
     @property
     def keyword(self):
@@ -336,6 +343,7 @@ class InterType15(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/INTER/TYPE15` is not implemented.")
 
     @property

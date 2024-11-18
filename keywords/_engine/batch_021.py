@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /STATE/BEAM/AUX             /STATE/BEAM/FULL            /STATE/BRICK/AUX/FULL       
-# /STATE/BRICK/EREF           /STATE/BRICK/FAIL           /STATE/BRICK/ORTHO          
-# /STATE/BRICK/STRAIN/FULL    /STATE/BRICK/STRAIN/GLOBFULL/STATE/BRICK/STRES/FULL     
+# /STATE/BEAM/AUX             /STATE/BEAM/FULL            /STATE/BRICK/AUX/FULL
+# /STATE/BRICK/EREF           /STATE/BRICK/FAIL           /STATE/BRICK/ORTHO
+# /STATE/BRICK/STRAIN/FULL    /STATE/BRICK/STRAIN/GLOBFULL/STATE/BRICK/STRES/FULL
 #
+
 
 # --- /STATE/BEAM/AUX ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class StateBeamAux(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BEAM/AUX` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/BEAM/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class StateBeamAux(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BEAM/FULL ------------------------------------------------------
@@ -44,7 +44,8 @@ class StateBeamFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BEAM/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/BEAM/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class StateBeamFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BRICK/AUX/FULL ------------------------------------------------------
@@ -70,7 +69,8 @@ class StateBrickAuxFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/AUX/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/BRICK/AUX/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class StateBrickAuxFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BRICK/EREF ------------------------------------------------------
@@ -96,7 +94,8 @@ class StateBrickEref(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/EREF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/BRICK/EREF` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class StateBrickEref(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BRICK/FAIL ------------------------------------------------------
@@ -122,7 +119,8 @@ class StateBrickFail(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/FAIL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/BRICK/FAIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class StateBrickFail(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BRICK/ORTHO ------------------------------------------------------
@@ -148,7 +144,8 @@ class StateBrickOrtho(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/ORTHO` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/BRICK/ORTHO` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class StateBrickOrtho(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BRICK/STRAIN/FULL ------------------------------------------------------
@@ -174,7 +169,10 @@ class StateBrickStrainFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/STRAIN/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/BRICK/STRAIN/FULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -186,11 +184,9 @@ class StateBrickStrainFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BRICK/STRAIN/GLOBFULL ------------------------------------------------------
@@ -200,7 +196,10 @@ class StateBrickStrainGlobfull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/STRAIN/GLOBFULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/BRICK/STRAIN/GLOBFULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -212,11 +211,9 @@ class StateBrickStrainGlobfull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/BRICK/STRES/FULL ------------------------------------------------------
@@ -226,7 +223,10 @@ class StateBrickStresFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/STRES/FULL` is not implemented.")
+        # TODO: Implementation
+        raise NotImplementedError(
+            "Keyword `/STATE/BRICK/STRES/FULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -238,8 +238,6 @@ class StateBrickStresFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

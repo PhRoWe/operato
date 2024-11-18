@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /FAIL/TAB1                  /FAIL/TBUTCHER              /FAIL/TENSSTRAIN            
-# /FAIL/USERi                 /FAIL/VISUAL                /FAIL/WIERZBICKI            
-# /FAIL/WILKINS               /FRAME/FIX                  /FRAME/MOV                  
+# /FAIL/TAB1                  /FAIL/TBUTCHER              /FAIL/TENSSTRAIN
+# /FAIL/USERi                 /FAIL/VISUAL                /FAIL/WIERZBICKI
+# /FAIL/WILKINS               /FRAME/FIX                  /FRAME/MOV
 #
+
 
 # --- /FAIL/TAB1 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class FailTab1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/TAB1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/TAB1` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class FailTab1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/TBUTCHER ------------------------------------------------------
@@ -44,7 +44,8 @@ class FailTbutcher(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/TBUTCHER` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/TBUTCHER` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class FailTbutcher(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/TENSSTRAIN ------------------------------------------------------
@@ -70,7 +69,8 @@ class FailTensstrain(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/TENSSTRAIN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/TENSSTRAIN` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class FailTensstrain(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/USERi ------------------------------------------------------
@@ -96,7 +94,8 @@ class FailUseri(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/USERi` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/USERi` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class FailUseri(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/VISUAL ------------------------------------------------------
@@ -122,7 +119,8 @@ class FailVisual(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/VISUAL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/VISUAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class FailVisual(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/WIERZBICKI ------------------------------------------------------
@@ -148,7 +144,8 @@ class FailWierzbicki(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/WIERZBICKI` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/WIERZBICKI` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class FailWierzbicki(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FAIL/WILKINS ------------------------------------------------------
@@ -174,7 +169,8 @@ class FailWilkins(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FAIL/WILKINS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FAIL/WILKINS` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class FailWilkins(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FRAME/FIX ------------------------------------------------------
@@ -200,7 +194,8 @@ class FrameFix(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/FRAME/FIX` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/FRAME/FIX` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class FrameFix(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /FRAME/MOV ------------------------------------------------------
@@ -226,6 +219,7 @@ class FrameMov(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/FRAME/MOV` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class FrameMov(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

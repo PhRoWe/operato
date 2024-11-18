@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /INISH3/ORTH_LOC            /INISHE/ORTHO               /INISH3/ORTHO               
-# /INISHE/SCALE_YLD           /INISH3/SCALE_YLD           /INISPRI/FULL               
-# /INISHE/STRA_F              /INISH3/STRA_F              /INISHE_STRA_F/GLOB         
+# /INISH3/ORTH_LOC            /INISHE/ORTHO               /INISH3/ORTHO
+# /INISHE/SCALE_YLD           /INISH3/SCALE_YLD           /INISPRI/FULL
+# /INISHE/STRA_F              /INISH3/STRA_F              /INISHE_STRA_F/GLOB
 #
+
 
 # --- /INISH3/ORTH_LOC ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Inish3OrthLoc(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISH3/ORTH_LOC` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISH3/ORTH_LOC` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Inish3OrthLoc(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/ORTHO ------------------------------------------------------
@@ -44,7 +44,8 @@ class InisheOrtho(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISHE/ORTHO` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISHE/ORTHO` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class InisheOrtho(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISH3/ORTHO ------------------------------------------------------
@@ -70,7 +69,8 @@ class Inish3Ortho(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISH3/ORTHO` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISH3/ORTHO` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Inish3Ortho(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/SCALE_YLD ------------------------------------------------------
@@ -96,7 +94,8 @@ class InisheScaleYld(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISHE/SCALE_YLD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISHE/SCALE_YLD` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class InisheScaleYld(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISH3/SCALE_YLD ------------------------------------------------------
@@ -122,7 +119,8 @@ class Inish3ScaleYld(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISH3/SCALE_YLD` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISH3/SCALE_YLD` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class Inish3ScaleYld(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISPRI/FULL ------------------------------------------------------
@@ -148,7 +144,8 @@ class InispriFull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISPRI/FULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISPRI/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class InispriFull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE/STRA_F ------------------------------------------------------
@@ -174,7 +169,8 @@ class InisheStraF(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISHE/STRA_F` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISHE/STRA_F` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class InisheStraF(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISH3/STRA_F ------------------------------------------------------
@@ -200,7 +194,8 @@ class Inish3StraF(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INISH3/STRA_F` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INISH3/STRA_F` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class Inish3StraF(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INISHE_STRA_F/GLOB ------------------------------------------------------
@@ -226,6 +219,7 @@ class InisheStraFGlob(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/INISHE_STRA_F/GLOB` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class InisheStraFGlob(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

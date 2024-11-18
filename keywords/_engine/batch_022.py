@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /STATE/BRICK/STRES/GLOBFULL /STATE/DT                   /STATE/INIMAP1D/Keyword3    
-# /STATE/INIMAP2D/Keyword3    /STATE/LSENSOR              /STATE/NODE/BCS             
-# /STATE/NODE/TEMP            /STATE/NODE/VEL             /STATE/NO_DEL               
+# /STATE/BRICK/STRES/GLOBFULL /STATE/DT                   /STATE/INIMAP1D/Keyword3
+# /STATE/INIMAP2D/Keyword3    /STATE/LSENSOR              /STATE/NODE/BCS
+# /STATE/NODE/TEMP            /STATE/NODE/VEL             /STATE/NO_DEL
 #
+
 
 # --- /STATE/BRICK/STRES/GLOBFULL ------------------------------------------------------
 @dataclass
@@ -18,7 +19,10 @@ class StateBrickStresGlobfull(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/BRICK/STRES/GLOBFULL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/BRICK/STRES/GLOBFULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -30,11 +34,9 @@ class StateBrickStresGlobfull(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/DT ------------------------------------------------------
@@ -44,7 +46,8 @@ class StateDt(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/DT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/DT` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +59,9 @@ class StateDt(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/INIMAP1D/Keyword3 ------------------------------------------------------
@@ -70,7 +71,10 @@ class StateInimap1dKeyword3(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/INIMAP1D/Keyword3` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/INIMAP1D/Keyword3` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -82,11 +86,9 @@ class StateInimap1dKeyword3(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/INIMAP2D/Keyword3 ------------------------------------------------------
@@ -96,7 +98,10 @@ class StateInimap2dKeyword3(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/INIMAP2D/Keyword3` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/STATE/INIMAP2D/Keyword3` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -108,11 +113,9 @@ class StateInimap2dKeyword3(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/LSENSOR ------------------------------------------------------
@@ -122,7 +125,8 @@ class StateLsensor(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/LSENSOR` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/LSENSOR` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +138,9 @@ class StateLsensor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/NODE/BCS ------------------------------------------------------
@@ -148,7 +150,8 @@ class StateNodeBcs(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/NODE/BCS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/NODE/BCS` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +163,9 @@ class StateNodeBcs(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/NODE/TEMP ------------------------------------------------------
@@ -174,7 +175,8 @@ class StateNodeTemp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/NODE/TEMP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/NODE/TEMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +188,9 @@ class StateNodeTemp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/NODE/VEL ------------------------------------------------------
@@ -200,7 +200,8 @@ class StateNodeVel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/STATE/NODE/VEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/STATE/NODE/VEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +213,9 @@ class StateNodeVel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /STATE/NO_DEL ------------------------------------------------------
@@ -226,6 +225,7 @@ class StateNoDel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/STATE/NO_DEL` is not implemented.")
 
     @property
@@ -238,8 +238,6 @@ class StateNoDel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

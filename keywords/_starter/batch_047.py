@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /RWALL/LAGMUL               /RWALL/THERM                /SECT                       
-# /SECT/CIRCLE                /SECT/PARAL                 /SENSOR                     
-# /SENSOR/ACCE                /SENSOR/AND_OR              /SENSOR/DIST                
+# /RWALL/LAGMUL               /RWALL/THERM                /SECT
+# /SECT/CIRCLE                /SECT/PARAL                 /SENSOR
+# /SENSOR/ACCE                /SENSOR/AND_OR              /SENSOR/DIST
 #
+
 
 # --- /RWALL/LAGMUL ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class RwallLagmul(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RWALL/LAGMUL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RWALL/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class RwallLagmul(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RWALL/THERM ------------------------------------------------------
@@ -44,7 +44,8 @@ class RwallTherm(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RWALL/THERM` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RWALL/THERM` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class RwallTherm(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SECT ------------------------------------------------------
@@ -70,7 +69,8 @@ class Sect(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SECT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SECT` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Sect(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SECT/CIRCLE ------------------------------------------------------
@@ -96,7 +94,8 @@ class SectCircle(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SECT/CIRCLE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SECT/CIRCLE` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class SectCircle(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SECT/PARAL ------------------------------------------------------
@@ -122,7 +119,8 @@ class SectParal(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SECT/PARAL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SECT/PARAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class SectParal(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR ------------------------------------------------------
@@ -148,7 +144,8 @@ class Sensor(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class Sensor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/ACCE ------------------------------------------------------
@@ -174,7 +169,8 @@ class SensorAcce(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/ACCE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/ACCE` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class SensorAcce(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/AND_OR ------------------------------------------------------
@@ -200,7 +194,8 @@ class SensorAndOr(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/SENSOR/AND_OR` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/SENSOR/AND_OR` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class SensorAndOr(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /SENSOR/DIST ------------------------------------------------------
@@ -226,6 +219,7 @@ class SensorDist(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SENSOR/DIST` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class SensorDist(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

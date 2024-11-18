@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /ANIM/SHELL/EPSP            /ANIM/SHELL/FLDF            /ANIM/SHELL/FLDZ            
-# /ANIM/SHELL/IDPLY           /ANIM/SHELL/IDPLY/DAMA      /ANIM/SHELL/IDPLY/EPSP      
-# /ANIM/SHELL/IDPLY/PHI       /ANIM/SHELL/IDPLY/Restype   /ANIM/SHELL/NXTFACTOR       
+# /ANIM/SHELL/EPSP            /ANIM/SHELL/FLDF            /ANIM/SHELL/FLDZ
+# /ANIM/SHELL/IDPLY           /ANIM/SHELL/IDPLY/DAMA      /ANIM/SHELL/IDPLY/EPSP
+# /ANIM/SHELL/IDPLY/PHI       /ANIM/SHELL/IDPLY/Restype   /ANIM/SHELL/NXTFACTOR
 #
+
 
 # --- /ANIM/SHELL/EPSP ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class AnimShellEpsp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/EPSP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/EPSP` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class AnimShellEpsp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/FLDF ------------------------------------------------------
@@ -44,7 +44,8 @@ class AnimShellFldf(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/FLDF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/FLDF` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class AnimShellFldf(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/FLDZ ------------------------------------------------------
@@ -70,7 +69,8 @@ class AnimShellFldz(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/FLDZ` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/FLDZ` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class AnimShellFldz(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/IDPLY ------------------------------------------------------
@@ -96,7 +94,8 @@ class AnimShellIdply(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/IDPLY` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class AnimShellIdply(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/IDPLY/DAMA ------------------------------------------------------
@@ -122,7 +119,8 @@ class AnimShellIdplyDama(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/IDPLY/DAMA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY/DAMA` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class AnimShellIdplyDama(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/IDPLY/EPSP ------------------------------------------------------
@@ -148,7 +144,8 @@ class AnimShellIdplyEpsp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/IDPLY/EPSP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY/EPSP` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class AnimShellIdplyEpsp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/IDPLY/PHI ------------------------------------------------------
@@ -174,7 +169,8 @@ class AnimShellIdplyPhi(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/IDPLY/PHI` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY/PHI` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class AnimShellIdplyPhi(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/IDPLY/Restype ------------------------------------------------------
@@ -200,7 +194,10 @@ class AnimShellIdplyRestype(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/IDPLY/Restype` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError(
+            "Keyword `/ANIM/SHELL/IDPLY/Restype` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -212,11 +209,9 @@ class AnimShellIdplyRestype(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/SHELL/NXTFACTOR ------------------------------------------------------
@@ -226,6 +221,7 @@ class AnimShellNxtfactor(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/ANIM/SHELL/NXTFACTOR` is not implemented.")
 
     @property
@@ -238,8 +234,6 @@ class AnimShellNxtfactor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /EBCS/INIV                  /EBCS/INLET                 /EBCS/MONVOL                
-# /EBCS/NORMV                 /EBCS/NRF                   /EBCS/PRES                  
-# /EBCS/VALVIN                /EBCS/VALVOUT               /EBCS/VEL                   
+# /EBCS/INIV                  /EBCS/INLET                 /EBCS/MONVOL
+# /EBCS/NORMV                 /EBCS/NRF                   /EBCS/PRES
+# /EBCS/VALVIN                /EBCS/VALVOUT               /EBCS/VEL
 #
+
 
 # --- /EBCS/INIV ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class EbcsIniv(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/INIV` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/INIV` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class EbcsIniv(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/INLET ------------------------------------------------------
@@ -44,7 +44,8 @@ class EbcsInlet(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/INLET` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/INLET` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class EbcsInlet(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/MONVOL ------------------------------------------------------
@@ -70,7 +69,8 @@ class EbcsMonvol(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/MONVOL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/MONVOL` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class EbcsMonvol(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/NORMV ------------------------------------------------------
@@ -96,7 +94,8 @@ class EbcsNormv(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/NORMV` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/NORMV` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class EbcsNormv(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/NRF ------------------------------------------------------
@@ -122,7 +119,8 @@ class EbcsNrf(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/NRF` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/NRF` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class EbcsNrf(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/PRES ------------------------------------------------------
@@ -148,7 +144,8 @@ class EbcsPres(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/PRES` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/PRES` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class EbcsPres(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/VALVIN ------------------------------------------------------
@@ -174,7 +169,8 @@ class EbcsValvin(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/VALVIN` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/VALVIN` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class EbcsValvin(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/VALVOUT ------------------------------------------------------
@@ -200,7 +194,8 @@ class EbcsValvout(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/VALVOUT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/VALVOUT` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class EbcsValvout(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /EBCS/VEL ------------------------------------------------------
@@ -226,6 +219,7 @@ class EbcsVel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/EBCS/VEL` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class EbcsVel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

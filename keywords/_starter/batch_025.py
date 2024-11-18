@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /INTER/TYPE18               /INTER/TYPE19               /INTER/TYPE21               
-# /INTER/TYPE22               /INTER/TYPE23               /INTER/TYPE24               
-# /INTER/TYPE25               /IOFLAG                     /KEY                        
+# /INTER/TYPE18               /INTER/TYPE19               /INTER/TYPE21
+# /INTER/TYPE22               /INTER/TYPE23               /INTER/TYPE24
+# /INTER/TYPE25               /IOFLAG                     /KEY
 #
+
 
 # --- /INTER/TYPE18 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class InterType18(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE18` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE18` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class InterType18(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE19 ------------------------------------------------------
@@ -44,7 +44,8 @@ class InterType19(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE19` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE19` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class InterType19(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE21 ------------------------------------------------------
@@ -70,7 +69,8 @@ class InterType21(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE21` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE21` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class InterType21(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE22 ------------------------------------------------------
@@ -96,7 +94,8 @@ class InterType22(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE22` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE22` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class InterType22(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE23 ------------------------------------------------------
@@ -122,7 +119,8 @@ class InterType23(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE23` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE23` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class InterType23(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE24 ------------------------------------------------------
@@ -148,7 +144,8 @@ class InterType24(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE24` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE24` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class InterType24(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INTER/TYPE25 ------------------------------------------------------
@@ -174,7 +169,8 @@ class InterType25(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INTER/TYPE25` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INTER/TYPE25` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class InterType25(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /IOFLAG ------------------------------------------------------
@@ -200,7 +194,8 @@ class Ioflag(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IOFLAG` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IOFLAG` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class Ioflag(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /KEY ------------------------------------------------------
@@ -226,6 +219,7 @@ class Key(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/KEY` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class Key(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

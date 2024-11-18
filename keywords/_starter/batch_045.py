@@ -29,7 +29,8 @@ class PropType35(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE35` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE35` is not implemented.")
 
     @property
     def keyword(self):
@@ -53,7 +54,8 @@ class PropType36(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE36` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE36` is not implemented.")
 
     @property
     def keyword(self):
@@ -77,7 +79,8 @@ class PropType43(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE43` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE43` is not implemented.")
 
     @property
     def keyword(self):
@@ -101,7 +104,8 @@ class PropType44(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE44` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE44` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +129,8 @@ class PropType45(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE45` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE45` is not implemented.")
 
     @property
     def keyword(self):
@@ -149,7 +154,8 @@ class PropType46(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE46` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE46` is not implemented.")
 
     @property
     def keyword(self):
@@ -173,7 +179,8 @@ class PropType51(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE51` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE51` is not implemented.")
 
     @property
     def keyword(self):
@@ -239,6 +246,7 @@ class Radiation(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/RADIATION` is not implemented.")
 
     @property

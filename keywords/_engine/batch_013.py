@@ -19,7 +19,8 @@ class ImplDivergN(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/DIVERG/n` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/DIVERG/n` is not implemented.")
 
     @property
     def keyword(self):
@@ -43,6 +44,7 @@ class ImplDt1(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/IMPL/DT/1` is not implemented.")
 
     @property
@@ -111,7 +113,8 @@ class ImplDt3(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/DT/3` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/DT/3` is not implemented.")
 
     @property
     def keyword(self):
@@ -135,7 +138,8 @@ class ImplDtFixpoint(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/DT/FIXPOINT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/DT/FIXPOINT` is not implemented.")
 
     @property
     def keyword(self):
@@ -159,7 +163,8 @@ class ImplDtStop(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/DT/STOP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/DT/STOP` is not implemented.")
 
     @property
     def keyword(self):
@@ -210,7 +215,8 @@ class ImplDyna1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/DYNA/1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/DYNA/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -234,7 +240,8 @@ class ImplDyna2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/IMPL/DYNA/2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/IMPL/DYNA/2` is not implemented.")
 
     @property
     def keyword(self):

@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /KEREL/1                    /KILL                       /MADYMO                     
-# /MASS/RESET                 /MON                        /NEGVOL                     
-# /OUTP                       /OUTPUT/LSENSOR             /PARITH                     
+# /KEREL/1                    /KILL                       /MADYMO
+# /MASS/RESET                 /MON                        /NEGVOL
+# /OUTP                       /OUTPUT/LSENSOR             /PARITH
 #
+
 
 # --- /KEREL/1 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Kerel1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/KEREL/1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/KEREL/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Kerel1(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /KILL ------------------------------------------------------
@@ -44,7 +44,8 @@ class Kill(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/KILL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/KILL` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class Kill(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MADYMO ------------------------------------------------------
@@ -70,7 +69,8 @@ class Madymo(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MADYMO` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MADYMO` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Madymo(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MASS/RESET ------------------------------------------------------
@@ -96,7 +94,8 @@ class MassReset(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MASS/RESET` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MASS/RESET` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class MassReset(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /MON ------------------------------------------------------
@@ -122,7 +119,8 @@ class Mon(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/MON` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/MON` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class Mon(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /NEGVOL ------------------------------------------------------
@@ -148,7 +144,8 @@ class Negvol(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/NEGVOL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/NEGVOL` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class Negvol(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /OUTP ------------------------------------------------------
@@ -174,7 +169,8 @@ class Outp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/OUTP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/OUTP` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class Outp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /OUTPUT/LSENSOR ------------------------------------------------------
@@ -200,7 +194,8 @@ class OutputLsensor(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/OUTPUT/LSENSOR` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/OUTPUT/LSENSOR` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class OutputLsensor(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PARITH ------------------------------------------------------
@@ -226,6 +219,7 @@ class Parith(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/PARITH` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class Parith(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

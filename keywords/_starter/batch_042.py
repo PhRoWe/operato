@@ -19,7 +19,8 @@ class PropType8(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE8` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE8` is not implemented.")
 
     @property
     def keyword(self):
@@ -43,7 +44,8 @@ class PropType9(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE9` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE9` is not implemented.")
 
     @property
     def keyword(self):
@@ -67,7 +69,8 @@ class PropType10(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE10` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE10` is not implemented.")
 
     @property
     def keyword(self):
@@ -91,7 +94,8 @@ class PropType11(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE11` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE11` is not implemented.")
 
     @property
     def keyword(self):
@@ -115,7 +119,8 @@ class PropType12(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE12` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE12` is not implemented.")
 
     @property
     def keyword(self):
@@ -139,7 +144,8 @@ class PropType13(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE13` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE13` is not implemented.")
 
     @property
     def keyword(self):
@@ -269,6 +275,7 @@ class PropType15(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/PROP/TYPE15` is not implemented.")
 
     @property

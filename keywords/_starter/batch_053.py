@@ -34,6 +34,7 @@ class SurfSeg(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/SEG` is not implemented.")
 
     @property
@@ -58,6 +59,7 @@ class SurfSubmodel(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/SUBMODEL` is not implemented.")
 
     @property
@@ -82,6 +84,7 @@ class SurfSubset(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/SUBSET` is not implemented.")
 
     @property
@@ -106,6 +109,7 @@ class SurfSurf(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/SURF/SURF` is not implemented.")
 
     @property
@@ -130,6 +134,7 @@ class Table0(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TABLE/0` is not implemented.")
 
     @property
@@ -154,6 +159,7 @@ class Table1(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TABLE/1` is not implemented.")
 
     @property
@@ -261,6 +267,7 @@ class Th(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/TH` is not implemented.")
 
     @property

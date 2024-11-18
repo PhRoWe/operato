@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /INIGRAV                    /INIMAP1D                   /INIMAP1D/FILE              
-# /INIMAP2D                   /INIMAP2D/FILE              /INIQUA                     
-# /INIQUA/DENS                /INIQUA/ENER                /INIQUA/EPSP                
+# /INIGRAV                    /INIMAP1D                   /INIMAP1D/FILE
+# /INIMAP2D                   /INIMAP2D/FILE              /INIQUA
+# /INIQUA/DENS                /INIQUA/ENER                /INIQUA/EPSP
 #
+
 
 # --- /INIGRAV ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Inigrav(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIGRAV` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIGRAV` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Inigrav(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIMAP1D ------------------------------------------------------
@@ -44,7 +44,8 @@ class Inimap1d(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIMAP1D` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIMAP1D` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class Inimap1d(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIMAP1D/FILE ------------------------------------------------------
@@ -70,7 +69,8 @@ class Inimap1dFile(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIMAP1D/FILE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIMAP1D/FILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Inimap1dFile(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIMAP2D ------------------------------------------------------
@@ -96,7 +94,8 @@ class Inimap2d(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIMAP2D` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIMAP2D` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class Inimap2d(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIMAP2D/FILE ------------------------------------------------------
@@ -122,7 +119,8 @@ class Inimap2dFile(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIMAP2D/FILE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIMAP2D/FILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class Inimap2dFile(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIQUA ------------------------------------------------------
@@ -148,7 +144,8 @@ class Iniqua(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIQUA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIQUA` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class Iniqua(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIQUA/DENS ------------------------------------------------------
@@ -174,7 +169,8 @@ class IniquaDens(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIQUA/DENS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIQUA/DENS` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class IniquaDens(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIQUA/ENER ------------------------------------------------------
@@ -200,7 +194,8 @@ class IniquaEner(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/INIQUA/ENER` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/INIQUA/ENER` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class IniquaEner(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /INIQUA/EPSP ------------------------------------------------------
@@ -226,6 +219,7 @@ class IniquaEpsp(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/INIQUA/EPSP` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class IniquaEpsp(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

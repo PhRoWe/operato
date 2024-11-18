@@ -181,18 +181,11 @@ class AleGridSpring(Keyword):
 class AleGridStandard(Keyword):
     """With this keyword it is possible to modify grid formulation parameters,
     which initially were set in Starter keyword /ALE/GRID/STANDARD.
-    (Altair standard method for grid velocity computation). (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/ale_grid_standard_engine_r.htm)
-
-    Args:
-        Keyword (_type_): _description_
-
-    Raises:
-        NotImplementedError: _description_
-
-    Returns:
-        _type_: _description_
+    (Altair standard method for grid velocity computation).
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/ale_grid_standard_engine_r.htm)
     """
 
+    # TODO: Implementation
     attr1: int
     attr2: float
 
@@ -219,6 +212,7 @@ class AleGridStandard(Keyword):
 class AleGridZero(Keyword):
     attr1: int
     attr2: float
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/GRID/ZERO` is not implemented.")
@@ -243,6 +237,7 @@ class AleGridZero(Keyword):
 class AleLinkOff(Keyword):
     attr1: int
     attr2: float
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/LINK/OFF` is not implemented.")
@@ -267,6 +262,7 @@ class AleLinkOff(Keyword):
 class AleLinkOn(Keyword):
     attr1: int
     attr2: float
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/LINK/ON` is not implemented.")

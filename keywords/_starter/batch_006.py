@@ -11,6 +11,7 @@ from ..common import FloatField, IntField, Keyword, StringField
 # /EBCS/FLUXOUT               /EBCS/GRADP0                /EBCS/INIP
 #
 
+
 # --- /DFS/DETPLAN/NODE ------------------------------------------------------
 @dataclass
 class DfsDetplanNode(Keyword):
@@ -125,7 +126,8 @@ class DfsLaser(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DFS/LASER` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DFS/LASER` is not implemented.")
 
     @property
     def keyword(self):
@@ -149,7 +151,8 @@ class DfsWavSha(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DFS/WAV_SHA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DFS/WAV_SHA` is not implemented.")
 
     @property
     def keyword(self):
@@ -173,7 +176,8 @@ class Drape(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/DRAPE` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/DRAPE` is not implemented.")
 
     @property
     def keyword(self):
@@ -197,7 +201,8 @@ class EbcsFluxout(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/FLUXOUT` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/FLUXOUT` is not implemented.")
 
     @property
     def keyword(self):
@@ -221,7 +226,8 @@ class EbcsGradp0(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/EBCS/GRADP0` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/EBCS/GRADP0` is not implemented.")
 
     @property
     def keyword(self):
@@ -245,6 +251,7 @@ class EbcsInip(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/EBCS/INIP` is not implemented.")
 
     @property

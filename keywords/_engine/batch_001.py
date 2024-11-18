@@ -6,16 +6,18 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /ALE/LINK/VEL               /ALE/MUSCL/OFF              /ALE/OFF                    
-# /ALE/ON                     /ALE/SOLVER/FINT            /ALE/SUPG/OFF               
-# /ANIM/BRICK/DAMA            /ANIM/BRICK/Restype         /ANIM/BRICK/TDEL            
+# /ALE/LINK/VEL               /ALE/MUSCL/OFF              /ALE/OFF
+# /ALE/ON                     /ALE/SOLVER/FINT            /ALE/SUPG/OFF
+# /ANIM/BRICK/DAMA            /ANIM/BRICK/Restype         /ANIM/BRICK/TDEL
 #
+
 
 # --- /ALE/LINK/VEL ------------------------------------------------------
 @dataclass
 class AleLinkVel(Keyword):
     attr1: int
     attr2: float
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/LINK/VEL` is not implemented.")
@@ -30,11 +32,9 @@ class AleLinkVel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ALE/MUSCL/OFF ------------------------------------------------------
@@ -42,6 +42,8 @@ class AleLinkVel(Keyword):
 class AleMusclOff(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/MUSCL/OFF` is not implemented.")
@@ -56,11 +58,9 @@ class AleMusclOff(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ALE/OFF ------------------------------------------------------
@@ -68,6 +68,8 @@ class AleMusclOff(Keyword):
 class AleOff(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/OFF` is not implemented.")
@@ -82,11 +84,9 @@ class AleOff(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ALE/ON ------------------------------------------------------
@@ -94,6 +94,8 @@ class AleOff(Keyword):
 class AleOn(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/ON` is not implemented.")
@@ -108,11 +110,9 @@ class AleOn(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ALE/SOLVER/FINT ------------------------------------------------------
@@ -120,6 +120,8 @@ class AleOn(Keyword):
 class AleSolverFint(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/SOLVER/FINT` is not implemented.")
@@ -134,11 +136,9 @@ class AleSolverFint(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ALE/SUPG/OFF ------------------------------------------------------
@@ -146,6 +146,8 @@ class AleSolverFint(Keyword):
 class AleSupgOff(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/SUPG/OFF` is not implemented.")
@@ -160,11 +162,9 @@ class AleSupgOff(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/BRICK/DAMA ------------------------------------------------------
@@ -172,6 +172,8 @@ class AleSupgOff(Keyword):
 class AnimBrickDama(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ANIM/BRICK/DAMA` is not implemented.")
@@ -186,11 +188,9 @@ class AnimBrickDama(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/BRICK/Restype ------------------------------------------------------
@@ -198,6 +198,8 @@ class AnimBrickDama(Keyword):
 class AnimBrickRestype(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ANIM/BRICK/Restype` is not implemented.")
@@ -212,11 +214,9 @@ class AnimBrickRestype(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /ANIM/BRICK/TDEL ------------------------------------------------------
@@ -224,6 +224,8 @@ class AnimBrickRestype(Keyword):
 class AnimBrickTdel(Keyword):
     attr1: int
     attr2: float
+
+    # TODO: Implementation
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ANIM/BRICK/TDEL` is not implemented.")
@@ -238,8 +240,6 @@ class AnimBrickTdel(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

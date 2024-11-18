@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /PROP/TYPE26                /PROP/TYPE27                /PROP/TYPE28                
-# /PROP/TYPE29                /PROP/TYPE30                /PROP/TYPE31                
-# /PROP/TYPE32                /PROP/TYPE33                /PROP/TYPE34                
+# /PROP/TYPE26                /PROP/TYPE27                /PROP/TYPE28
+# /PROP/TYPE29                /PROP/TYPE30                /PROP/TYPE31
+# /PROP/TYPE32                /PROP/TYPE33                /PROP/TYPE34
 #
+
 
 # --- /PROP/TYPE26 ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class PropType26(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE26` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE26` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class PropType26(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE27 ------------------------------------------------------
@@ -44,7 +44,8 @@ class PropType27(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE27` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE27` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class PropType27(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE28 ------------------------------------------------------
@@ -70,7 +69,8 @@ class PropType28(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE28` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE28` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class PropType28(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE29 ------------------------------------------------------
@@ -96,7 +94,8 @@ class PropType29(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE29` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE29` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class PropType29(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE30 ------------------------------------------------------
@@ -122,7 +119,8 @@ class PropType30(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE30` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE30` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class PropType30(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE31 ------------------------------------------------------
@@ -148,7 +144,8 @@ class PropType31(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE31` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE31` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class PropType31(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE32 ------------------------------------------------------
@@ -174,7 +169,8 @@ class PropType32(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE32` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE32` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class PropType32(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE33 ------------------------------------------------------
@@ -200,7 +194,8 @@ class PropType33(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE33` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE33` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class PropType33(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /PROP/TYPE34 ------------------------------------------------------
@@ -226,6 +219,7 @@ class PropType34(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/PROP/TYPE34` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class PropType34(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure

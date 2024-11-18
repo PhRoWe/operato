@@ -19,7 +19,8 @@ class AnimShellPhi(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/PHI` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/PHI` is not implemented.")
 
     @property
     def keyword(self):
@@ -115,7 +116,8 @@ class AnimShellSig1h(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/SIG1H` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/SIG1H` is not implemented.")
 
     @property
     def keyword(self):
@@ -139,7 +141,8 @@ class AnimShellSig2h(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/SIG2H` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/SIG2H` is not implemented.")
 
     @property
     def keyword(self):
@@ -163,7 +166,8 @@ class AnimShellTdel(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/TDEL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/TDEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -187,7 +191,8 @@ class AnimShellTens(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/SHELL/TENS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/SHELL/TENS` is not implemented.")
 
     @property
     def keyword(self):
@@ -211,6 +216,7 @@ class AnimTitle(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/ANIM/TITLE` is not implemented.")
 
     @property
@@ -277,7 +283,8 @@ class AnimVers(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/ANIM/VERS` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/ANIM/VERS` is not implemented.")
 
     @property
     def keyword(self):

@@ -19,7 +19,8 @@ class PropInject1(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/INJECT1` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/INJECT1` is not implemented.")
 
     @property
     def keyword(self):
@@ -43,7 +44,8 @@ class PropInject2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/INJECT2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/INJECT2` is not implemented.")
 
     @property
     def keyword(self):
@@ -67,7 +69,8 @@ class PropPcompp(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/PCOMPP` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/PCOMPP` is not implemented.")
 
     @property
     def keyword(self):
@@ -200,7 +203,8 @@ class PropType2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE2` is not implemented.")
 
     @property
     def keyword(self):
@@ -304,7 +308,8 @@ class PropType4(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/PROP/TYPE4` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/PROP/TYPE4` is not implemented.")
 
     @property
     def keyword(self):
@@ -328,6 +333,7 @@ class PropType6(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/PROP/TYPE6` is not implemented.")
 
     @property

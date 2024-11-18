@@ -6,10 +6,11 @@ from ..common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
-# /RANDOM                     /RBE2                       /RBE3                       
-# /RBODY                      /RBODY/LAGMUL               /REFSTA                     
-# /RETRACTOR/SPRING           /RLINK                      /RWALL                      
+# /RANDOM                     /RBE2                       /RBE3
+# /RBODY                      /RBODY/LAGMUL               /REFSTA
+# /RETRACTOR/SPRING           /RLINK                      /RWALL
 #
+
 
 # --- /RANDOM ------------------------------------------------------
 @dataclass
@@ -18,7 +19,8 @@ class Random(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RANDOM` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RANDOM` is not implemented.")
 
     @property
     def keyword(self):
@@ -30,11 +32,9 @@ class Random(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RBE2 ------------------------------------------------------
@@ -44,7 +44,8 @@ class Rbe2(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RBE2` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RBE2` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,11 +57,9 @@ class Rbe2(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RBE3 ------------------------------------------------------
@@ -70,7 +69,8 @@ class Rbe3(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RBE3` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RBE3` is not implemented.")
 
     @property
     def keyword(self):
@@ -82,11 +82,9 @@ class Rbe3(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RBODY ------------------------------------------------------
@@ -96,7 +94,8 @@ class Rbody(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RBODY` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -108,11 +107,9 @@ class Rbody(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RBODY/LAGMUL ------------------------------------------------------
@@ -122,7 +119,8 @@ class RbodyLagmul(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RBODY/LAGMUL` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RBODY/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -134,11 +132,9 @@ class RbodyLagmul(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /REFSTA ------------------------------------------------------
@@ -148,7 +144,8 @@ class Refsta(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/REFSTA` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/REFSTA` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,11 +157,9 @@ class Refsta(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RETRACTOR/SPRING ------------------------------------------------------
@@ -174,7 +169,8 @@ class RetractorSpring(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RETRACTOR/SPRING` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RETRACTOR/SPRING` is not implemented.")
 
     @property
     def keyword(self):
@@ -186,11 +182,9 @@ class RetractorSpring(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RLINK ------------------------------------------------------
@@ -200,7 +194,8 @@ class Rlink(Keyword):
     attr2: float
 
     def __post_init__(self):
-        raise NotImplementedError("Keyword `/RLINK` is not implemented.")
+        # TODO: Implementation
+        raiseNotImplementedError("Keyword `/RLINK` is not implemented.")
 
     @property
     def keyword(self):
@@ -212,11 +207,9 @@ class Rlink(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
 
 
 # --- /RWALL ------------------------------------------------------
@@ -226,6 +219,7 @@ class Rwall(Keyword):
     attr2: float
 
     def __post_init__(self):
+        # TODO: Implementation
         raise NotImplementedError("Keyword `/RWALL` is not implemented.")
 
     @property
@@ -238,8 +232,6 @@ class Rwall(Keyword):
 
     @property
     def structure(self):
-        structure = [
+        structure = []
 
-        ]
-
-        return structure 
+        return structure
