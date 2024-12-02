@@ -9,7 +9,7 @@ from typing import List, Iterable, Literal, Sequence, Tuple, get_args, get_type_
 
 import numpy as np
 
-from operato.constants import (
+from ..constants import (
     FIELDWIDTH,
     FLOAT_FULL_FORMAT_SPEC,
     INT_FULL_FORMAT_SPEC,

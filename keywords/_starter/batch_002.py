@@ -3,7 +3,6 @@
 from dataclasses import dataclass
 from typing import Literal, List, Sequence
 from numpy.typing import NDArray
-from constants import LINE_SEPARATOR
 
 from ..common import (
     ArrayOfAtomicFields,
@@ -321,31 +320,27 @@ class Beam(Keyword):
 
     @property
     def structure(self):
-        structure = [FloatField("line1", 1, 10)]
+        structure = [StringField("line1", 1, 10)]
         if len(self.node_ids[0]) == 2:
             structure.append(
-                [
-                    ArrayOfAtomicFields(
-                        [
-                            IntField("beam_ids", 1),
-                            IntField("node_ids:ID_1|0", 2),
-                            IntField("node_ids:ID_2|1", 3),
-                        ]
-                    )
-                ]
+                ArrayOfAtomicFields(
+                    [
+                        IntField("beam_ids", 1),
+                        IntField("node_ids:ID_1|0", 2),
+                        IntField("node_ids:ID_2|1", 3),
+                    ]
+                )
             )
         elif len(self.node_ids[0]) == 3:
             structure.append(
-                [
-                    ArrayOfAtomicFields(
-                        [
-                            IntField("beam_ids", 1),
-                            IntField("node_ids:ID_1|0", 2),
-                            IntField("node_ids:ID_2|1", 3),
-                            IntField("node_ids:ID_3|2", 4),
-                        ]
-                    )
-                ]
+                ArrayOfAtomicFields(
+                    [
+                        IntField("beam_ids", 1),
+                        IntField("node_ids:ID_1|0", 2),
+                        IntField("node_ids:ID_2|1", 3),
+                        IntField("node_ids:ID_3|2", 4),
+                    ]
+                )
             )
 
         return structure

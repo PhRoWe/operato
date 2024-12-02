@@ -1,2 +1,19 @@
 [tool.isort]
 profile = "black"
+[project]
+name = "operato_PRW"
+version = "0.0.1"
+authors = [
+  { name="Marco Nawijn", email="author@example.com" },{name="P.Weißinger",email="philippa.weissinger@tum.de"}
+]
+description = "Package for the automatic creation of OpenRadioss input decks."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://gitlab.lrz.de/fgcm/operato.git"
