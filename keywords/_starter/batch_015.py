@@ -244,7 +244,7 @@ class Grpart(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRPART` is not implemented.")
+        raise NotImplementedError("Keyword `/GRPART` is not implemented.")
 
     @property
     def keyword(self):
