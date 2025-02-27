@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField
+from ..common import FloatField, IntField, Keyword, StringField, VLSequenceOfAtomicField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -65,16 +65,17 @@ class ThMonvol(Keyword):
 # --- /TH/NODE ------------------------------------------------------
 @dataclass
 class ThNode(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        # TODO: Implementation
-        raise NotImplementedError("Keyword `/TH/NODE` is not implemented.")
+    id: int
+    name: str
+    var: list[str]
+    node_id: int
+    skew_frame_id: int
+    node_name: str
 
     @property
     def keyword(self):
-        return "/TH/NODE"
+        line = f"/TH/NODE/{self.id}"
+        return line
 
     @property
     def pre_conditions(self):
@@ -82,7 +83,13 @@ class ThNode(Keyword):
 
     @property
     def structure(self):
-        structure = []
+        structure = [
+            StringField("name", 1, 10),
+            VLSequenceOfAtomicField(IntField("var", 1)),
+            IntField("node_id", 1),
+            IntField("skew_frame_id", 2),
+            StringField("node_name", 3, 5),
+        ]
 
         return structure
 
