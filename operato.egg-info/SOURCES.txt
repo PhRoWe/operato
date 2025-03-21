@@ -7,7 +7,6 @@ operato/__init__.py
 operato/constants.py
 operato/engine.py
 operato/starter.py
-operato/testutil.py
 operato.egg-info/PKG-INFO
 operato.egg-info/SOURCES.txt
 operato.egg-info/dependency_links.txt

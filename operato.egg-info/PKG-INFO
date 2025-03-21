@@ -1,12 +1,11 @@
 Metadata-Version: 2.1
 Name: operato
-Version: 0.1.0
-Summary: Input deck creation tool for (Open-)Radioss
+Version: 0.0.1
+Summary: Package for the automatic creation of OpenRadioss input decks.
 Home-page: https://github.com/PhRoWe/operato
 Author: P. Weißinger
-Author-email: philippa.weissinger@gmail.de
-License: UNKNOWN
-Platform: UNKNOWN
+Author-email: Marco Nawijn <author@example.com>, "P.Weißinger" <philippa.weissinger@tum.de>
+Project-URL: Homepage, https://gitlab.lrz.de/fgcm/operato.git
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -19,7 +18,5 @@ License-File: LICENSE
 This python package was developed to automate the creation of Radioss input files.
 The repository and its initial structure was forked from 
 (https://github.com/nawijn/operato) and expanded.
-
-
 
 
