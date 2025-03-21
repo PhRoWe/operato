@@ -246,7 +246,7 @@ class GrpartPart(Keyword):
 
     @property
     def keyword(self):
-        return self.line00 + f"/GRNOD/NODE/{self.grnd_id}"
+        return self.line00 + f"/GRPART/PART/{self.grprt_id}"
 
     @property
     def pre_conditions(self):
@@ -268,9 +268,9 @@ class GrpartPart(Keyword):
         return structure
 
 
-# --- /GRPARTPART ------------------------------------------------------
+# --- /GRPART ------------------------------------------------------
 @dataclass
-class GrpartPartPart(Keyword):
+class Grpart(Keyword):
     grpart_id: int
     grpart_title: str
 
@@ -297,7 +297,7 @@ class Grquad(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRQUAD` is not implemented.")
+        raise NotImplementedError("Keyword `/GRQUAD` is not implemented.")
 
     @property
     def keyword(self):
