@@ -238,13 +238,41 @@ class GrnodNode(Grnod):
 
 # --- /GRPART ------------------------------------------------------
 @dataclass
-class Grpart(Keyword):
-    attr1: int
-    attr2: float
+class GrpartPart(Keyword):
+    grprt_id: int
+    grprt_title: str
+    item_ids: List[int]
+    line00: str = "#/GRPART/PART/grprt_ID\n"
 
-    def __post_init__(self):
-        # TODO: Implementation
-        raise NotImplementedError("Keyword `/GRPART` is not implemented.")
+    @property
+    def keyword(self):
+        return self.line00 + f"/GRNOD/NODE/{self.grnd_id}"
+
+    @property
+    def pre_conditions(self):
+        return []
+
+    @property
+    def structure(self):
+        if type(self.item_ids) == int:
+            structure: KeywordStructureType = [
+                StringField("grprt_title", 1, 3),
+                IntField("item_ids", 1),
+            ]
+        else:
+            structure: KeywordStructureType = [
+                StringField("grprt_title", 1, 3),
+                VLSequenceOfAtomicField(IntField("item_ids", 1)),
+            ]
+
+        return structure
+
+
+# --- /GRPARTPART ------------------------------------------------------
+@dataclass
+class GrpartPartPart(Keyword):
+    grpart_id: int
+    grpart_title: str
 
     @property
     def keyword(self):
