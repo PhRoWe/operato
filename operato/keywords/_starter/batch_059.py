@@ -6,7 +6,7 @@ from typing import Literal
 from numpy.typing import NDArray
 
 from ...constants import VALID_LENGTH_LITERALS, VALID_MASS_LITERALS, VALID_TIME_LITERALS
-from ..common import (
+from operato.keywords.common import (
     ArrayOfAtomicFields,
     FloatField,
     IntField,

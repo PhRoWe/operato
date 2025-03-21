@@ -2,7 +2,13 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField, ArrayOfAtomicFields
+from operato.keywords.common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    ArrayOfAtomicFields,
+)
 from ...constants import UNKNOWN_INPUT, UNKNOWN_OPT
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
@@ -98,21 +104,19 @@ class DtAms(Keyword):
     def structure(self):
         structure = []
         if self.Iflag == 0:
-            attr_list = ["line1", "dT_sca", "dTmin"]
+            structure.append(StringField("line1", 1, 10))
+            structure.append(
+                [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
+            )
         if self.Iflag == 1 or self.Iflag == 2:
-            attr_list = ["line2", "Tol_AMS"]
+            structure.append(StringField("line2", 1, 10))
+            structure.append(FloatField("Tol_AMS", 1))
         if self.Iflag == 2:
-            attr_list = ["line2", "Tol_AMS", "line3", "Niter", "Nprint"]
-        for i, attr in enumerate(attr_list):
-            match getattr(self, attr):
-                case str():
-                    structure.append(StringField(attr, 1, 10))
-                case float():
-                    structure.append(FloatField(attr, i + 1))
-                case int():
-                    structure.append(IntField(attr, i + 1))
-                case None:
-                    continue
+            structure.append(StringField("line3", 1, 10))
+            structure.append(
+                [FloatField("Niter", 1), FloatField("Nprint", 3)],
+            )
+
         return structure
 
 

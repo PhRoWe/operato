@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from typing import Literal, List, Sequence
 from numpy.typing import NDArray
 
-from ..common import (
+from operato.keywords.common import (
     ArrayOfAtomicFields,
     BoolField,
     FloatField,

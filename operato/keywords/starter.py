@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from _starter.batch_000 import (
+from operato.keywords._starter.batch_000 import (
     Accel,
     Activ,
     Admas,
@@ -12,7 +12,7 @@ from _starter.batch_000 import (
     ALEClose,
 )
 
-from _starter.batch_001 import (
+from operato.keywords._starter.batch_001 import (
     ALEGridDisp,
     ALEGridDonea,
     ALEGridLaplacian,
@@ -24,7 +24,7 @@ from _starter.batch_001 import (
     ALEMat,
 )
 
-from _starter.batch_002 import (
+from operato.keywords._starter.batch_002 import (
     ALEMuscl,
     ALESolverFint,
     Ams,
@@ -36,7 +36,7 @@ from _starter.batch_002 import (
     Beam,
 )
 
-from _starter.batch_003 import (
+from operato.keywords._starter.batch_003 import (
     Begin,
     BemDaa,
     BemFlow,
@@ -49,7 +49,7 @@ from _starter.batch_003 import (
     Cload,
 )
 
-from _starter.batch_004 import (
+from operato.keywords._starter.batch_004 import (
     Cluster,
     Cnode,
     Convec,
@@ -61,7 +61,7 @@ from _starter.batch_004 import (
     DefaultInterType2,
 )
 
-from _starter.batch_005 import (
+from operato.keywords._starter.batch_005 import (
     DefaultInterType7,
     DefaultInterType11,
     DefaultInterType19,
@@ -73,7 +73,7 @@ from _starter.batch_005 import (
     DfsDetplan,
 )
 
-from _starter.batch_006 import (
+from operato.keywords._starter.batch_006 import (
     DfsDetplanNode,
     DfsDetpoint,
     DfsDetpointNode,
@@ -85,7 +85,7 @@ from _starter.batch_006 import (
     EbcsInip,
 )
 
-from _starter.batch_007 import (
+from operato.keywords._starter.batch_007 import (
     EbcsIniv,
     EbcsInlet,
     EbcsMonvol,
@@ -97,7 +97,7 @@ from _starter.batch_007 import (
     EbcsVel,
 )
 
-from _starter.batch_008 import (
+from operato.keywords._starter.batch_008 import (
     Eig,
     Encrypt,
     End,
@@ -109,7 +109,7 @@ from _starter.batch_008 import (
     EosLszk,
 )
 
-from _starter.batch_009 import (
+from operato.keywords._starter.batch_009 import (
     EosMurnaghan,
     EosNasg,
     EosNobleAbel,
@@ -121,7 +121,7 @@ from _starter.batch_009 import (
     EosTillotson,
 )
 
-from _starter.batch_010 import (
+from operato.keywords._starter.batch_010 import (
     Eref,
     EulerMat,
     Fail,
@@ -133,7 +133,7 @@ from _starter.batch_010 import (
     FailEmc,
 )
 
-from _starter.batch_011 import (
+from operato.keywords._starter.batch_011 import (
     FailEnergy,
     FailFabric,
     FailFld,
@@ -145,7 +145,7 @@ from _starter.batch_011 import (
     FailLadDama,
 )
 
-from _starter.batch_012 import (
+from operato.keywords._starter.batch_012 import (
     FailMullinsOr,
     FailNxt,
     FailOrthbiquad,
@@ -157,7 +157,7 @@ from _starter.batch_012 import (
     FailSpalling,
 )
 
-from _starter.batch_013 import (
+from operato.keywords._starter.batch_013 import (
     FailTab1,
     FailTbutcher,
     FailTensstrain,
@@ -169,7 +169,7 @@ from _starter.batch_013 import (
     FrameMov,
 )
 
-from _starter.batch_014 import (
+from operato.keywords._starter.batch_014 import (
     FrameMov2,
     FrameNod,
     FricOrient,
@@ -181,7 +181,7 @@ from _starter.batch_014 import (
     Gauge,
 )
 
-from _starter.batch_015 import (
+from operato.keywords._starter.batch_015 import (
     GaugeSph,
     Gjoint,
     Grav,
@@ -196,7 +196,7 @@ from _starter.batch_015 import (
     Grsh3n,
 )
 
-from _starter.batch_016 import (
+from operato.keywords._starter.batch_016 import (
     Grshel,
     Grspri,
     Grtria,
@@ -208,7 +208,7 @@ from _starter.batch_016 import (
     Impflux,
 )
 
-from _starter.batch_017 import (
+from operato.keywords._starter.batch_017 import (
     Implicit,
     Imptemp,
     Impvel,
@@ -220,7 +220,7 @@ from _starter.batch_017 import (
     Inicrack,
 )
 
-from _starter.batch_018 import (
+from operato.keywords._starter.batch_018 import (
     Inigrav,
     Inimap1d,
     Inimap1dFile,
@@ -232,7 +232,7 @@ from _starter.batch_018 import (
     IniquaEpsp,
 )
 
-from _starter.batch_019 import (
+from operato.keywords._starter.batch_019 import (
     IniquaStress,
     InisheAux,
     Inish3Aux,
@@ -244,7 +244,7 @@ from _starter.batch_019 import (
     InisheOrthLoc,
 )
 
-from _starter.batch_020 import (
+from operato.keywords._starter.batch_020 import (
     Inish3OrthLoc,
     InisheOrtho,
     Inish3Ortho,
@@ -256,7 +256,7 @@ from _starter.batch_020 import (
     InisheStraFGlob,
 )
 
-from _starter.batch_021 import (
+from operato.keywords._starter.batch_021 import (
     Inish3StraFGlob,
     InisheStrsF,
     Inish3StrsF,
@@ -268,7 +268,7 @@ from _starter.batch_021 import (
     Inista,
 )
 
-from _starter.batch_022 import (
+from operato.keywords._starter.batch_022 import (
     Initemp,
     InitrussFull,
     Inivel,
@@ -280,7 +280,7 @@ from _starter.batch_022 import (
     InterLagdtType7,
 )
 
-from _starter.batch_023 import (
+from operato.keywords._starter.batch_023 import (
     InterLagmulType2,
     InterLagmulType7,
     InterLagmulType16,
@@ -292,7 +292,7 @@ from _starter.batch_023 import (
     InterType5,
 )
 
-from _starter.batch_024 import (
+from operato.keywords._starter.batch_024 import (
     InterType6,
     InterType7,
     InterType8,
@@ -304,7 +304,7 @@ from _starter.batch_024 import (
     InterType15,
 )
 
-from _starter.batch_025 import (
+from operato.keywords._starter.batch_025 import (
     InterType18,
     InterType19,
     InterType21,
@@ -316,7 +316,7 @@ from _starter.batch_025 import (
     Key,
 )
 
-from _starter.batch_026 import (
+from operato.keywords._starter.batch_026 import (
     Lagmul,
     LeakMat,
     Line,
@@ -328,7 +328,7 @@ from _starter.batch_026 import (
     MatGas,
 )
 
-from _starter.batch_027 import (
+from operato.keywords._starter.batch_027 import (
     MatLaw0,
     MatLaw1,
     MatPlasJohns,
@@ -340,7 +340,7 @@ from _starter.batch_027 import (
     MatKEps,
 )
 
-from _starter.batch_028 import (
+from operato.keywords._starter.batch_028 import (
     MatLaw10,
     MatLaw11,
     MatLaw12,
@@ -352,7 +352,7 @@ from _starter.batch_028 import (
     MatLaw20,
 )
 
-from _starter.batch_029 import (
+from operato.keywords._starter.batch_029 import (
     MatLaw21,
     MatLaw22,
     MatLaw23,
@@ -364,7 +364,7 @@ from _starter.batch_029 import (
     MatLaw32,
 )
 
-from _starter.batch_030 import (
+from operato.keywords._starter.batch_030 import (
     MatLaw33,
     MatLaw34,
     MatLaw35,
@@ -376,7 +376,7 @@ from _starter.batch_030 import (
     MatLaw42,
 )
 
-from _starter.batch_031 import (
+from operato.keywords._starter.batch_031 import (
     MatLaw43,
     MatLaw44,
     MatLaw46,
@@ -388,7 +388,7 @@ from _starter.batch_031 import (
     MatLaw53,
 )
 
-from _starter.batch_032 import (
+from operato.keywords._starter.batch_032 import (
     MatLaw54,
     MatLaw57,
     MatLaw58,
@@ -400,7 +400,7 @@ from _starter.batch_032 import (
     MatLaw65,
 )
 
-from _starter.batch_033 import (
+from operato.keywords._starter.batch_033 import (
     MatLaw66,
     MatLaw68,
     MatLaw69,
@@ -412,7 +412,7 @@ from _starter.batch_033 import (
     MatLaw75,
 )
 
-from _starter.batch_034 import (
+from operato.keywords._starter.batch_034 import (
     MatLaw76,
     MatLaw77,
     MatLaw78,
@@ -424,7 +424,7 @@ from _starter.batch_034 import (
     MatLaw84,
 )
 
-from _starter.batch_035 import (
+from operato.keywords._starter.batch_035 import (
     MatLaw87,
     MatLaw88,
     MatLaw90,
@@ -436,7 +436,7 @@ from _starter.batch_035 import (
     MatLaw10,
 )
 
-from _starter.batch_036 import (
+from operato.keywords._starter.batch_036 import (
     MatLaw101,
     MatLaw102,
     MatLaw103,
@@ -448,7 +448,7 @@ from _starter.batch_036 import (
     MatLaw111,
 )
 
-from _starter.batch_037 import (
+from operato.keywords._starter.batch_037 import (
     MatLaw112,
     MatLaw113,
     MatLaw114,
@@ -460,7 +460,7 @@ from _starter.batch_037 import (
     MatLaw151,
 )
 
-from _starter.batch_038 import (
+from operato.keywords._starter.batch_038 import (
     MatLaw200,
     MatPlasPredef,
     MatUserij,
@@ -472,7 +472,7 @@ from _starter.batch_038 import (
     MonvolFvmbag2,
 )
 
-from _starter.batch_039 import (
+from operato.keywords._starter.batch_039 import (
     MonvolGas,
     MonvolLfluid,
     MonvolPres,
@@ -484,7 +484,7 @@ from _starter.batch_039 import (
     Parameter,
 )
 
-from _starter.batch_040 import (
+from operato.keywords._starter.batch_040 import (
     Part,
     Penta6,
     Perturb,
@@ -496,7 +496,7 @@ from _starter.batch_040 import (
     Preload,
 )
 
-from _starter.batch_041 import (
+from operato.keywords._starter.batch_041 import (
     PropInject1,
     PropInject2,
     PropPcompp,
@@ -508,7 +508,7 @@ from _starter.batch_041 import (
     PropType6,
 )
 
-from _starter.batch_042 import (
+from operato.keywords._starter.batch_042 import (
     PropType8,
     PropType9,
     PropType10,
@@ -520,7 +520,7 @@ from _starter.batch_042 import (
     PropType15,
 )
 
-from _starter.batch_043 import (
+from operato.keywords._starter.batch_043 import (
     PropType16,
     PropType17,
     PropType18,
@@ -532,7 +532,7 @@ from _starter.batch_043 import (
     PropType25,
 )
 
-from _starter.batch_044 import (
+from operato.keywords._starter.batch_044 import (
     PropType26,
     PropType27,
     PropType28,
@@ -544,7 +544,7 @@ from _starter.batch_044 import (
     PropType34,
 )
 
-from _starter.batch_045 import (
+from operato.keywords._starter.batch_045 import (
     PropType35,
     PropType36,
     PropType43,
@@ -556,7 +556,7 @@ from _starter.batch_045 import (
     Radiation,
 )
 
-from _starter.batch_046 import (
+from operato.keywords._starter.batch_046 import (
     Random,
     Rbe2,
     Rbe3,
@@ -568,7 +568,7 @@ from _starter.batch_046 import (
     Rwall,
 )
 
-from _starter.batch_047 import (
+from operato.keywords._starter.batch_047 import (
     RwallLagmul,
     RwallTherm,
     Sect,
@@ -580,7 +580,7 @@ from _starter.batch_047 import (
     SensorDist,
 )
 
-from _starter.batch_048 import (
+from operato.keywords._starter.batch_048 import (
     SensorDistSurf,
     SensorEnergy,
     SensorGauge,
@@ -592,7 +592,7 @@ from _starter.batch_048 import (
     SensorSect,
 )
 
-from _starter.batch_049 import (
+from operato.keywords._starter.batch_049 import (
     SensorSens,
     SensorTime,
     SensorVel,
@@ -604,7 +604,7 @@ from _starter.batch_049 import (
     SkewFix,
 )
 
-from _starter.batch_050 import (
+from operato.keywords._starter.batch_050 import (
     SkewMov,
     SkewMov2,
     SlipringShell,
@@ -616,7 +616,7 @@ from _starter.batch_050 import (
     Sphglo,
 )
 
-from _starter.batch_051 import (
+from operato.keywords._starter.batch_051 import (
     Spring,
     Stack,
     Stamping,
@@ -628,7 +628,7 @@ from _starter.batch_051 import (
     SurfDsurf,
 )
 
-from _starter.batch_052 import (
+from operato.keywords._starter.batch_052 import (
     SurfEllips,
     SurfGrbricExt,
     SurfGrbricFree,
@@ -640,7 +640,7 @@ from _starter.batch_052 import (
     SurfProp,
 )
 
-from _starter.batch_053 import (
+from operato.keywords._starter.batch_053 import (
     SurfSeg,
     SurfSubmodel,
     SurfSubset,
@@ -652,7 +652,7 @@ from _starter.batch_053 import (
     Th,
 )
 
-from _starter.batch_054 import (
+from operato.keywords._starter.batch_054 import (
     ThAccel,
     ThBeam,
     ThBric,
@@ -664,7 +664,7 @@ from _starter.batch_054 import (
     ThInter,
 )
 
-from _starter.batch_055 import (
+from operato.keywords._starter.batch_055 import (
     ThMode,
     ThMonvol,
     ThNode,
@@ -676,7 +676,7 @@ from _starter.batch_055 import (
     ThRwall,
 )
 
-from _starter.batch_056 import (
+from operato.keywords._starter.batch_056 import (
     ThSectio,
     ThSh3n,
     ThShel,
@@ -688,7 +688,7 @@ from _starter.batch_056 import (
     ThSurf,
 )
 
-from _starter.batch_057 import (
+from operato.keywords._starter.batch_057 import (
     ThTria,
     ThTruss,
     ThermStressMat,
@@ -700,7 +700,7 @@ from _starter.batch_057 import (
     ThpartGrshel,
 )
 
-from _starter.batch_058 import (
+from operato.keywords._starter.batch_058 import (
     ThpartGrspri,
     ThpartGrtrus,
     Title,
@@ -711,7 +711,7 @@ from _starter.batch_058 import (
     TransformSym,
 )
 
-from _starter.batch_059 import (
+from operato.keywords._starter.batch_059 import (
     TransformTra,
     Tria,
     Truss,

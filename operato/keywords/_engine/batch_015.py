@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from ..common import FloatField, IntField, Keyword, StringField
+from operato.keywords.common import FloatField, IntField, Keyword, StringField
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #

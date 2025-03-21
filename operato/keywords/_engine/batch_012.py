@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 from typing import List, Literal
-from ..common import (
+from operato.keywords.common import (
     FloatField,
     IntField,
     Keyword,

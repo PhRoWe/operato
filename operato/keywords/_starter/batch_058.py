@@ -6,7 +6,7 @@ from typing import Sequence
 from numpy.typing import NDArray
 from math import ceil
 
-from ..common import (
+from operato.keywords.common import (
     FloatField,
     IntField,
     Keyword,

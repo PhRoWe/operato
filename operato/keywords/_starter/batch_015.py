@@ -5,7 +5,7 @@ from math import ceil
 from typing import List
 from numpy.typing import NDArray
 
-from ..common import (
+from operato.keywords.common import (
     FloatField,
     IntField,
     Keyword,

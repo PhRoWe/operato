@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import Literal
 
-from ..common import (
+from operato.keywords.common import (
     BoolField,
     FloatField,
     IntField,

@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import Literal, List
 
-from ..common import (
+from operato.keywords.common import (
     FloatField,
     IntField,
     Keyword,
@@ -19,6 +19,7 @@ from ..common import (
 # /CYL_JOINT                  /DAMP                       /DAMP/INTER
 # /DEF_SHELL                  /DEF_SOLID                  /DEFAULT/INTER/TYPE2
 #
+
 
 # --- /CLUSTER ------------------------------------------------------
 @dataclass

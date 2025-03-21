@@ -3,7 +3,13 @@
 from dataclasses import dataclass
 from typing import Literal
 
-from ..common import BoolField, FloatField, IntField, Keyword, StringField
+from operato.keywords.common import (
+    BoolField,
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -11,6 +17,7 @@ from ..common import BoolField, FloatField, IntField, Keyword, StringField
 # /ALE/GRID/SPRING            /ALE/GRID/STANDARD          /ALE/GRID/VOLUME
 # /ALE/GRID/ZERO              /ALE/LINK/VEL               /ALE/MAT
 #
+
 
 # --- /ALE/GRID/DISP --------------------------------------------------------------------------
 @dataclass

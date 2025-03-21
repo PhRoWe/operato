@@ -5,7 +5,7 @@ from typing import List, Literal, Sequence, Tuple, get_args
 
 from numpy.typing import NDArray
 
-from ..common import (
+from operato.keywords.common import (
     FloatField,
     IntField,
     Keyword,
