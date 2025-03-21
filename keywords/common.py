@@ -619,9 +619,16 @@ class Keyword:
                 sequence_of_fields = []
                 for i in range(len(field_values)):
                     index = i * atomic_field.span + 1
-                    sequence_of_fields.append(
-                        atomic_field_cls(atomic_field.attr, index)
-                    )
+                    if atomic_field_cls == StringField:
+                        sequence_of_fields.append(
+                            atomic_field_cls(
+                                atomic_field.attr, index, atomic_field.span
+                            )
+                        )
+                    else:
+                        sequence_of_fields.append(
+                            atomic_field_cls(atomic_field.attr, index)
+                        )
 
                 # Return the information we need to directly call `_make_line`
                 return (fields_srep, sequence_of_fields, field_values)

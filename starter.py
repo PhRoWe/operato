@@ -98,7 +98,8 @@ class Starter:
     def findAmountOfType(self, type_str):
         count = 0
         for keyword in self._keywords:
-            if type_str in str(type(keyword)):
+            name = str(type(keyword)).split(".")[-1][0:-2]
+            if name == type_str:
                 count += 1
         return count
 

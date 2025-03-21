@@ -2,7 +2,14 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField
+from ..common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    VLSequenceOfAtomicField,
+    ArrayOfAtomicFields,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -40,16 +47,16 @@ class ThAccel(Keyword):
 # --- /TH/BEAM ------------------------------------------------------
 @dataclass
 class ThBeam(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        # TODO: Implementation
-        raise NotImplementedError("Keyword `/TH/BEAM` is not implemented.")
+    id: int
+    name: str
+    var: list[str]
+    elem_id: int
+    elem_name: str
 
     @property
     def keyword(self):
-        return "/TH/BEAM"
+        line = f"/TH/BEAM/{self.id}"
+        return line
 
     @property
     def pre_conditions(self):
@@ -57,7 +64,12 @@ class ThBeam(Keyword):
 
     @property
     def structure(self):
-        structure = []
+        structure = [
+            StringField("name", 1, 10),
+            VLSequenceOfAtomicField(StringField("var", 1, 1)),
+            IntField("elem_id", 1),
+            StringField("elem_name", 3, 5),
+        ]
 
         return structure
 

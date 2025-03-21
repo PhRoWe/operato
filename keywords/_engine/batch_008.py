@@ -74,6 +74,8 @@ class DtAms(Keyword):
     @property
     def structure(self):
         structure = []
+        if self.flag == 0:
+            structure.append([FloatField("dT_sca", 1), FloatField("dTmin", 2)])
         if self.Iflag == 1 or self.Iflag == 2:
             structure.append([FloatField("Tol_AMS", 1)])
         if self.Iflag == 2:
@@ -89,7 +91,7 @@ class DtCstAms(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT/CST_AMS` is not implemented.")
+        raise NotImplementedError("Keyword `/DT/CST_AMS` is not implemented.")
 
     @property
     def keyword(self):

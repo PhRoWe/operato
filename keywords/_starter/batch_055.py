@@ -2,7 +2,14 @@
 
 from dataclasses import dataclass
 
-from ..common import FloatField, IntField, Keyword, StringField, VLSequenceOfAtomicField
+from ..common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    VLSequenceOfAtomicField,
+    ArrayOfAtomicFields,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -85,7 +92,7 @@ class ThNode(Keyword):
     def structure(self):
         structure = [
             StringField("name", 1, 10),
-            VLSequenceOfAtomicField(IntField("var", 1)),
+            VLSequenceOfAtomicField(StringField("var", 1, 1)),
             IntField("node_id", 1),
             IntField("skew_frame_id", 2),
             StringField("node_name", 3, 5),
@@ -122,24 +129,57 @@ class ThNstrand(Keyword):
 # --- /TH/PART ------------------------------------------------------
 @dataclass
 class ThPart(Keyword):
-    attr1: int
-    attr2: float
+    """Describes the time history for parts. (https://2021.help.altair.com/2021/hwsolvers/rad/topics/solvers/rad/th_part_starter_r.htm)" """
 
-    def __post_init__(self):
-        # TODO: Implementation
-        raise NotImplementedError("Keyword `/TH/PART` is not implemented.")
+    id: int
+    name: str
+    var: list[str]
+    obj_id: list[int]
 
     @property
     def keyword(self):
-        return "/TH/PART"
+        line = f"/TH/PART/{self.id}"
+        return line
 
     @property
     def pre_conditions(self):
-        return []
+        vars = [
+            "IE",
+            "KE",
+            "XMOM",
+            "YMOM",
+            "ZMOM",
+            "MASS",
+            "HE",
+            "TURBKE",
+            "XCG",
+            "YCG",
+            "ZCG",
+            "XXMOM",
+            "YYMOM",
+            "ZZMOM",
+            "IXX",
+            "IYY",
+            "IZZ",
+            "IXY",
+            "IYZ",
+            "IZX",
+            "RIE",
+            "KERB",
+            "RKERB",
+            "RKE",
+            "DEF",
+        ]
+        conditions = [(var in vars, "Unknown Var setting") for var in self.var]
+        return conditions
 
     @property
     def structure(self):
-        structure = []
+        structure = [
+            StringField("name", 1, 10),
+            VLSequenceOfAtomicField(StringField("var", 1, 1)),
+            VLSequenceOfAtomicField(IntField("obj_id", 1)),
+        ]
 
         return structure
 
