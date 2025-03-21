@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+keywords/__init__.py
+keywords/common.py
+keywords/engine.py
+keywords/starter.py
+operato.egg-info/PKG-INFO
+operato.egg-info/SOURCES.txt
+operato.egg-info/dependency_links.txt
+operato.egg-info/top_level.txt

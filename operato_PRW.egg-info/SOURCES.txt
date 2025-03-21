@@ -2,6 +2,7 @@ LICENSE
 README.md
 pyproject.toml
 setup.cfg
+setup.py
 keywords/__init__.py
 keywords/common.py
 keywords/engine.py

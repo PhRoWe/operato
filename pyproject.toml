@@ -1,14 +1,19 @@
 [tool.isort]
 profile = "black"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "operato_PRW"
+name = "operato"
 version = "0.0.1"
 authors = [
   { name="Marco Nawijn", email="author@example.com" },{name="P.Weißinger",email="philippa.weissinger@tum.de"}
 ]
 description = "Package for the automatic creation of OpenRadioss input decks."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
