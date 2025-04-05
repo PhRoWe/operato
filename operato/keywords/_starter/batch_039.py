@@ -8,9 +8,11 @@ from operato.keywords.common import (
     ArrayOfAtomicFields,
     FloatField,
     IntField,
+    StringField,
     Keyword,
     KeywordPreconditionsType,
     KeywordStructureType,
+    MultiLineArrayOfAtomicFields,
 )
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
@@ -124,24 +126,46 @@ class MoveFunct(Keyword):
 # --- /MPC ------------------------------------------------------
 @dataclass
 class Mpc(Keyword):
-    attr1: int
-    attr2: float
+    id: int
+    title: str
+    node_id: list[int]
+    idof: list[int]
+    skew_id: list[int]
+    alpha: list[int]
 
-    def __post_init__(self):
-        # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MPC` is not implemented.")
+    line0: str = (
+        "#-node_id|-----idof|--skew_id|----alpha|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
-        return "/MPC"
+        return f"/MPC/{self.id}"
 
     @property
     def pre_conditions(self):
-        return []
+        # check that all are either ints of of same length
+        inputs = [self.node_id, self.idof, self.skew_id, self.alpha]
+        conditions = [
+            (
+                bool(all(len(inputs[0]) == len(x) for x in inputs[1:])),
+                "Inconsistent input lengths!",
+            ),
+        ]
+        return conditions
 
     @property
     def structure(self):
-        structure: KeywordStructureType = []
+        structure: KeywordStructureType = [
+            StringField("line0", 1, 10),
+            ArrayOfAtomicFields(
+                [
+                    IntField("node_id", 1),
+                    IntField("idof", 2),
+                    IntField("skew_id", 3),
+                    IntField("alpha", 4),
+                ]
+            ),
+        ]
 
         return structure
 

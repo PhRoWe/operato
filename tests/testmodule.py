@@ -31,6 +31,22 @@ class TestModule(unittest.TestCase):
         engine.add(DtAms(dTmin=0.01, Iflag=2, Niter=4, Nprint=1))
         engine.write()
 
+    def test_MPC(self):
+        self.test_file = tempfile.NamedTemporaryFile(delete=False)
+        self.test_file.name = "MPC.rad"
+        starter = Starter()
+        starter.add(
+            Mpc(
+                id=0,
+                title="hhjff",
+                node_id=[1, 2],
+                idof=[1, 3],
+                skew_id=[1, 2],
+                alpha=[3, 3],
+            )
+        )
+        starter.write()
+
 
 if __name__ == "__main__":
     unittest.main()
