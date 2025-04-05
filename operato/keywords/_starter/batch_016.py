@@ -216,7 +216,10 @@ class Impdisp(Keyword):
 
     @property
     def keyword(self):
-        return "/IMPDISP"
+        line = f"/IMPDISP/{self.impdisp_id}"
+        if self.unit_id is not None:
+            line += f"/{self.unit_id}"
+        return line
 
     @property
     def pre_conditions(self):
