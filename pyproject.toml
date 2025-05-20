@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "operato"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Marco Nawijn", email="author@example.com" },{name="P.Weißinger",email="philippa.weissinger@tum.de"}
 ]

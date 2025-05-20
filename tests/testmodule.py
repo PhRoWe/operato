@@ -47,6 +47,47 @@ class TestModule(unittest.TestCase):
         )
         starter.write()
 
+    def test_DtNodaKeyword3Iflag(self):
+        self.test_file = tempfile.NamedTemporaryFile(delete=False)
+        self.test_file.name = "DtNoda.rad"
+        engine = Engine()
+        engine.add(DtNodaKeyword3Iflag(Keyword3="CST", dTmin=0.9, dT_sca=0.1))
+        engine.add(
+            DtNodaKeyword3Iflag(
+                Keyword3="CST",
+                dTmin=0.9,
+                dT_sca=0.1,
+                Iflag=0,
+                initial_mass_ratio=0,
+                grnd_ID=4,
+            )
+        )
+        engine.write()
+
+    def test_FunctSmooth(self):
+        self.test_file = tempfile.NamedTemporaryFile(delete=False)
+        self.test_file.name = "DtNoda.rad"
+        starter = Starter()
+        starter.add(
+            FunctSmooth(
+                fct_id=1,
+                fct_title="blaabla",
+                x=[0, 0.4, 1.0],
+                y=[0, 1.0, 1.0],
+            )
+        )
+        starter.add(
+            FunctSmooth(
+                fct_id=1,
+                fct_title="blaabla",
+                Ascalex=2.0,
+                Fscaley=1.9,
+                x=[0, 0.4, 1.0],
+                y=[0, 1.0, 1.0],
+            )
+        )
+        starter.write()
+
 
 if __name__ == "__main__":
     unittest.main()

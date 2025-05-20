@@ -227,6 +227,12 @@ class DtInterKeyword3Iflag(Keyword):
 # --- /DT/NODA/Keyword3/Iflag ------------------------------------------------------
 @dataclass
 class DtNodaKeyword3Iflag(Keyword):
+    """Activates the nodal time step control method with the option to apply mass
+    scaling to increase a model’s time step.
+    https://help.altair.com/hwsolvers/rad/topics/solvers/rad/dt_noda_keyword3_engine_r.htm
+
+    """
+
     Keyword3: str
     dTmin: float
     dT_sca: float
@@ -251,16 +257,16 @@ class DtNodaKeyword3Iflag(Keyword):
 
     @property
     def pre_conditions(self):
-        conditions = []
+        if self.Keyword3 is not None:
+            keyword3s = ["CST", "SET", "STOP"]
+            conditions = [(self.Keyword3 in keyword3s, UNKNOWN_INPUT + "keyword3")]
         conditions.append(
             [
                 (self.dT_sca is not None, UNKNOWN_INPUT + "dT_sca"),
                 (self.dTmin is not None, UNKNOWN_INPUT + "dTmin"),
             ]
         )
-        if self.Keyword3 is not None:
-            keyword3s = ["CST", "SET", "STOP"]
-            conditions.append((self.Keyword3 in keyword3s), UNKNOWN_INPUT)
+
         return conditions
 
     @property

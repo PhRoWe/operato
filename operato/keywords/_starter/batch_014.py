@@ -183,12 +183,13 @@ class FunctSmooth(Keyword):
 
     fct_id: int
     fct_title: str
-    Ascalex: float
-    Fscaley: float
-    Ashiftx: float
-    Fshifty: float
-    x: float | List[float]
-    y: float | List[float]
+    x: List[float]
+    y: List[float]
+    Ascalex: float = 1.0
+    Fscaley: float = 1.0
+    Ashiftx: float = 0.0
+    Fshifty: float = 0.0
+
     # added commentary lines for readability
     line0: str = "#/FUNCT_SMOOTH/fct_ID\n"
     line1: str = (
