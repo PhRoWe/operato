@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 
 from operato.keywords.common import FloatField, IntField, Keyword, StringField
+from operato.constants import UNKNOWN_INPUT
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -190,25 +191,36 @@ class Delint(Keyword):
 # --- /DT ------------------------------------------------------
 @dataclass
 class Dt(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT` is not implemented.")
+    dTmin: float
+    dT_sca: float
+    # added commentary line for readability of input deck
+    line0: str = "#/DT\n"
+    line1: str = (
+        "#------------dT_sca|-------------dT_min|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
-        return "/DT"
+        return self.line0 + f"/DT"
 
     @property
     def pre_conditions(self):
+        conditions = []
+        conditions.append(
+            [
+                (self.dT_sca is not None, UNKNOWN_INPUT + "dT_sca"),
+                (self.dTmin is not None, UNKNOWN_INPUT + "dTmin"),
+            ]
+        )
         return []
 
     @property
     def structure(self):
         structure = []
-
+        structure.append(StringField("line1", 1, 10))
+        structure.append(
+            [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
+        )
         return structure
 
 

@@ -111,11 +111,11 @@ class DtAms(Keyword):
         if self.Iflag == 1 or self.Iflag == 2:
             structure.append(StringField("line2", 1, 10))
             structure.append(FloatField("Tol_AMS", 1))
-        if self.Iflag == 2:
-            structure.append(StringField("line3", 1, 10))
-            structure.append(
-                [FloatField("Niter", 1), FloatField("Nprint", 3)],
-            )
+            if self.Iflag == 2:
+                structure.append(StringField("line3", 1, 10))
+                structure.append(
+                    [FloatField("Niter", 1), FloatField("Nprint", 3)],
+                )
 
         return structure
 
@@ -227,27 +227,51 @@ class DtInterKeyword3Iflag(Keyword):
 # --- /DT/NODA/Keyword3/Iflag ------------------------------------------------------
 @dataclass
 class DtNodaKeyword3Iflag(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        # TODO: Implementation
-        raiseNotImplementedError(
-            "Keyword `/DT/NODA/Keyword3/Iflag` is not implemented."
-        )
+    Keyword3: str
+    dTmin: float
+    dT_sca: float
+    grnd_ID: int | None = None
+    Iflag: int | None = None
+    initial_mass_ratio: float | None = None
+    # added commentary line for readability of input deck
+    line0: str = "#/DT/NODA/Keywoard3/Iflag\n"
+    line1: str = (
+        "#------------dT_sca|-------------dT_min|-initial_mass_ratio|----7----|----8----|----9----|----10---|"
+    )
+    line2: str = (
+        "#-----------grnd_ID|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
+    )
 
     @property
     def keyword(self):
-        return "/DT/NODA/Keyword3/Iflag"
+        line = f"/DT/NODA/{self.Keyword3}"
+        if self.Iflag is not None:
+            line += f"/{self.Iflag}"
+        return self.line0 + line
 
     @property
     def pre_conditions(self):
-        return []
+        conditions = []
+        conditions.append(
+            [
+                (self.dT_sca is not None, UNKNOWN_INPUT + "dT_sca"),
+                (self.dTmin is not None, UNKNOWN_INPUT + "dTmin"),
+            ]
+        )
+        if self.Keyword3 is not None:
+            keyword3s = ["CST", "SET", "STOP"]
+            conditions.append((self.Keyword3 in keyword3s), UNKNOWN_INPUT)
+        return conditions
 
     @property
     def structure(self):
         structure = []
-
+        structure.append(StringField("line1", 1, 10))
+        structure.append(
+            [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
+        )
+        if self.Iflag == 1:
+            structure.append([StringField("line2", 1, 10), IntField("grnd_ID", 1)])
         return structure
 
 
@@ -259,7 +283,7 @@ class DtShnodKeyword3(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT/SHNOD/Keyword3` is not implemented.")
+        raise NotImplementedError("Keyword `/DT/SHNOD/Keyword3` is not implemented.")
 
     @property
     def keyword(self):

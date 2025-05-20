@@ -177,16 +177,29 @@ class Funct(Keyword):
 # --- /FUNCT_SMOOTH ------------------------------------------------------
 @dataclass
 class FunctSmooth(Keyword):
-    attr1: int
-    attr2: float
+    """Defines a smoothstep analytic function to be used with loads.
+    https://help.altair.com/hwsolvers/rad/topics/solvers/rad/funct_smooth_starter_r.htm
+    """
 
-    def __post_init__(self):
-        # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FUNCT_SMOOTH` is not implemented.")
+    fct_id: int
+    fct_title: str
+    Ascalex: float
+    Fscaley: float
+    Ashiftx: float
+    Fshifty: float
+    x: float | List[float]
+    y: float | List[float]
+    # added commentary lines for readability
+    line0: str = "#/FUNCT_SMOOTH/fct_ID\n"
+    line1: str = (
+        "#-----------Ascalex|------------Fscaley|------------Ashiftx|------------Fshifty|----9----|----10---|"
+    )
+    line2: str = "#                  X                   Y"
+    add_separator: bool = True
 
     @property
     def keyword(self):
-        return "/FUNCT_SMOOTH"
+        return self.line0 + f"/FUNCT_SMOOTH/{self.fct_id}"
 
     @property
     def pre_conditions(self):
@@ -194,7 +207,16 @@ class FunctSmooth(Keyword):
 
     @property
     def structure(self):
-        structure = []
+        structure = [
+            StringField("fct_title", 1, 3),
+            StringField("line1", 1, 10),
+            FloatField("Ascalex", 1),
+            FloatField("Fscaley", 3),
+            FloatField("Ashiftx", 5),
+            FloatField("Fshifty", 7),
+            StringField("line2", 1, 10),
+            ArrayOfAtomicFields([FloatField("x", 1), FloatField("y", 3)]),
+        ]
 
         return structure
 
