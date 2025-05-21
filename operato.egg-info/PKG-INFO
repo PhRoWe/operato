@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: operato
-Version: 0.0.3
+Version: 0.0.4
 Summary: Package for the automatic creation of OpenRadioss input decks.
 Home-page: https://github.com/PhRoWe/operato
 Author: P. Weißinger

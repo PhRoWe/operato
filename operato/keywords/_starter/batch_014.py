@@ -27,7 +27,7 @@ class FrameMov2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FRAME/MOV2` is not implemented.")
+        raise NotImplementedError("Keyword `/FRAME/MOV2` is not implemented.")
 
     @property
     def keyword(self):
@@ -52,7 +52,7 @@ class FrameNod(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FRAME/NOD` is not implemented.")
+        raise NotImplementedError("Keyword `/FRAME/NOD` is not implemented.")
 
     @property
     def keyword(self):
@@ -77,7 +77,7 @@ class FricOrient(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FRIC_ORIENT` is not implemented.")
+        raise NotImplementedError("Keyword `/FRIC_ORIENT` is not implemented.")
 
     @property
     def keyword(self):
@@ -102,7 +102,7 @@ class Friction(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FRICTION` is not implemented.")
+        raise NotImplementedError("Keyword `/FRICTION` is not implemented.")
 
     @property
     def keyword(self):
@@ -211,10 +211,12 @@ class FunctSmooth(Keyword):
         structure = [
             StringField("fct_title", 1, 3),
             StringField("line1", 1, 10),
-            FloatField("Ascalex", 1),
-            FloatField("Fscaley", 3),
-            FloatField("Ashiftx", 5),
-            FloatField("Fshifty", 7),
+            [
+                FloatField("Ascalex", 1),
+                FloatField("Fscaley", 3),
+                FloatField("Ashiftx", 5),
+                FloatField("Fshifty", 7),
+            ],
             StringField("line2", 1, 10),
             ArrayOfAtomicFields([FloatField("x", 1), FloatField("y", 3)]),
         ]
@@ -230,7 +232,7 @@ class Fxbody(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FXBODY` is not implemented.")
+        raise NotImplementedError("Keyword `/FXBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -255,7 +257,7 @@ class Gauge(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GAUGE` is not implemented.")
+        raise NotImplementedError("Keyword `/GAUGE` is not implemented.")
 
     @property
     def keyword(self):

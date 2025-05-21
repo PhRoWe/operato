@@ -103,11 +103,10 @@ class DtAms(Keyword):
     @property
     def structure(self):
         structure = []
-        if self.Iflag == 0:
-            structure.append(StringField("line1", 1, 10))
-            structure.append(
-                [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
-            )
+        structure.append(StringField("line1", 1, 10))
+        structure.append(
+            [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
+        )
         if self.Iflag == 1 or self.Iflag == 2:
             structure.append(StringField("line2", 1, 10))
             structure.append(FloatField("Tol_AMS", 1))
@@ -180,7 +179,7 @@ class DtFvmbagIflag(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT/FVMBAG/Iflag` is not implemented.")
+        raise NotImplementedError("Keyword `/DT/FVMBAG/Iflag` is not implemented.")
 
     @property
     def keyword(self):
@@ -205,7 +204,7 @@ class DtInterKeyword3Iflag(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/DT/INTER/Keyword3/Iflag` is not implemented."
         )
 
@@ -314,7 +313,7 @@ class DtSphcelKeyword3(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT/SPHCEL/Keyword3` is not implemented.")
+        raise NotImplementedError("Keyword `/DT/SPHCEL/Keyword3` is not implemented.")
 
     @property
     def keyword(self):
