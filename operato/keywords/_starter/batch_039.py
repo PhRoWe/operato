@@ -127,12 +127,12 @@ class MoveFunct(Keyword):
 @dataclass
 class Mpc(Keyword):
     id: int
-    title: str = ""
+
     node_id: list[int]
     idof: list[int]
     skew_id: list[int]
     alpha: list[int]
-
+    title: str = ""
     line0: str = (
         "#-node_id|-----idof|--skew_id|----alpha|----5----|----6----|----7----|----8----|----9----|----10---|"
     )
