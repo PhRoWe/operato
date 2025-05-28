@@ -127,7 +127,7 @@ class MoveFunct(Keyword):
 @dataclass
 class Mpc(Keyword):
     id: int
-    title: str
+    title: str = ""
     node_id: list[int]
     idof: list[int]
     skew_id: list[int]
@@ -157,6 +157,7 @@ class Mpc(Keyword):
     def structure(self):
         structure: KeywordStructureType = [
             StringField("line0", 1, 10),
+            StringField("title", 1, 10),
             ArrayOfAtomicFields(
                 [
                     IntField("node_id", 1),
