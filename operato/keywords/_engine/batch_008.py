@@ -60,15 +60,7 @@ class DtAms(Keyword):
     Nprint: int | None = None
     # added commentary line for readability of input deck
     line0: str = "#/DT/AMS/Iflag\n"
-    line1: str = (
-        "#------------dT_sca|-------------dT_min|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line2: str = (
-        "#-----------Tol_AMS|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line3: str = (
-        "#--N_iter|--N_print|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -103,15 +95,12 @@ class DtAms(Keyword):
     @property
     def structure(self):
         structure = []
-        structure.append(StringField("line1", 1, 10))
         structure.append(
             [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
         )
         if self.Iflag == 1 or self.Iflag == 2:
-            structure.append(StringField("line2", 1, 10))
             structure.append(FloatField("Tol_AMS", 1))
             if self.Iflag == 2:
-                structure.append(StringField("line3", 1, 10))
                 structure.append(
                     [FloatField("Niter", 1), FloatField("Nprint", 3)],
                 )
@@ -240,12 +229,7 @@ class DtNodaKeyword3Iflag(Keyword):
     initial_mass_ratio: float | None = None
     # added commentary line for readability of input deck
     line0: str = "#/DT/NODA/Keywoard3/Iflag\n"
-    line1: str = (
-        "#------------dT_sca|-------------dT_min|-initial_mass_ratio|----7----|----8----|----9----|----10---|"
-    )
-    line2: str = (
-        "#-----------grnd_ID|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -271,7 +255,6 @@ class DtNodaKeyword3Iflag(Keyword):
     @property
     def structure(self):
         structure = []
-        structure.append(StringField("line1", 1, 10))
         structure.append(
             [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
         )

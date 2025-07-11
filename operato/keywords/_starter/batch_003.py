@@ -458,18 +458,7 @@ class BoxRecta(Keyword):
     y_p2: float | None = None
     z_p2: float | None = None
     # added line for readability
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#------N1|-------N2|--skew_ID|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line2: str = (
-        "#--------------x_p1|---------------y_p1|---------------z_p1|----7----|----8----|----9----|----10---|"
-    )
-    line3: str = (
-        "#--------------x_p2|---------------y_p2|---------------z_p2|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -519,18 +508,15 @@ class BoxRecta(Keyword):
             StringField("box_title", 1, 10),
         ]
         if self.node1 is not None and self.node2 is not None:
-            structure.append(StringField("line1", 1, 10))
             structure.append(
                 IntField("node1", 1),
                 IntField("node2", 2),
                 IntField("skew_id", 3),
             )
         else:
-            structure.append(StringField("line2", 1, 10))
             structure.append(
                 [FloatField("x_p1", 1), FloatField("y_p1", 3), FloatField("z_p1", 5)]
             )
-            structure.append(StringField("line3", 1, 10))
             structure.append(
                 [FloatField("x_p2", 1), FloatField("y_p2", 3), FloatField("z_p2", 5)]
             )
@@ -704,12 +690,7 @@ class Cload(Keyword):
     a_scale_x: float = 1.0
     f_scale_y: float = 1.0
     # added commentary lines for readability of deck
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#--Fct_ID|------Dir|--skew_ID|--sens_ID|--grnd_ID|----6----|-----------Ascale_x|-----------Fscale_y|"
-    )
+    add_header: bool = True
     add_separator: bool = True
 
     @property
@@ -732,7 +713,6 @@ class Cload(Keyword):
     def structure(self):
         structure: KeywordStructureType = [
             StringField("cload_title", 1, 10),
-            StringField("line1", 1, 10),
             [
                 IntField("fct_id_t", 1),
                 StringField("dir", 2, 1, alignment=TextAlignment.CENTER),

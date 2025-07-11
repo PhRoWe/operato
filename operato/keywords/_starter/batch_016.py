@@ -204,15 +204,7 @@ class Impdisp(Keyword):
     f_scale_y: float | None = None
 
     # added commentary lines for readability of deck
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#--Fct_ID|------Dir|--skew_ID|--sens_ID|--grnd_ID|----6----|----icoor|----8----|----9----|----10---|"
-    )
-    line2: str = (
-        "#----------Ascale_x|-----------Fscale_y|------------T_start|-------------T_stop|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -229,7 +221,6 @@ class Impdisp(Keyword):
     def structure(self):
         structure: KeywordStructureType = [
             StringField("title", 1, 10),
-            StringField("line1", 1, 10),
             [
                 IntField("fct_id_t", 1),
                 StringField("dir", 2, 1, alignment=TextAlignment.CENTER),
@@ -238,7 +229,6 @@ class Impdisp(Keyword):
                 IntField("grnd_id", 5),
                 IntField("icoor", 7),
             ],
-            StringField("line2", 1, 10),
             [
                 FloatField("a_scale_x", 1),
                 FloatField("f_scale_y", 3),

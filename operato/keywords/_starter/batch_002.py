@@ -301,9 +301,7 @@ class Beam(Keyword):
     beam_ids: List[int]
     node_ids: NDArray
     line00: str = "#/BEAM/part_ID\n"
-    line1: str = (
-        "#-beam_id|-node_id1|-node_id2|-node_id3|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -320,7 +318,7 @@ class Beam(Keyword):
 
     @property
     def structure(self):
-        structure = [StringField("line1", 1, 10)]
+        structure = []
         if len(self.node_ids[0]) == 2:
             structure.append(
                 ArrayOfAtomicFields(

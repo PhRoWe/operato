@@ -26,7 +26,7 @@ class H3dDt(Keyword):
     t_start: float
     t_freq: float
     # added line for readability
-    line1 = str = "#    TSTART     TFREQ"
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -39,11 +39,8 @@ class H3dDt(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("line1", 1, 10),
-            [
-                FloatField("t_start", 1),
-                FloatField("t_freq", 3),
-            ],
+            FloatField("t_start", 1),
+            FloatField("t_freq", 3),
         ]
 
         return structure

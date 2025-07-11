@@ -199,12 +199,7 @@ class SurfBox(Keyword):
     box2: bool | None = False
 
     # added commentary lines for readability of deck
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#--box_id|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -221,7 +216,6 @@ class SurfBox(Keyword):
     def structure(self):
         structure = [
             StringField("surf_title", 1, 10),
-            StringField("line1", 1, 10),
             IntField("box_id", 1),
         ]
         return structure

@@ -202,6 +202,7 @@ class Node(Keyword):
     node_ids: list | tuple | NDArray
     xc_yc_zc: NDArray
     unit_id: int | None = None
+    add_header: bool = False
 
     def __post_init__(self) -> None:
         super().__post_init__()

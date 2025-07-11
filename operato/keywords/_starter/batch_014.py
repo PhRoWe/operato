@@ -152,7 +152,7 @@ class Funct(Keyword):
     x: float | List[float]
     y: float | List[float]
     # added commentary lines for readability
-    line1: str = "#                  X                   Y"
+    add_header: bool = True
     add_separator: bool = True
 
     @property
@@ -167,7 +167,6 @@ class Funct(Keyword):
     def structure(self):
         structure = [
             StringField("fct_title", 1, 3),
-            StringField("line1", 1, 10),
             ArrayOfAtomicFields([FloatField("x", 1), FloatField("y", 3)]),
         ]
 
@@ -191,11 +190,9 @@ class FunctSmooth(Keyword):
     Fshifty: float = 0.0
 
     # added commentary lines for readability
+    add_header: bool = True
     line0: str = "#/FUNCT_SMOOTH/fct_ID\n"
-    line1: str = (
-        "#-----------Ascalex|------------Fscaley|------------Ashiftx|------------Fshifty|----9----|----10---|"
-    )
-    line2: str = "#                  X                   Y"
+    add_header: bool = True
     add_separator: bool = True
 
     @property
@@ -210,14 +207,12 @@ class FunctSmooth(Keyword):
     def structure(self):
         structure = [
             StringField("fct_title", 1, 3),
-            StringField("line1", 1, 10),
             [
                 FloatField("Ascalex", 1),
                 FloatField("Fscaley", 3),
                 FloatField("Ashiftx", 5),
                 FloatField("Fshifty", 7),
             ],
-            StringField("line2", 1, 10),
             ArrayOfAtomicFields([FloatField("x", 1), FloatField("y", 3)]),
         ]
 

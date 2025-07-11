@@ -138,18 +138,8 @@ class PropType1(Keyword):
     a_shear: float | None = None
     # commentary lines for better readability:
     line00: str = "#/PROP/TYPE1/prop_ID/unit_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#--Ishell|---Ismstr|----Ish3n|---Idrill|----5----|----6----|------P_thick_fail-|----9----|----10---|"
-    )
-    line2: str = (
-        "#----------------hm|-----------------hf|-----------------hr|-----------------dm|-----------------dn|"
-    )
-    line3: str = (
-        "#-------N|--Istrain|--------------Thick|-------------Ashear|----7----|---Ithick|----Iplas|----10---|"
-    )
+    add_header: bool = True
+
     add_separator: bool = True
 
     @property
@@ -167,7 +157,6 @@ class PropType1(Keyword):
     def structure(self):
         structure = [
             StringField("prop_title", 1, 3),
-            StringField("line1", 1, 10),
             [
                 IntField("i_shell", 1),
                 IntField("i_smstr", 2),
@@ -175,7 +164,6 @@ class PropType1(Keyword):
                 IntField("i_drill", 4),
                 FloatField("p_thick_fail", 7),
             ],
-            StringField("line2", 1, 10),
             [
                 FloatField("h_m", 1),
                 FloatField("h_f", 3),
@@ -183,7 +171,6 @@ class PropType1(Keyword):
                 FloatField("d_m", 7),
                 FloatField("d_n", 9),
             ],
-            StringField("line3", 1, 10),
             [
                 IntField("n", 1),
                 FloatField("t", 3),
@@ -243,21 +230,7 @@ class PropType3(Keyword):
     omega_dof: str | None = "   000 000"
     # lines added for readability of input deck
     line00: str = "#/PROP/TYPE3/prop_ID/unit_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#---1----|--i_smstr|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line2: str = (
-        "#---------------d_m|----------------d_f|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line3: str = (
-        "#--------------area|---------------I_yy|---------------I_zz|---------------I_xx|----9----|----10---|"
-    )
-    line4: str = (
-        "#omegadof|--i_shear|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -278,16 +251,13 @@ class PropType3(Keyword):
         structure = [
             StringField("line0", 1, 10),
             StringField("prop_title", 1, 3),
-            StringField("line1", 1, 10),
             [
                 IntField("I_smstr", 2),
             ],
-            StringField("line2", 1, 10),
             [
                 FloatField("d_m", 1),
                 FloatField("d_f", 3),
             ],
-            StringField("line3", 1, 10),
             [
                 FloatField("area", 1),
                 FloatField("i_yy", 3),
@@ -295,7 +265,6 @@ class PropType3(Keyword):
                 FloatField("i_xx", 7),
             ],
         ]
-        structure.append(StringField("line4", 1, 10))
         structure.append([StringField("omega_dof", 1, 1), IntField("I_shear", 2)])
 
         return structure

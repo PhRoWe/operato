@@ -152,12 +152,7 @@ class GrbricBric(Keyword):
     grbric_title: str | None = "Standard"
     # added commentary lines for readability of deck
     line00: str = "#/GRBRIC/BRIC/grbric_ID/unit_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#item_id1|-item_id2|-item_id3|-item_id4|-item_id5|-item_id6|-item_id7|-item_id8|-item_id9|item_id10|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -172,7 +167,7 @@ class GrbricBric(Keyword):
 
     @property
     def structure(self):
-        structure = [StringField("grbric_title", 1, 10), StringField("line1", 1, 10)]
+        structure = [StringField("grbric_title", 1, 10)]
         if type(self.item_ids) == int:
             structure.append(IntField("item_ids", 1))
         else:

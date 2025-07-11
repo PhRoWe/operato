@@ -195,9 +195,7 @@ class Dt(Keyword):
     dT_sca: float
     # added commentary line for readability of input deck
     line0: str = "#/DT\n"
-    line1: str = (
-        "#------------dT_sca|-------------dT_min|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -217,7 +215,6 @@ class Dt(Keyword):
     @property
     def structure(self):
         structure = []
-        structure.append(StringField("line1", 1, 10))
         structure.append(
             [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
         )

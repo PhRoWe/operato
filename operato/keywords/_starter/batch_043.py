@@ -92,27 +92,7 @@ class PropType18(Keyword):
     omega_dof: str | None = "   000 000"
     # lines added for readability of input deck
     line00: str = "#/PROP/TYPE18/prop_ID/unit_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#--i_sect|--i_smstr|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line2: str = (
-        "#---------------d_m|----------------d_f|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line3: str = (
-        "#-----NIP|----i_ref|----------------y_0|----------------z_0|----7----|----8----|----9----|----10---|"
-    )
-    line4: str = (
-        "#---------------y_i|----------------z_i|---------------area|----7----|----8----|----9----|----10---|"
-    )
-    line5: str = (
-        "#----NITR|---------|-----------------L1|-----------------L2|----7----|----8----|----9----|----10---|"
-    )
-    line6: str = (
-        "#omegadof|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -175,17 +155,14 @@ class PropType18(Keyword):
         structure = [
             StringField("line0", 1, 10),
             StringField("prop_title", 1, 3),
-            StringField("line1", 1, 10),
             [
                 IntField("i_sect", 1),
                 IntField("i_smstr", 2),
             ],
-            StringField("line2", 1, 10),
             [
                 FloatField("d_m", 1),
                 FloatField("d_f", 3),
             ],
-            StringField("line3", 1, 10),
             [
                 IntField("NIP", 1),
                 IntField("i_ref", 2),
@@ -194,7 +171,6 @@ class PropType18(Keyword):
             ],
         ]
         if self.NIP is not None:
-            structure.append(StringField("line4", 1, 10))
             structure.append(
                 ArrayOfAtomicFields(
                     [
@@ -205,11 +181,9 @@ class PropType18(Keyword):
                 )
             )
         if self.nitr is not None:
-            structure.append(StringField("line5", 1, 10))
             structure.append(
                 [IntField("nitr", 1), FloatField("l1", 3), FloatField("l2", 5)]
             )
-        structure.append(StringField("line6", 1, 10))
         structure.append(StringField("omega_dof", 1, 10))
 
         return structure

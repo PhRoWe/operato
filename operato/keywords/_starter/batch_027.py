@@ -140,23 +140,7 @@ class MatPlasJohns(Keyword):
     T_r: float = 298
     unit_id: int | None = None
     line00: str = "# /MAT/PLAS_JOHNS/mat_ID/unit_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = "#-------------rho_i|"
-    line2: str = "#-----------------E|-----------------nu|---I_flag|"
-    line3: str = (
-        "#-----------------a|------------------b|------------------n|------------e_p^max|-----------sig_max0|"
-    )
-    line4: str = (
-        "#-----------sigma_y|----------------UTS|------------eps_UTS|------------e_p^max|-----------sig_max0|"
-    )
-    line5: str = (
-        "#-----------------c|----------eps_dot_0|------ICC|-F_smooth|--------------F_cut|-------------C_hard|"
-    )
-    line6: str = (
-        "#-----------------m|-------------T_melt|-------------rhoC_p|----------------T_r|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -182,60 +166,47 @@ class MatPlasJohns(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("line0", 1, 10),
             StringField("mat_title", 1, 10),
-            StringField("line1", 1, 10),
             FloatField("rho_i", 1),
-            StringField("line2", 1, 10),
             [FloatField("E", 1), FloatField("nu", 3), IntField("i_flag", 5)],
         ]
 
         if self.i_flag == 0:
             structure.extend(
                 [
-                    StringField("line3", 1, 10),
-                    [
-                        FloatField("a", 1),
-                        FloatField("b", 3),
-                        FloatField("n", 5),
-                        FloatField("eps_max_p", 7),
-                        FloatField("sigma_max_0", 9),
-                    ],
-                ]
+                    FloatField("a", 1),
+                    FloatField("b", 3),
+                    FloatField("n", 5),
+                    FloatField("eps_max_p", 7),
+                    FloatField("sigma_max_0", 9),
+                ],
             )
         elif self.i_flag == 1:
             structure.extend(
                 [
-                    StringField("line4", 1, 10),
-                    [
-                        FloatField("sigma_y", 1),
-                        FloatField("UTS", 3),
-                        FloatField("eps_uts", 5),
-                        FloatField("eps_max_p", 7),
-                        FloatField("sigma_max_0", 9),
-                    ],
+                    FloatField("sigma_y", 1),
+                    FloatField("UTS", 3),
+                    FloatField("eps_uts", 5),
+                    FloatField("eps_max_p", 7),
+                    FloatField("sigma_max_0", 9),
                 ]
             )
 
         structure.extend(
             [
-                StringField("line5", 1, 10),
-                [
-                    FloatField("c", 1),
-                    FloatField("eps_rate_0", 3),
-                    IntField("icc", 5),
-                    IntField("f_smooth", 6),
-                    FloatField("f_cut", 7),
-                    FloatField("c_hard", 9),
-                ],
-                StringField("line6", 1, 10),
-                [
-                    FloatField("m", 1),
-                    FloatField("T_melt", 3),
-                    FloatField("rho_c_p", 5),
-                    FloatField("T_r", 7),
-                ],
-            ]
+                FloatField("c", 1),
+                FloatField("eps_rate_0", 3),
+                IntField("icc", 5),
+                IntField("f_smooth", 6),
+                FloatField("f_cut", 7),
+                FloatField("c_hard", 9),
+            ],
+            [
+                FloatField("m", 1),
+                FloatField("T_melt", 3),
+                FloatField("rho_c_p", 5),
+                FloatField("T_r", 7),
+            ],
         )
 
         return structure

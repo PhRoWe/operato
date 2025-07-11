@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 
 from operato.keywords.common import FloatField, IntField, Keyword, StringField
+from typing import List
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -65,16 +66,48 @@ class PropType9(Keyword):
 # --- /PROP/TYPE10 ------------------------------------------------------
 @dataclass
 class PropType10(Keyword):
-    attr1: int
-    attr2: float
+    """This property set is used to define the composite shell property set.
+      It is possible to define composite with several layers and each layer with
+      individual orthotropic direction.
+    https://help.altair.com/hwsolvers/rad/topics/solvers/rad/prop_type10_sh_comp_starter_r.htm
 
-    def __post_init__(self):
-        # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE10` is not implemented.")
+    """
+
+    prop_id: int
+    Thick: float
+    unit_id: int | None = None
+    prop_title: str | None = None
+    i_shell: int | None = None
+    i_smstr: int | None = None
+    i_sh3n: int | None = None
+    i_drill: int | None = None
+    P_thick_fail: float | None = None
+    h_m: float | None = None
+    h_f: float | None = None
+    h_r: float | None = None
+    d_m: float | None = None
+    d_n: float | None = None
+    N: int | None = None
+    A_shear: float | None = None
+    I_thick: int | None = None
+    I_plas: int | None = None
+    V_x: float | None = None
+    V_y: float | None = None
+    V_z: float | None = None
+    skew_id: int | None = None
+    I_pos: int | None = None
+    I_p: int | None = None
+    theta: List[float] | None = None
+    # lines added for readability of input deck
+    line00: str = "#/PROP/TYPE10/prop_ID/unit_ID\n"
+    add_header: bool = True
 
     @property
     def keyword(self):
-        return "/PROP/TYPE10"
+        if self.unit_id is not None:
+            return self.line00 + f"/PROP/TYPE10/{self.prop_id}/{self.unit_id}"
+        else:
+            return self.line00 + f"/PROP/TYPE10/{self.prop_id}"
 
     @property
     def pre_conditions(self):
@@ -83,6 +116,24 @@ class PropType10(Keyword):
     @property
     def structure(self):
         structure = []
+        # Line 1
+        for i, attr in enumerate(
+            ["Ishell", "Ismstr", "Ish3n", "Idrill", "P_thickfail"]
+        ):
+            match getattr(self, attr):
+                case int():
+                    structure.append(IntField(attr, i + 1))
+                case float():
+                    structure.append(FloatField(attr, i + 1))
+                case None:
+                    continue
+        # Line 2
+        for i, attr in enumerate(["hm", "hf", "hr", "dm", "dn"]):
+            match getattr(self, attr):
+                case float():
+                    structure.append(FloatField(attr, i + 1))
+                case None:
+                    continue
 
         return structure
 
@@ -190,16 +241,7 @@ class PropType14(Keyword):
     Ndir: int | None = None
     sphpart_id: int | None = None
     # commentary lines for better readability:
-    line1: str = (
-        "#   Isolid    Ismstr               Icpre  Itetra10     Inpts   Itetra4    Iframe                  dn"
-    )
-    line2: str = (
-        "#                q_a                 q_b                   h            LAMBDA_V                MU_V"
-    )
-    line3: str = (
-        "#             dt_min            Vdef_min            Vdef_max             APS_max             COL_min"
-    )
-    line4: str = "#              N_dir          sphpart_id"
+    add_header: bool = True
     add_separator: bool = True
 
     @property
@@ -223,7 +265,6 @@ class PropType14(Keyword):
     def structure(self):
         structure = [
             StringField("prop_title", 1, 3),
-            StringField("line1", 1, 10),
             [
                 IntField("i_solid", 1),
                 IntField(
@@ -238,7 +279,6 @@ class PropType14(Keyword):
                 IntField("i_frame", 8),
                 FloatField("d_n", 9),
             ],
-            StringField("line2", 1, 10),
             [
                 FloatField("q_a", 1),
                 FloatField("q_b", 3),
@@ -246,7 +286,6 @@ class PropType14(Keyword):
                 FloatField("lambda_v", 7),
                 FloatField("mu_v", 9),
             ],
-            StringField("line3", 1, 10),
             [
                 FloatField("dt_min", 1),
                 FloatField("Vdef_min", 3),

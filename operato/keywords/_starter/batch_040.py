@@ -196,12 +196,7 @@ class Pload(Keyword):
     f_scale_y: float | None = 1.0
     # added line for readability
     line00: str = "#/PLOAD/pload_ID/unit_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#-surf_ID|-fct_ID_T|--sens_ID|----4----|----I_del|----6----|-----------Ascale_x|-----------Fscale_y|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -220,7 +215,6 @@ class Pload(Keyword):
     def structure(self):
         structure: KeywordStructureType = [
             StringField("pload_title", 1, 10),
-            StringField("line1", 1, 10),
             [
                 IntField("surf_id", 1),
                 IntField("fct_id_t", 2),

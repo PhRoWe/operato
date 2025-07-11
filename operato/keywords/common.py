@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from enum import Enum
 from io import TextIOBase
 from math import floor
+import math
 from typing import List, Iterable, Literal, Sequence, Tuple, get_args, get_type_hints
 
 import numpy as np
@@ -351,6 +352,99 @@ class Keyword:
         # `KeywordCategory.STARTER` or `KeywordCategory.ENGINE` respectively.
         self.category: KeywordCategory = KeywordCategory.GENERIC
 
+    @property
+    def Header(self):
+        def createHeaderField(Field):
+            headerline = ""
+            header_fields = [headerline] * NFIELDS
+            # get the attr from the fields
+            name = Field.attr
+            if ":" in name and "|" in name:
+                name = name.split(":")[0] + name.split("|")[-1]
+            # check length of current field
+            if type(Field) == IntField or type(Field) == BoolField:
+                l = FIELDWIDTH
+            elif type(Field) == FloatField:
+                l = Field.span * FIELDWIDTH
+                # empty out next field to account for double length
+                if Field.span != 1:
+                    header_fields[Field.index : Field.index + Field.span] = ""
+            elif type(Field) == StringField:
+                l = Field.span * FIELDWIDTH
+                if Field.span != 1:
+                    header_fields[Field.index : Field.index + Field.span] = ""
+            # find number of "-" to print before and after the name
+            # --(name)--|
+            before = int(math.ceil(float(l - len(name) - 1) / 2))
+            after = int(math.floor(float(l - len(name) - 1) / 2))
+            if Field.index == 1:
+                before -= 1
+                headerline = "#"
+            headerline += "-" * before + str(name) + "-" * after + "|"
+
+            return headerline
+
+        def createHeaderforArrayOfAtomic(Fields):
+            header = []
+            for Field in Fields:
+                header.append(createHeaderField(Field))
+
+            return "".join(header)
+
+        num = int(math.ceil(float(FIELDWIDTH - 1)))
+        headerline = "-" * num + "|"
+        # initialize empty headers array (several in case of Multilinearray)
+        headers = []
+        # Now, iterate over the fields and add the names of the existing fields
+        Fields = self.structure
+        if len(Fields) == 0:
+            return
+        for field in Fields:
+            line_definition_type = get_line_definition_type(field)
+            match line_definition_type:
+                case LineDefinitionType.MULTI_LINE_ARRAY_OF_ATOMIC_FIELDS:
+                    # here, we need to print several headers on top and then add the actual cards.
+                    # step one layer down into the Fields making up the MultiLineArray.
+                    Fields = Fields.fields
+                    for Field in Fields:
+                        line_definition_type2 = get_line_definition_type(Field)
+                        match line_definition_type2:
+                            case LineDefinitionType.VL_SEQUENCE_OF_ATOMIC_FIELD:
+                                # Here we add one or more header lines. Depends on length.
+                                # Step down one layer:
+                                Field = Field.fields
+                                header = "".join(createHeaderField(Field))
+                                while len(header) > 100:
+                                    headers.append(header[0:99])
+                                    header = header[100:-1]
+                                headers.append(header)
+                            case LineDefinitionType.ARRAY_OF_ATOMIC_FIELDS:
+                                # Here we just add one header line. Step down one layer into the all fields
+                                Fields = Field.fields
+                                headers.append(createHeaderforArrayOfAtomic(Fields))
+                    # Again, the fields may be ArrayOfAtomicFields, VLSequenceOfAtomicField or just AtomicField
+                case LineDefinitionType.VL_SEQUENCE_OF_ATOMIC_FIELD:
+                    # Here we add one or more header lines. Depends on length.
+                    # Step down one layer:
+                    Field = Fields.fields
+                    header = "".join(createHeaderField(Field))
+                    while len(header) > 100:
+                        headers.append(header[0:99])
+                        header = header[100:-1]
+                    headers.append(header)
+                case LineDefinitionType.ARRAY_OF_ATOMIC_FIELDS:
+                    # Here we just add one header line. Step down one layer into the all fields
+                    Fields = field.fields
+                    headers.append(createHeaderforArrayOfAtomic(Fields))
+                case LineDefinitionType.SINGLE_ATOMIC_FIELD:
+                    headers.append("".join(createHeaderField(field)))
+                case LineDefinitionType.SEQUENCE_OF_ATOMIC_FIELDS:
+                    header = []
+                    for subfield in field:
+                        header.append(createHeaderField(subfield))
+                    headers.append("".join(header))
+        return headers
+
     def check_pre_conditions(self) -> None:
         """Check pre-conditions for this keyword.
 
@@ -674,9 +768,10 @@ class Keyword:
 
         # Process the fields in this keyword by looping over the structure
         # definition.
-        for line_definition in self.structure:
+        for i, line_definition in enumerate(self.structure):
             line_definition_type = get_line_definition_type(line_definition)
-
+            if self.add_header == True:
+                lines.append(self.Header[i])
             # Dispatch to the correct handler
             match line_definition_type:
 

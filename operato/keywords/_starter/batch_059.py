@@ -471,6 +471,7 @@ class XtraLineUser(Keyword):
 
     comment: str
     add_separator: bool = False
+    add_header: bool = False
 
     @property
     def keyword(self):

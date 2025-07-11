@@ -115,12 +115,23 @@ class MatLaw92(Keyword):
 # --- /MAT/LAW93 ------------------------------------------------------
 @dataclass
 class MatLaw93(Keyword):
-    attr1: int
-    attr2: float
-
-    def __post_init__(self):
-        # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW93` is not implemented.")
+    # FIXME: tbc
+    id: int
+    rho: float
+    E11: float
+    E22: float
+    E33: float
+    G12: float
+    G13: float
+    G23: float
+    nu12: float
+    nu13: float
+    nu23: float
+    N_rate: int
+    VP: int | None = None
+    F_cut: float | None = None
+    unit_id: int | None = None
+    title: str = ""
 
     @property
     def keyword(self):

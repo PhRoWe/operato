@@ -184,12 +184,7 @@ class Tetra4(Keyword):
     tetra_ids: List[int] | NDArray
     node_ids: List[Tuple[int, ...]] | NDArray
     line00: str = "#/TETRA4/part_ID\n"
-    line0: str = (
-        "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
-    line1: str = (
-        "#tetra_id|-node_id1|-node_id2|-node_id3|-node_id4|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -202,7 +197,6 @@ class Tetra4(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("line1", 1, 10),
             ArrayOfAtomicFields(
                 [
                     IntField("tetra_ids", 1),
