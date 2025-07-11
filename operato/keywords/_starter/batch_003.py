@@ -504,7 +504,6 @@ class BoxRecta(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("line0", 1, 10),
             StringField("box_title", 1, 10),
         ]
         if self.node1 is not None and self.node2 is not None:

@@ -133,9 +133,7 @@ class Mpc(Keyword):
     skew_id: list[int]
     alpha: list[int]
     title: str = ""
-    line0: str = (
-        "#-node_id|-----idof|--skew_id|----alpha|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -156,7 +154,6 @@ class Mpc(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("line0", 1, 10),
             StringField("title", 1, 10),
             ArrayOfAtomicFields(
                 [

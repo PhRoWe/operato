@@ -123,9 +123,7 @@ class AnimDt(Keyword):
     t_freq: float
     t_stop: float | None = None
     # added line for readability
-    line0: str = (
-        "#-----------T_start|-------------T_freq|------------T-stop-|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -138,12 +136,9 @@ class AnimDt(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("line0", 1, 10),
-            [
-                FloatField("t_start", 1),
-                FloatField("t_freq", 3),
-                FloatField("t_stop", 5),
-            ],
+            FloatField("t_start", 1),
+            FloatField("t_freq", 3),
+            FloatField("t_stop", 5),
         ]
 
         return structure

@@ -333,6 +333,8 @@ def get_line_definition_type(line_definition) -> LineDefinitionType:
 class Keyword:
     """Baseclass for OpenRadioss keyword definitions."""
 
+    add_header: bool = True
+
     def __post_init__(self) -> None:
         self._text_alignment = {
             # Note: specifying an alignment for a `BoolField` has no effect
