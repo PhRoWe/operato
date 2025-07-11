@@ -153,7 +153,6 @@ class PropType18(Keyword):
     def structure(self):
         # Basic structure
         structure = [
-            StringField("line0", 1, 10),
             StringField("prop_title", 1, 3),
             [
                 IntField("i_sect", 1),
