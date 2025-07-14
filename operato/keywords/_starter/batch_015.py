@@ -28,6 +28,7 @@ from operato.keywords.common import (
 class GaugeSph(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -53,6 +54,7 @@ class GaugeSph(Keyword):
 class Gjoint(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -78,6 +80,7 @@ class Gjoint(Keyword):
 class Grav(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -103,6 +106,7 @@ class Grav(Keyword):
 class Grbeam(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -203,6 +207,7 @@ class GrnodNode(Grnod):
     item_ids: List[int]
     unit_id: int | None = None
     line00: str = "#/GRNOD/NODE/grnd_ID/unit_ID\n"
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -238,6 +243,7 @@ class GrpartPart(Keyword):
     grprt_title: str
     item_ids: List[int]
     line00: str = "#/GRPART/PART/grprt_ID\n"
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -268,6 +274,7 @@ class GrpartPart(Keyword):
 class Grpart(Keyword):
     grpart_id: int
     grpart_title: str
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -289,6 +296,7 @@ class Grpart(Keyword):
 class Grquad(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -316,6 +324,7 @@ class Grquadquad(Keyword):
     item_ids: List[int]
     unit_id: int | None = None
     grquad_title: str | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -343,6 +352,7 @@ class Grquadquad(Keyword):
 class Grsh3n(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

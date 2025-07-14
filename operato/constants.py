@@ -103,6 +103,13 @@ UNKNOWN_INPUT = f"Necessary input not defined!"
 # Line separator that can be used for debugging or when more verbose output is
 # desired.
 LINE_SEPARATOR = ["#---1----|"]
-for i in range(2, 11):
+for i in range(2, 10):
     LINE_SEPARATOR.extend(["----" + str(i) + "----|"])
+LINE_SEPARATOR.append("----10---|")
 LINE_SEPARATOR = "".join(LINE_SEPARATOR)
+
+# separate lines
+LINESARRAY = ["#---1----|"]
+for i in range(2, 10):
+    LINESARRAY.append(f"----{str(i)}----|")
+LINESARRAY.append("----10---|")

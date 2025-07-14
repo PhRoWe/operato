@@ -78,6 +78,7 @@ class ThNode(Keyword):
     node_id: int
     skew_frame_id: int
     node_name: str
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -135,6 +136,7 @@ class ThPart(Keyword):
     name: str
     var: list[str]
     obj_id: list[int]
+    add_header: bool = True
 
     @property
     def keyword(self):

@@ -218,6 +218,7 @@ class Tetra10(Keyword):
     tetra_ids: List[int] | NDArray
     node_ids: List[Tuple[int, ...]] | NDArray
     line00: str = "#/TETRA10/part_ID\n"
+    add_header: bool = True
 
     @property
     def keyword(self):

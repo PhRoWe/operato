@@ -184,6 +184,7 @@ class Shell(Keyword):
     t: List[Tuple[int, ...]] | NDArray
     phi: List[Tuple[int, ...]] | NDArray
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):

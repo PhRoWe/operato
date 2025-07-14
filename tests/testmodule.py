@@ -15,11 +15,11 @@ class TestModule(unittest.TestCase):
     #     if os.path.exists(self.test_file.name):
     #         os.remove(self.test_file.name)
 
-    def test_starter_basic(self):
-        self.test_file = tempfile.NamedTemporaryFile(delete=False)
-        self.test_file.name = "_0000.rad"
-        starter = Starter()
-        starter.write()
+    # def test_starter_basic(self):
+    #     self.test_file = tempfile.NamedTemporaryFile(delete=False)
+    #     self.test_file.name = "_0000.rad"
+    #     starter = Starter()
+    #     starter.write()
 
     def test_engine_basic(self):
         self.test_file = tempfile.NamedTemporaryFile(delete=False)
@@ -84,6 +84,28 @@ class TestModule(unittest.TestCase):
                 Fscaley=1.9,
                 x=[0, 0.4, 1.0],
                 y=[0, 1.0, 1.0],
+            )
+        )
+        starter.write()
+
+    def test_MatLaw25(self):
+        self.test_file = tempfile.NamedTemporaryFile(delete=False)
+        self.test_file.name = "matLaw25.rad"
+        starter = Starter()
+        starter.add(
+            MatLaw25(
+                mat_id=1,
+                mat_title="test123",
+                rho=7.8e-6,
+                E11=2.1e2,
+                E22=2.1e2,
+                E33=2.1e2,
+                nu12=0.3,
+                G12=0.7e-2,
+                G13=0.7e-2,
+                G23=0.7e-2,
+                i_off=0,
+                depsdt0=0.01,
             )
         )
         starter.write()

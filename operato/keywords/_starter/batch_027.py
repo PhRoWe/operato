@@ -32,6 +32,7 @@ class MatLaw0(Keyword):
     # line added for readability
     line: str = "#              RHO                  E                  nu"
     add_separator: bool = True
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -73,9 +74,8 @@ class MatLaw1(Keyword):
     # unit identifier (optional)
     unit_id: int | None = None
     # lines added for readability of input deck
-    rho_line: str = "#              RHO_I"
-    E_line: str = "#                  E                  nu"
     add_separator: bool = True
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -92,9 +92,7 @@ class MatLaw1(Keyword):
     def structure(self):
         structure: KeywordStructureType = [
             StringField("mat_title", 1, 10),
-            StringField("rho_line", 1, 10),
             FloatField("rho_i", 1),
-            StringField("E_line", 1, 10),
             [FloatField("E", 1), FloatField("nu", 3)],
         ]
 

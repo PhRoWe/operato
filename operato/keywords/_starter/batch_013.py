@@ -17,6 +17,7 @@ from operato.keywords.common import FloatField, IntField, Keyword, StringField
 class FailTab1(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -42,6 +43,7 @@ class FailTab1(Keyword):
 class FailTbutcher(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -67,6 +69,7 @@ class FailTbutcher(Keyword):
 class FailTensstrain(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -92,6 +95,7 @@ class FailTensstrain(Keyword):
 class FailUseri(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -117,6 +121,7 @@ class FailUseri(Keyword):
 class FailVisual(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -142,6 +147,7 @@ class FailVisual(Keyword):
 class FailWierzbicki(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -167,6 +173,7 @@ class FailWierzbicki(Keyword):
 class FailWilkins(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -192,6 +199,7 @@ class FailWilkins(Keyword):
 class FrameFix(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -217,6 +225,7 @@ class FrameFix(Keyword):
 class FrameMov(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

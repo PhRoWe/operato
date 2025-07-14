@@ -17,6 +17,7 @@ from operato.keywords.common import FloatField, IntField, Keyword, StringField
 class Inigrav(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -42,6 +43,7 @@ class Inigrav(Keyword):
 class Inimap1d(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -67,6 +69,7 @@ class Inimap1d(Keyword):
 class Inimap1dFile(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -92,6 +95,7 @@ class Inimap1dFile(Keyword):
 class Inimap2d(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -117,6 +121,7 @@ class Inimap2d(Keyword):
 class Inimap2dFile(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -142,6 +147,7 @@ class Inimap2dFile(Keyword):
 class Iniqua(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -167,6 +173,7 @@ class Iniqua(Keyword):
 class IniquaDens(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -192,6 +199,7 @@ class IniquaDens(Keyword):
 class IniquaEner(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -217,6 +225,7 @@ class IniquaEner(Keyword):
 class IniquaEpsp(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

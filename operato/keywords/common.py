@@ -15,6 +15,7 @@ from operato.constants import (
     FLOAT_FULL_FORMAT_SPEC,
     INT_FULL_FORMAT_SPEC,
     NFIELDS,
+    LINESARRAY,
 )
 
 
@@ -328,12 +329,37 @@ def get_line_definition_type(line_definition) -> LineDefinitionType:
     raise RuntimeError("Invalid line definition (BUG)")
 
 
+def match_type_append_line_struct(key, struct, attrs):
+    substruct = []
+    pos = 0
+    for i, attr in enumerate(attrs):
+        if "-" in attr:
+            # count how many fields to jump
+            n = attr.count("-")
+            pos += n
+            continue
+        pos += 1
+        match getattr(key, attr):
+            case int():
+                substruct.append(IntField(attr, pos))
+            case str():
+                substruct.append(StringField(attr, pos))
+            case bool():
+                substruct.append(BoolField(attr, pos))
+            case float():
+                substruct.append(FloatField(attr, pos))
+                pos += 1
+            case None:
+                continue
+    if len(substruct) != 0:
+        struct.append(substruct)
+    return struct
+
+
 # --- Starter keywords ------------------------------------------------------------------------
 @dataclass
 class Keyword:
     """Baseclass for OpenRadioss keyword definitions."""
-
-    add_header: bool = True
 
     def __post_init__(self) -> None:
         self._text_alignment = {
@@ -364,17 +390,21 @@ class Keyword:
             if ":" in name and "|" in name:
                 name = name.split(":")[0] + name.split("|")[-1]
             # check length of current field
-            if type(Field) == IntField or type(Field) == BoolField:
-                l = FIELDWIDTH
-            elif type(Field) == FloatField:
-                l = Field.span * FIELDWIDTH
-                # empty out next field to account for double length
-                if Field.span != 1:
-                    header_fields[Field.index : Field.index + Field.span] = ""
-            elif type(Field) == StringField:
-                l = Field.span * FIELDWIDTH
-                if Field.span != 1:
-                    header_fields[Field.index : Field.index + Field.span] = ""
+            l = Field.span * FIELDWIDTH
+            # if type(Field) == IntField or type(Field) == BoolField:
+            #     l = FIELDWIDTH
+            # elif type(Field) == FloatField:
+
+            #     # empty out next field to account for double length
+            #     # if Field.span != 1:
+            #     #     header_fields[Field.index : Field.index + Field.span] = ""
+            # elif type(Field) == StringField:
+            #     l = Field.span * FIELDWIDTH
+            #     # if Field.span != 1:
+            #     #     header_fields[Field.index : Field.index + Field.span] = ""
+            # # check if name too long, then abbreviate:
+            if len(name) > l - 1:
+                name = name[0 : l - 1]
             # find number of "-" to print before and after the name
             # --(name)--|
             before = int(math.ceil(float(l - len(name) - 1) / 2))
@@ -387,12 +417,21 @@ class Keyword:
             return headerline
 
         def createHeaderforArrayOfAtomic(Fields):
-            header = []
-            for Field in Fields:
-                header.append(createHeaderField(Field))
+            header_fields = LINESARRAY.copy()
+            for i, Field in enumerate(Fields):
+                if Field.span != 1:
+                    string = createHeaderField(Field)
+                    for p in range(Field.span):
+                        header_fields[Field.index - 1 + p] = string[
+                            FIELDWIDTH * p : FIELDWIDTH * (p + 1)
+                        ]
 
-            return "".join(header)
+                else:
+                    header_fields[Field.index - 1] = createHeaderField(Field)
 
+            return "".join(header_fields)
+
+        # amount of separators in headerline:
         num = int(math.ceil(float(FIELDWIDTH - 1)))
         headerline = "-" * num + "|"
         # initialize empty headers array (several in case of Multilinearray)
@@ -428,8 +467,7 @@ class Keyword:
                 case LineDefinitionType.VL_SEQUENCE_OF_ATOMIC_FIELD:
                     # Here we add one or more header lines. Depends on length.
                     # Step down one layer:
-                    Field = Fields.fields
-                    header = "".join(createHeaderField(Field))
+                    header = "".join(createHeaderField(field.field))
                     while len(header) > 100:
                         headers.append(header[0:99])
                         header = header[100:-1]
@@ -441,10 +479,11 @@ class Keyword:
                 case LineDefinitionType.SINGLE_ATOMIC_FIELD:
                     headers.append("".join(createHeaderField(field)))
                 case LineDefinitionType.SEQUENCE_OF_ATOMIC_FIELDS:
-                    header = []
-                    for subfield in field:
-                        header.append(createHeaderField(subfield))
-                    headers.append("".join(header))
+                    headers.append(createHeaderforArrayOfAtomic(field))
+                    # header = []
+                    # for subfield in field:
+                    #     header.append(createHeaderField(subfield))
+                    # headers.append("".join(header))
         return headers
 
     def check_pre_conditions(self) -> None:

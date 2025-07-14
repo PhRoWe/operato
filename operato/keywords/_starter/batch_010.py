@@ -17,6 +17,7 @@ from operato.keywords.common import FloatField, IntField, Keyword, StringField
 class Eref(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -42,6 +43,7 @@ class Eref(Keyword):
 class EulerMat(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -67,6 +69,7 @@ class EulerMat(Keyword):
 class Fail(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -92,6 +95,7 @@ class Fail(Keyword):
 class FailAlter(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -117,6 +121,7 @@ class FailAlter(Keyword):
 class FailBiquad(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -142,6 +147,7 @@ class FailBiquad(Keyword):
 class FailChang(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -167,6 +173,7 @@ class FailChang(Keyword):
 class FailCockcroft(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -192,6 +199,7 @@ class FailCockcroft(Keyword):
 class FailConnect(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -217,6 +225,7 @@ class FailConnect(Keyword):
 class FailEmc(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

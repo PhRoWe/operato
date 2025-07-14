@@ -33,6 +33,7 @@ class Accel(Keyword):
     skew_id: int
     f_cut: float
     unit_id: None | int = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -74,6 +75,7 @@ class Activ(Keyword):
     unit_id: None | int = None
     t_start: None | float = None
     t_stop: float = 1e30
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -141,6 +143,7 @@ class Admas(Keyword):
     node_id: None | List[int] = None
     part_id: None | List[int] = None
     iflag: None | Literal[0, 1] | List[Literal[0, 1]] = 0
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -219,6 +222,7 @@ class AdmeshGlobal(Keyword):
     ladmrule: Literal[0, 1]
     time_delay: float
     idt: Literal[0, 1]
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -253,6 +257,7 @@ class AdmeshSet(Keyword):
     inilev: int
     thkerr: float
     part_ids: List[int]
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -293,6 +298,7 @@ class AdmeshStateShell(Keyword):
     shell_id4: int
     actlev: int
     imapping: Literal[-1, 0, 1]
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -332,6 +338,7 @@ class AdmeshStateSh3n(Keyword):
     sh3n_id4: int
     actlev: int
     imapping: Literal[-1, 0, 1]
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -368,6 +375,7 @@ class ALEBcs(Keyword):
     grilag: List[Literal[0, 1]]
     skew_id: int
     grnd_id: int
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -401,6 +409,7 @@ class ALEClose(Keyword):
     prop_id: int
     htest: float
     hclose: None | float = None
+    add_header: bool = True
 
     def __post_init__(self):
         super().__post_init__()

@@ -33,6 +33,7 @@ class ALEMuscl(Keyword):
 
     beta: float
     iflag: Literal[0, 1] = 0
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -61,6 +62,7 @@ class ALESolverFint(Keyword):
     """
 
     iform: Literal[0, 1, 2, 3] = 3
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -90,6 +92,7 @@ class Ams(Keyword):
     """
 
     grpart_id: int
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -118,11 +121,7 @@ class Analy(Keyword):
     i_parith: Literal[0, 1, 2] = 0
     i_subcycle: Literal[0, 2] = 0
     # FIXME: i_subcycle removed in V2024!
-
-    # line added for readability
-    line: str = (
-        "#---N2D3D|-----------I_parith|-----ISUB|----5----|----6----|----7----|----8----|----9----|----10---|"
-    )
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -148,12 +147,9 @@ class Analy(Keyword):
     @property
     def structure(self):
         return [
-            StringField("line", 1, 10),
-            [
-                IntField("n_2D3D", 1),
-                IntField("i_parith", 3),
-                IntField("i_subcycle", 4),
-            ],
+            IntField("n_2D3D", 1),
+            IntField("i_parith", 3),
+            IntField("i_subcycle", 4),
         ]
 
 
@@ -163,6 +159,7 @@ class AnimVers(Keyword):
     """Defines the animation file version."""
 
     anim_vers: int = 44
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -190,7 +187,7 @@ class Bcs(Keyword):
     trarot: Sequence[Literal[0, 1]]
     skew_id: int
     grnd_id: int
-    line: str = "#-tra-rot|--skew_ID|-grnod_ID|"
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -204,7 +201,6 @@ class Bcs(Keyword):
     def structure(self):
         structure = [
             StringField("bcs_title", 1, 10),
-            StringField("line", 1, 10),
             [
                 BoolField("trarot", 1, 6, [4, 5, 6, 8, 9, 10]),
                 IntField("skew_id", 2),
@@ -228,6 +224,7 @@ class BcsCyclic(Keyword):
     grnd_id_1: int
     grnd_id_2: int
     skew_id: int = 0
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -264,6 +261,7 @@ class BcsLagmul(Keyword):
     trarot: str
     skew_id: int
     grnd_id: int
+    add_header: bool = True
 
     @property
     def keyword(self):

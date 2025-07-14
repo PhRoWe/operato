@@ -24,6 +24,7 @@ from operato.keywords.common import (
 class FrameMov2(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -49,6 +50,7 @@ class FrameMov2(Keyword):
 class FrameNod(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -74,6 +76,7 @@ class FrameNod(Keyword):
 class FricOrient(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -99,6 +102,7 @@ class FricOrient(Keyword):
 class Friction(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -124,6 +128,7 @@ class Friction(Keyword):
 class Func2d(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -224,6 +229,7 @@ class FunctSmooth(Keyword):
 class Fxbody(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -249,6 +255,7 @@ class Fxbody(Keyword):
 class Gauge(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

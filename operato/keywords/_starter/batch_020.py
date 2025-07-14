@@ -17,6 +17,7 @@ from operato.keywords.common import FloatField, IntField, Keyword, StringField
 class Inish3OrthLoc(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -42,6 +43,7 @@ class Inish3OrthLoc(Keyword):
 class InisheOrtho(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -67,6 +69,7 @@ class InisheOrtho(Keyword):
 class Inish3Ortho(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -92,6 +95,7 @@ class Inish3Ortho(Keyword):
 class InisheScaleYld(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -117,6 +121,7 @@ class InisheScaleYld(Keyword):
 class Inish3ScaleYld(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -142,6 +147,7 @@ class Inish3ScaleYld(Keyword):
 class InispriFull(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -167,6 +173,7 @@ class InispriFull(Keyword):
 class InisheStraF(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -192,6 +199,7 @@ class InisheStraF(Keyword):
 class Inish3StraF(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -217,6 +225,7 @@ class Inish3StraF(Keyword):
 class InisheStraFGlob(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

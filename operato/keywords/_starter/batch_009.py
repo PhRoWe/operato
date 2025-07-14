@@ -17,6 +17,7 @@ from operato.keywords.common import FloatField, IntField, Keyword, StringField
 class EosMurnaghan(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -42,6 +43,7 @@ class EosMurnaghan(Keyword):
 class EosNasg(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -67,6 +69,7 @@ class EosNasg(Keyword):
 class EosNobleAbel(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -92,6 +95,7 @@ class EosNobleAbel(Keyword):
 class EosOsborne(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -117,6 +121,7 @@ class EosOsborne(Keyword):
 class EosPolynomial(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -142,6 +147,7 @@ class EosPolynomial(Keyword):
 class EosPuff(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -167,6 +173,7 @@ class EosPuff(Keyword):
 class EosSesame(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -192,6 +199,7 @@ class EosSesame(Keyword):
 class EosStiffGas(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -217,6 +225,7 @@ class EosStiffGas(Keyword):
 class EosTillotson(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

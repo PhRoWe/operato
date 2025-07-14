@@ -52,6 +52,7 @@ class ThBeam(Keyword):
     var: list[str]
     elem_id: int
     elem_name: str
+    add_header: bool = False
 
     @property
     def keyword(self):

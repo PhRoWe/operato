@@ -94,6 +94,7 @@ class PropType0(Keyword):
     prop_title: str | None = None
     unit_id: int | None = None
     line00: str = "#/PROP/TYPE0/prop_ID/unit_ID\n"
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -139,7 +140,6 @@ class PropType1(Keyword):
     # commentary lines for better readability:
     line00: str = "#/PROP/TYPE1/prop_ID/unit_ID\n"
     add_header: bool = True
-
     add_separator: bool = True
 
     @property

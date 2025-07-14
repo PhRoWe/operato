@@ -207,6 +207,7 @@ class Quad(Keyword):
     part_id: int
     quad_ids: List[int] | NDArray
     node_ids: List[Tuple[int, ...]] | NDArray
+    add_header: bool = True
 
     @property
     def keyword(self):

@@ -42,6 +42,7 @@ class Eig(Keyword):
     tol: float = 0.0
     filename: str | None = None
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -90,6 +91,7 @@ class Eig(Keyword):
 class Encrypt(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -115,6 +117,8 @@ class Encrypt(Keyword):
 class End(Keyword):
     """Declares that end of input deck has been reached."""
 
+    add_header: bool = False
+
     @property
     def keyword(self):
         return "/END"
@@ -125,6 +129,7 @@ class End(Keyword):
 class EosCompaction(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -150,6 +155,7 @@ class EosCompaction(Keyword):
 class EosGruneisen(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -175,6 +181,7 @@ class EosGruneisen(Keyword):
 class EosIdealGas(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -200,6 +207,7 @@ class EosIdealGas(Keyword):
 class EosIdealGasVt(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -225,6 +233,7 @@ class EosIdealGasVt(Keyword):
 class EosLinear(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -250,6 +259,7 @@ class EosLinear(Keyword):
 class EosLszk(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

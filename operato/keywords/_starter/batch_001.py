@@ -27,6 +27,7 @@ class ALEGridDisp(Keyword):
 
     u_max: float = -1.0e30
     v_min: float = -1.0e30
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -55,6 +56,7 @@ class ALEGridDonea(Keyword):
     fscale_y: float = 1.0
     fscale_z: float = 1.0
     v_min: float = -1.0e30
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -94,6 +96,7 @@ class ALEGridLaplacian(Keyword):
     # `lambda` is unfortunately not allowed here.
     scale_factor: float = 1.0
     n_iter: int = 1
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -120,6 +123,7 @@ class ALEGridSpring(Keyword):
     eta: float = 0.5
     nu: float = 1.0
     v_min: float = -1.0e30
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -153,6 +157,7 @@ class ALEGridStandard(Keyword):
     alpha: float = 0.9
     gamma: float = 1.0e-2
     eta: float = 1e-2
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -204,6 +209,8 @@ class ALEGridVolume(Keyword):
 class ALEGridZero(Keyword):
     """Describes the Euler formulation."""
 
+    add_header: bool = False
+
     @property
     def keyword(self):
         return "/ALE/GRID/ZERO"
@@ -235,6 +242,7 @@ class ALELinkVel(Keyword):
     i_form: Literal[-1, 0, 1]
     t_start: float
     t_stop: float
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -272,6 +280,7 @@ class ALEMat(Keyword):
     """Compute material flow with ALE framework."""
 
     mat_id: int
+    add_header: bool = False
 
     @property
     def keyword(self):

@@ -28,6 +28,7 @@ class Part(Keyword):
     unit_id: int | None = None
     subset_id: int = None
     Thick: float = None
+    add_header: bool = True
 
     @property
     def keyword(self):

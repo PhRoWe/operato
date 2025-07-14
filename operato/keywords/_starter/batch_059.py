@@ -42,6 +42,7 @@ class TransformTra(Keyword):
     node_id_2: int | None = None
     sub_id: int | None = None
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -95,6 +96,7 @@ class Tria(Keyword):
     part_id: int
     tria_ids: list | tuple | NDArray
     node_ids: NDArray
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -138,6 +140,7 @@ class Truss(Keyword):
     part_id: int
     truss_ids: list | tuple | NDArray
     node_ids: NDArray
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -178,6 +181,7 @@ class Unit(Keyword):
     length_unit: VALID_LENGTH_LITERALS
     time_unit: VALID_TIME_LITERALS
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -227,6 +231,7 @@ class Upwind(Keyword):
     eta_1: float = 1.0
     eta_2: float = 1.0
     eta_3: float = 1.0
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -289,6 +294,7 @@ class ViscProny(Keyword):
     ykl_scale: float = 1.0
 
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -400,6 +406,7 @@ class Xelem(Keyword):
     elem_id: int
     grnd_id: int
     # TODO: Check if elem_id/grnd_id should actually be arrays instead of single values.
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -427,6 +434,7 @@ class Xref(Keyword):
     xc_yc_zc: NDArray
     n_itrs: int = 100
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):

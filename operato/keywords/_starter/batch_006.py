@@ -23,6 +23,7 @@ class DfsDetplanNode(Keyword):
     t_det: float = 0.0
     mat_id: int = 0
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -57,7 +58,7 @@ class DfsDetpoint(Keyword):
     z_det: float = 0.0
     t_det: float = 0.0
     mat_id: float = 0
-
+    add_header: bool = True
     unit_id: int | None = None
 
     @property
@@ -94,6 +95,7 @@ class DfsDetpointNode(Keyword):
     node_id: int
     mat_id: int = 0
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -124,6 +126,7 @@ class DfsDetpointNode(Keyword):
 class DfsLaser(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -149,6 +152,7 @@ class DfsLaser(Keyword):
 class DfsWavSha(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -174,6 +178,7 @@ class DfsWavSha(Keyword):
 class Drape(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -199,6 +204,7 @@ class Drape(Keyword):
 class EbcsFluxout(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -224,6 +230,7 @@ class EbcsFluxout(Keyword):
 class EbcsGradp0(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -249,6 +256,7 @@ class EbcsGradp0(Keyword):
 class EbcsInip(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

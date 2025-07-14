@@ -33,6 +33,7 @@ class ThpartGrspri(Keyword):
     th_part_id: int
     th_part_title: str
     grelem_id: int
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -60,6 +61,7 @@ class ThpartGrtrus(Keyword):
     th_part_id: int
     th_part_title: str
     grelem_id: int
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -85,6 +87,7 @@ class Title(Keyword):
     """Describes the title."""
 
     title: str
+    add_header: bool = False
 
     @property
     def keyword(self):
@@ -112,6 +115,7 @@ class TransformMatrix(Keyword):
     grnd_id: int | None = None
     sub_id: int | None = None
     unit_id: int | None = None
+    add_header: bool = True
 
     def __post_init__(self) -> None:
         super().__post_init__()
@@ -201,6 +205,7 @@ class TransformPosition(Keyword):
     point_5: list[float] | NDArray | None = None
     point_6: list[float] | NDArray | None = None
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -303,6 +308,7 @@ class TransformRot(Keyword):
     point_2: list[float] | NDArray | None = None
     angle: float = 0.0
     unit_id: int | None = None
+    add_header: bool = True
 
     def __post_init__(self) -> None:
         super().__post_init__()
@@ -399,6 +405,7 @@ class TransformSca(Keyword):
     fscale_z: float = 0.0
     node_id_c: int | None = None
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -438,6 +445,7 @@ class TransformSym(Keyword):
     point_1: list[float] | NDArray | None = None
     point_2: list[float] | NDArray | None = None
     unit_id: int | None = None
+    add_header: bool = True
 
     def __post_init__(self) -> None:
         super().__post_init__()

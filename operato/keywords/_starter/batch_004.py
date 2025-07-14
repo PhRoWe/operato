@@ -47,6 +47,7 @@ class Cluster(Keyword):
     b3: float = 1.0
     b4: float = 1.0
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -129,6 +130,7 @@ class Cnode(Keyword):
     y_c: float
     z_c: float
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -171,6 +173,7 @@ class Convec(Keyword):
     fscale_y: float = 1.0
     t_stop: float = 1e30
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -213,6 +216,7 @@ class CylJoint(Keyword):
     node_id_2: int
     grnd_id: int
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -262,6 +266,7 @@ class Damp(Keyword):
     bxx: float | None = None
     byy: float | None = None
     bzz: float | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -358,6 +363,7 @@ class DampInter(Keyword):
     bxx: float | None = None
     byy: float | None = None
     bzz: float | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -445,6 +451,7 @@ class Def_Shell(Keyword):
     i_strain: Literal[0, 1, 2] = 1
     i_sh3n: Literal[0, 1, 2, 30, 31] = 2
     i_dril: Literal[0, 1, 2] = 2
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -503,6 +510,7 @@ class Def_Solid(Keyword):
     i_tetra10: Literal[0, 2, 3, 1000] = 0
     i_mas: Literal[0, 1, 2] = 2
     i_frame: Literal[-2, -1, 0, 1, 2] = 1
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -557,6 +565,7 @@ class DefaultInterType2(Keyword):
     i_search: Literal[0, 1, 2] = 2
     i_del2: Literal[0, 1, 2, 1000] = 1000
     i_stf: Literal[0, 1, 2, 3, 4, 5] = 2
+    add_header: bool = True
 
     @property
     def keyword(self):

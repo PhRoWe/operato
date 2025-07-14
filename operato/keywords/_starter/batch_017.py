@@ -17,6 +17,7 @@ from operato.keywords.common import FloatField, IntField, Keyword, StringField
 class Implicit(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -42,6 +43,7 @@ class Implicit(Keyword):
 class Imptemp(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -67,6 +69,7 @@ class Imptemp(Keyword):
 class Impvel(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -92,6 +95,7 @@ class Impvel(Keyword):
 class ImpvelFgeo(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -117,6 +121,7 @@ class ImpvelFgeo(Keyword):
 class ImpvelLagmul(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -137,11 +142,33 @@ class ImpvelLagmul(Keyword):
         return structure
 
 
+# --- #include ------------------------------------------------------
+@dataclass
+class Include(Keyword):
+    filename: str
+    add_header: bool = False
+
+    @property
+    def keyword(self):
+        return f"#include {self.filename}"
+
+    @property
+    def pre_conditions(self):
+        return []
+
+    @property
+    def structure(self):
+        structure = []
+
+        return structure
+
+
 # --- /INIBEAM/AUX ------------------------------------------------------
 @dataclass
 class InibeamAux(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -167,6 +194,7 @@ class InibeamAux(Keyword):
 class InibeamFull(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -192,6 +220,7 @@ class InibeamFull(Keyword):
 class Inibri(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -217,6 +246,7 @@ class Inibri(Keyword):
 class Inicrack(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation

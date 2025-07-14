@@ -43,6 +43,7 @@ class Begin(Keyword):
     work_mass_unit: VALID_MASS_LITERALS = "kg"
     work_length_unit: VALID_LENGTH_LITERALS = "m"
     work_time_unit: VALID_TIME_LITERALS = "s"
+    add_header: bool = False
 
     @property
     def keyword(self):
@@ -138,6 +139,7 @@ class BemDaa(Keyword):
     dir_y: float | None = None
     dir_z: float | None = None
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -306,6 +308,7 @@ class BemFlow(Keyword):
     fscale_v: float = 1.0
     ascale_v: float = 1.0
     unit_id: int | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -418,6 +421,7 @@ class BoxBox(Keyword):
     box_id: int
     box_title: str
     box_ids: List[int]
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -533,6 +537,7 @@ class Brick(Keyword):
     part_id: int
     brick_ids: List[int] | NDArray
     node_ids: List[Tuple[int, ...]] | NDArray
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -580,6 +585,7 @@ class Bric20(Keyword):
     part_id: int
     brick_ids: List[int] | NDArray
     node_ids: List[Tuple[int, ...]] | NDArray
+    add_header: bool = True
 
     @property
     def keyword(self):

@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 
 from operato.keywords.common import FloatField, IntField, Keyword, StringField
+from operato.keywords.common import *
 from typing import List
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
@@ -89,15 +90,15 @@ class PropType10(Keyword):
     d_n: float | None = None
     N: int | None = None
     A_shear: float | None = None
-    I_thick: int | None = None
-    I_plas: int | None = None
+    i_thick: int | None = None
+    i_plas: int | None = None
     V_x: float | None = None
     V_y: float | None = None
     V_z: float | None = None
     skew_id: int | None = None
-    I_pos: int | None = None
-    I_p: int | None = None
-    theta: List[float] | None = None
+    i_pos: int | None = None
+    i_p: int | None = None
+    phi: List[float] | None = None
     # lines added for readability of input deck
     line00: str = "#/PROP/TYPE10/prop_ID/unit_ID\n"
     add_header: bool = True
@@ -117,24 +118,26 @@ class PropType10(Keyword):
     def structure(self):
         structure = []
         # Line 1
-        for i, attr in enumerate(
-            ["Ishell", "Ismstr", "Ish3n", "Idrill", "P_thickfail"]
-        ):
-            match getattr(self, attr):
-                case int():
-                    structure.append(IntField(attr, i + 1))
-                case float():
-                    structure.append(FloatField(attr, i + 1))
-                case None:
-                    continue
-        # Line 2
-        for i, attr in enumerate(["hm", "hf", "hr", "dm", "dn"]):
-            match getattr(self, attr):
-                case float():
-                    structure.append(FloatField(attr, i + 1))
-                case None:
-                    continue
+        structure = match_type_append_line_struct(
+            self,
+            structure,
+            ["i_shell", "i_smstr", "i_sh3n", "i_drill", "--", "P_thick_fail"],
+        )
 
+        # Line 2
+        structure = match_type_append_line_struct(
+            self, structure, ["h_m", "h_f", "h_r", "d_m", "d_n"]
+        )
+        # Line 3
+        structure = match_type_append_line_struct(
+            self, structure, ["N", "-", "Thick", "A_shear", "-", "i_thick", "i_plas"]
+        )
+        # Line 4
+        structure = match_type_append_line_struct(
+            self, structure, ["V_x", "V_y", "V_z", "skew_id", "-", "i_pos", "i_p"]
+        )
+        # Line 5
+        structure.append(VLSequenceOfAtomicField(FloatField("phi", 1)))
         return structure
 
 

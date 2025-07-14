@@ -132,6 +132,7 @@ class MatLaw93(Keyword):
     F_cut: float | None = None
     unit_id: int | None = None
     title: str = ""
+    add_header: bool = True
 
     @property
     def keyword(self):

@@ -25,6 +25,7 @@ from typing import Literal
 class Grshel(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -50,6 +51,7 @@ class Grshel(Keyword):
 class Grspri(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -75,6 +77,7 @@ class Grspri(Keyword):
 class Grtria(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -100,6 +103,7 @@ class Grtria(Keyword):
 class Grtrus(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -125,6 +129,7 @@ class Grtrus(Keyword):
 class HeatMat(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -150,6 +155,7 @@ class HeatMat(Keyword):
 class Impacc(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -245,6 +251,7 @@ class Impdisp(Keyword):
 class ImpdispFgeo(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
@@ -270,6 +277,7 @@ class ImpdispFgeo(Keyword):
 class Impflux(Keyword):
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         # TODO: Implementation
