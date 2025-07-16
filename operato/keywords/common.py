@@ -811,7 +811,7 @@ class Keyword:
         # definition.
         for i, line_definition in enumerate(self.structure):
             line_definition_type = get_line_definition_type(line_definition)
-            if self.add_header == True:
+            if hasattr(self, "add_header") and getattr(self, "add_header") == True:
                 lines.append(self.Header[i])
             # Dispatch to the correct handler
             match line_definition_type:

@@ -92,8 +92,7 @@ class ImplDt2(Keyword):
 
     @property
     def structure(self):
-        structure = [
-            StringField("line", 1, 10),
+        structure = (
             [
                 IntField("it_w", 1),
                 FloatField("l_arc", 2),
@@ -101,7 +100,7 @@ class ImplDt2(Keyword):
                 FloatField("dt_scad", 5),
                 FloatField("dt_scamax", 7),
             ],
-        ]
+        )
 
         return structure
 

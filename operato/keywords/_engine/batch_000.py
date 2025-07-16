@@ -29,6 +29,7 @@ class Abf(Keyword):
 
     dt_abf: float
     dt_t_w_abv: float
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -53,6 +54,7 @@ class Adyrel(Keyword):
 
     t_start: float = 0.0
     t_stop: float | None = None
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -83,6 +85,7 @@ class AleGridDisp(Keyword):
 
     u_max: float
     v_min: float
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -113,6 +116,7 @@ class AleGridDonea(Keyword):
     fscale_y: float
     fscale_z: float
     v_min: float
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -157,6 +161,7 @@ class AleGridSpring(Keyword):
     eta: float
     nu: float
     v_min: float
+    add_header: bool = True
 
     @property
     def keyword(self):
@@ -194,6 +199,7 @@ class AleGridStandard(Keyword):
     # TODO: Implementation
     attr1: int
     attr2: float
+    add_header: bool = True
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/GRID/STANDARD` is not implemented.")
@@ -219,6 +225,7 @@ class AleGridZero(Keyword):
     attr1: int
     attr2: float
     # TODO: Implementation
+    add_header: bool = True
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/GRID/ZERO` is not implemented.")
@@ -244,6 +251,7 @@ class AleLinkOff(Keyword):
     attr1: int
     attr2: float
     # TODO: Implementation
+    add_header: bool = True
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/LINK/OFF` is not implemented.")
@@ -269,6 +277,7 @@ class AleLinkOn(Keyword):
     attr1: int
     attr2: float
     # TODO: Implementation
+    add_header: bool = True
 
     def __post_init__(self):
         raise NotImplementedError("Keyword `/ALE/LINK/ON` is not implemented.")

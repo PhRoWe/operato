@@ -35,6 +35,7 @@ class AnimBrickTens(Keyword):
 
     keyword1: Literal["STRESS", "STRAIN", "EPSP"]
     keyword2: str | None = None
+    add_header: bool = False
 
     @property
     def keyword(self):
@@ -64,7 +65,7 @@ class AnimBrickTens(Keyword):
 class AnimBrickTensDama(Keyword):
     attr1: int
     attr2: float
-
+    add_header: bool = False
     # TODO: Implementation
 
     def __post_init__(self):
@@ -90,7 +91,7 @@ class AnimBrickTensDama(Keyword):
 class AnimBrickVdami(Keyword):
     attr1: int
     attr2: float
-
+    add_header: bool = False
     # TODO: Implementation
 
     def __post_init__(self):
@@ -148,6 +149,7 @@ class AnimDt(Keyword):
 @dataclass
 class AnimEltypForc(Keyword):
     eltype: str
+    add_header: bool = False
 
     @property
     def keyword(self):
@@ -169,6 +171,7 @@ class AnimEltypForc(Keyword):
 class AnimEltypRestype(Keyword):
     eltype: str
     restype: str
+    add_header: bool = False
 
     @property
     def keyword(self):
@@ -227,7 +230,7 @@ class AnimEltypRestype(Keyword):
 class AnimEltypTdet(Keyword):
     attr1: int
     attr2: float
-
+    add_header: bool = False
     # TODO: Implementation
 
     def __post_init__(self):
@@ -259,6 +262,8 @@ class AnimGpsStrainTens(Keyword):
 
     """
 
+    add_header: bool = False
+
     @property
     def keyword(self):
         return "/ANIM/GPS/STRAIN/TENS"
@@ -283,6 +288,8 @@ class AnimGpsStressTens(Keyword):
     this node.
     (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/anim_gps_tens_engine_r.htm)
     """
+
+    add_header: bool = False
 
     @property
     def keyword(self):

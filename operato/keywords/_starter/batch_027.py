@@ -49,7 +49,6 @@ class MatLaw0(Keyword):
     def structure(self):
         structure: KeywordStructureType = [
             StringField("mat_title", 1, 10),
-            StringField("line", 1, 10),
             [FloatField("rho_i", 1), FloatField("E", 3), FloatField("nu", 5)],
         ]
 
@@ -192,19 +191,21 @@ class MatPlasJohns(Keyword):
 
         structure.extend(
             [
-                FloatField("c", 1),
-                FloatField("eps_rate_0", 3),
-                IntField("icc", 5),
-                IntField("f_smooth", 6),
-                FloatField("f_cut", 7),
-                FloatField("c_hard", 9),
-            ],
-            [
-                FloatField("m", 1),
-                FloatField("T_melt", 3),
-                FloatField("rho_c_p", 5),
-                FloatField("T_r", 7),
-            ],
+                [
+                    FloatField("c", 1),
+                    FloatField("eps_rate_0", 3),
+                    IntField("icc", 5),
+                    IntField("f_smooth", 6),
+                    FloatField("f_cut", 7),
+                    FloatField("c_hard", 9),
+                ],
+                [
+                    FloatField("m", 1),
+                    FloatField("T_melt", 3),
+                    FloatField("rho_c_p", 5),
+                    FloatField("T_r", 7),
+                ],
+            ]
         )
 
         return structure

@@ -23,6 +23,7 @@ class Print(Keyword):
     n_line: int | None = None
     # added line for readability
     line0: str = "#/PRINT/Nprint(/N_line)\n"
+    add_header: bool = False
 
     @property
     def keyword(self):
@@ -199,6 +200,7 @@ class Run(Keyword):
     run_num: int
     t_stop: float
     restart_letter: str | None = None
+    add_header: bool = False
 
     @property
     def keyword(self):

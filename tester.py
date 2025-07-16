@@ -13,6 +13,7 @@ starter.add(
 )
 mat_id = 1
 # this begin keyword will be ignored when included, but enables setting the file name
+
 starter.add(st.Begin(runname="matfile_include"))
 starter.add(
     st.MatLaw25(
@@ -58,5 +59,9 @@ starter.add(
         phi=[-60.0, -30.0, 0.0, 30.0, 60.0],
     )
 )
-
+starter.add(
+    st.Node(
+        node_ids=[0, 1, 2, 3], xc_yc_zc=[[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    )
+)
 starter.write(assume_yes=True)

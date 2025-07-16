@@ -104,7 +104,7 @@ UNKNOWN_INPUT = f"Necessary input not defined!"
 # desired.
 LINE_SEPARATOR = ["#---1----|"]
 for i in range(2, 10):
-    LINE_SEPARATOR.extend(["----" + str(i) + "----|"])
+    LINE_SEPARATOR.extend([f"----{str(i)}----|"])
 LINE_SEPARATOR.append("----10---|")
 LINE_SEPARATOR = "".join(LINE_SEPARATOR)
 
