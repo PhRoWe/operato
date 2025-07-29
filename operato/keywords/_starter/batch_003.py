@@ -242,7 +242,7 @@ class BemDaa(Keyword):
                 ]
             )
         elif self.i_pres == 2:
-            structure.extend(
+            structure.append(
                 [
                     [IntField("fct_id_p", 1), FloatField("fscale_p", 3)],
                     [
@@ -254,7 +254,7 @@ class BemDaa(Keyword):
             )
 
         if self.grav_id > 0 or self.freesurf == 2:
-            structure.extend(
+            structure.append(
                 [
                     [
                         FloatField("x_a", 1),
@@ -390,7 +390,7 @@ class BemFlow(Keyword):
                 )
             )
 
-        structure.extend(
+        structure.append(
             [
                 [
                     IntField("i_form", 1),

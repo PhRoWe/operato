@@ -146,11 +146,15 @@ class Analy(Keyword):
 
     @property
     def structure(self):
-        return [
-            IntField("n_2D3D", 1),
-            IntField("i_parith", 3),
-            IntField("i_subcycle", 4),
+
+        structure = [
+            [
+                IntField("n_2D3D", 1),
+                IntField("i_parith", 3),
+                IntField("i_subcycle", 4),
+            ]
         ]
+        return structure
 
 
 # --- /ANIM/VERS ------------------------------------------------------------------------------

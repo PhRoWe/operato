@@ -77,7 +77,7 @@ class PropType10(Keyword):
     prop_id: int
     Thick: float
     unit_id: int | None = None
-    prop_title: str | None = None
+    prop_title: str = ""
     i_shell: int | None = None
     i_smstr: int | None = None
     i_sh3n: int | None = None

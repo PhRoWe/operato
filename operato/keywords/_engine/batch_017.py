@@ -141,14 +141,13 @@ class ImplSolver(Keyword):
     @property
     def structure(self):
         structure = [
-            StringField("line", 1, 10),
-            [
+            
                 IntField("i_prec", 1),
                 IntField("it_max", 2),
                 IntField("i_tol", 3),
                 FloatField("tol", 4),
             ],
-        ]
+        
 
         return structure
 

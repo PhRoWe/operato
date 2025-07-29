@@ -39,7 +39,7 @@ class ALEGridDisp(Keyword):
 
     @property
     def structure(self):
-        structure = [FloatField("u_max", 1), FloatField("v_min", 1)]
+        structure = [[FloatField("u_max", 1), FloatField("v_min", 2)]]
 
         return structure
 

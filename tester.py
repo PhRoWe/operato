@@ -64,4 +64,21 @@ starter.add(
         node_ids=[0, 1, 2, 3], xc_yc_zc=[[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
     )
 )
+starter.add(st.Analy(n_2D3D=0, i_parith=0, i_subcycle=2))
+starter.add(
+    st.MatPlasJohns(
+        mat_id=2,
+        mat_title="steel",
+        rho_i=0.01,
+        E=2.1e2,
+        nu=0.3,
+        a=1e30,
+        b=1,
+    )
+)
+starter.add(st.PropType3(prop_id=1, area=0.1, i_yy=0.1, i_zz=0.1, i_xx=0.1, I_shear=1))
 starter.write(assume_yes=True)
+
+engine = Engine()
+engine.add(en.AnimDt(t_start=0, t_freq=2))
+engine.write()

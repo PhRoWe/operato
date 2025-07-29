@@ -2,7 +2,13 @@
 
 from dataclasses import dataclass
 
-from operato.keywords.common import FloatField, IntField, Keyword, StringField
+from operato.keywords.common import (
+    FloatField,
+    IntField,
+    Keyword,
+    StringField,
+    match_type_append_line_struct,
+)
 
 # === Concrete keyword definitions (in alphabetical order) ====================================
 #
@@ -91,7 +97,7 @@ class PropPcompp(Keyword):
 @dataclass
 class PropType0(Keyword):
     prop_id: int
-    prop_title: str | None = None
+    prop_title: str = ""
     unit_id: int | None = None
     line00: str = "#/PROP/TYPE0/prop_ID/unit_ID\n"
     add_header: bool = True
@@ -222,10 +228,10 @@ class PropType3(Keyword):
     i_xx: float
     I_shear: int
     unit_id: int | None = None
-    prop_title: str | None = None
+    prop_title: str = ""
     I_smstr: int = 0
-    d_m: float | None = None
-    d_f: float | None = None
+    d_m: float = 0.00
+    d_f: float = 0.01
 
     omega_dof: str | None = "   000 000"
     # lines added for readability of input deck
@@ -249,22 +255,20 @@ class PropType3(Keyword):
     def structure(self):
         # Basic structure
         structure = [
-            StringField("line0", 1, 10),
             StringField("prop_title", 1, 3),
             [
                 IntField("I_smstr", 2),
             ],
-            [
-                FloatField("d_m", 1),
-                FloatField("d_f", 3),
-            ],
+        ]
+        structure.append([FloatField("d_m", 1), FloatField("d_f", 3)])
+        structure.append(
             [
                 FloatField("area", 1),
                 FloatField("i_yy", 3),
                 FloatField("i_zz", 5),
                 FloatField("i_xx", 7),
-            ],
-        ]
+            ]
+        )
         structure.append([StringField("omega_dof", 1, 1), IntField("I_shear", 2)])
 
         return structure

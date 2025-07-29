@@ -403,8 +403,15 @@ class Keyword:
             #     # if Field.span != 1:
             #     #     header_fields[Field.index : Field.index + Field.span] = ""
             # # check if name too long, then abbreviate:
-            if len(name) > l - 1:
-                name = name[0 : l - 1]
+            # if it's at the beginning of a line, remove one more letter to account
+            # for the leading "#"
+            if Field.index == 1:
+                space = 2
+            else:
+                space = 1
+            if len(name) > l - space:
+                name = name[0 : l - space]
+
             # find number of "-" to print before and after the name
             # --(name)--|
             before = int(math.ceil(float(l - len(name) - 1) / 2))
@@ -417,6 +424,7 @@ class Keyword:
             return headerline
 
         def createHeaderforArrayOfAtomic(Fields):
+            # copy the basic commentary line
             header_fields = LINESARRAY.copy()
             for i, Field in enumerate(Fields):
                 if Field.span != 1:
@@ -446,7 +454,7 @@ class Keyword:
                 case LineDefinitionType.MULTI_LINE_ARRAY_OF_ATOMIC_FIELDS:
                     # here, we need to print several headers on top and then add the actual cards.
                     # step one layer down into the Fields making up the MultiLineArray.
-                    Fields = Fields.fields
+                    Fields = field.fields
                     for Field in Fields:
                         line_definition_type2 = get_line_definition_type(Field)
                         match line_definition_type2:

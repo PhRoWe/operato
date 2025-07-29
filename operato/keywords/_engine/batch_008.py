@@ -259,7 +259,7 @@ class DtNodaKeyword3Iflag(Keyword):
             [FloatField("dT_sca", 1), FloatField("dTmin", 3)],
         )
         if self.Iflag == 1:
-            structure.append([StringField("line2", 1, 10), IntField("grnd_ID", 1)])
+            structure.append( IntField("grnd_ID", 1))
         return structure
 
 

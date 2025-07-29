@@ -136,10 +136,12 @@ class AnimDt(Keyword):
 
     @property
     def structure(self):
-        structure: KeywordStructureType = [
-            FloatField("t_start", 1),
-            FloatField("t_freq", 3),
-            FloatField("t_stop", 5),
+        structure = [
+            [
+                FloatField("t_start", 1),
+                FloatField("t_freq", 3),
+                FloatField("t_stop", 5),
+            ]
         ]
 
         return structure

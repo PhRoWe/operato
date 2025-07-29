@@ -81,7 +81,7 @@ class Cluster(Keyword):
         ]
 
         if self.i_fail != 3:
-            structure.extend(
+            structure.append(
                 [
                     FloatField("fn_fail", 1),
                     FloatField("fs_fail", 1),
@@ -90,7 +90,7 @@ class Cluster(Keyword):
                 ]
             )
         else:
-            structure.extend(
+            structure.append(
                 [
                     [
                         FloatField("fn_fail", 1),
@@ -285,7 +285,7 @@ class Damp(Keyword):
         # fail if `a` or `b` equals 0 (or 0.0). We specifically want to test
         # for `None`.
         if None not in (self.a, self.b):
-            structure.extend(
+            structure.append(
                 [
                     [
                         FloatField("a", 1),
@@ -299,7 +299,7 @@ class Damp(Keyword):
             )
 
         else:
-            structure.extend(
+            structure.append(
                 [
                     [
                         FloatField("ax", 1),
@@ -385,7 +385,7 @@ class DampInter(Keyword):
         # fail if `a` or `b` equals 0 (or 0.0). We specifically want to test
         # for `None`.
         if None not in (self.a, self.b):
-            structure.extend(
+            structure.append(
                 [
                     [
                         FloatField("a", 1),
@@ -399,7 +399,7 @@ class DampInter(Keyword):
             )
 
         else:
-            structure.extend(
+            structure.append(
                 [
                     [
                         FloatField("ax", 1),

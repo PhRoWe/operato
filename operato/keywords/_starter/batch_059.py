@@ -351,7 +351,7 @@ class ViscProny(Keyword):
             )
 
         elif self.i_tab == 1:
-            structure.extend(
+            structure.append(
                 [
                     [
                         IntField("i_func_g", 1),
@@ -367,7 +367,7 @@ class ViscProny(Keyword):
             )
 
         elif self.i_tab == 2:
-            structure.extend(
+            structure.append(
                 [
                     [
                         IntField("i_func_gs", 1),

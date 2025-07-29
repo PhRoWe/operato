@@ -169,7 +169,7 @@ class MatPlasJohns(Keyword):
         ]
 
         if self.i_flag == 0:
-            structure.extend(
+            structure.append(
                 [
                     FloatField("a", 1),
                     FloatField("b", 3),
@@ -179,7 +179,7 @@ class MatPlasJohns(Keyword):
                 ],
             )
         elif self.i_flag == 1:
-            structure.extend(
+            structure.append(
                 [
                     FloatField("sigma_y", 1),
                     FloatField("UTS", 3),
@@ -189,22 +189,22 @@ class MatPlasJohns(Keyword):
                 ]
             )
 
-        structure.extend(
+        structure.append(
             [
-                [
-                    FloatField("c", 1),
-                    FloatField("eps_rate_0", 3),
-                    IntField("icc", 5),
-                    IntField("f_smooth", 6),
-                    FloatField("f_cut", 7),
-                    FloatField("c_hard", 9),
-                ],
-                [
-                    FloatField("m", 1),
-                    FloatField("T_melt", 3),
-                    FloatField("rho_c_p", 5),
-                    FloatField("T_r", 7),
-                ],
+                FloatField("c", 1),
+                FloatField("eps_rate_0", 3),
+                IntField("icc", 5),
+                IntField("f_smooth", 6),
+                FloatField("f_cut", 7),
+                FloatField("c_hard", 9),
+            ]
+        )
+        structure.append(
+            [
+                FloatField("m", 1),
+                FloatField("T_melt", 3),
+                FloatField("rho_c_p", 5),
+                FloatField("T_r", 7),
             ]
         )
 
