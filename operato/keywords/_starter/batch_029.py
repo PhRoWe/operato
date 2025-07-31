@@ -156,26 +156,20 @@ class MatLaw25(Keyword):
     eps_m1: float | None = None
     eps_t2: float | None = None
     eps_m2: float | None = None
-    d_max: float | None = None
+    d_max: float | None = 0.999
     W_p_max: float | None = None
     W_p_ref: float | None = None
     Ratio: float | None = None
-    b: float | None = None
+    b: float | None = 0.0
     n: float | None = None
     f_max: float | None = None
-    sig_1y_t: float | None = None
-    sig_2y_t: float | None = None
-    sig_1y_c: float | None = None
-    sig_2y_c: float | None = None
-    sig_12y_t: float | None = None
-    sig_12y_c: float | None = None
     alpha: float | None = None
     c: float | None = None
     ICC: int | None = None
     gamma_ini: float | None = None
     gamma_max: float | None = None
-    d_3max: float | None = None
-    F_smooth: int | None = None
+    d_3max: float | None = 1.0
+    F_smooth: int | None = 0
     F_cut: float | None = None
     add_header: bool = True
 
@@ -218,7 +212,7 @@ class MatLaw25(Keyword):
         if self.i_form == 0 or type(self.i_form) == None:
             # Composite Plasticity Hardening
             structure = match_type_append_line_struct(
-                self, structure, ["W_p_max", "W_p_ref", "i_off", "-" "Ratio"]
+                self, structure, ["W_p_max", "W_p_ref", "i_off", "-","Ratio"] #Small typo
             )
             structure = match_type_append_line_struct(
                 self, structure, ["b", "n", "f_max"]
