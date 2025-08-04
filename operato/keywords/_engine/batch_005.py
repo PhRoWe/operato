@@ -92,7 +92,7 @@ class AnimShellRestype(Keyword):
             "USRII",
             "USRII/JJ",
             "VONM",
-            "/WPLA",
+            "WPLA/ALL",
         ]
         return [
             (

@@ -73,7 +73,7 @@ class PropType10(Keyword):
     https://help.altair.com/hwsolvers/rad/topics/solvers/rad/prop_type10_sh_comp_starter_r.htm
 
     """
-
+    
     prop_id: int
     Thick: float
     unit_id: int | None = None
@@ -84,7 +84,7 @@ class PropType10(Keyword):
     i_drill: int | None = None
     P_thick_fail: float | None = None
     h_m: float | None = None
-    h_f: float | None = None
+    h_f: float | None = 0.01    #Default value added to ensure line 2 is written
     h_r: float | None = None
     d_m: float | None = None
     d_n: float | None = None
@@ -97,7 +97,7 @@ class PropType10(Keyword):
     V_z: float | None = None
     skew_id: int | None = None
     i_pos: int | None = None
-    i_p: int | None = None
+    i_p: int | None = 0     #Default value added to ensure line 4 is written
     phi: List[float] | None = None
     # lines added for readability of input deck
     line00: str = "#/PROP/TYPE10/prop_ID/unit_ID\n"
@@ -117,6 +117,7 @@ class PropType10(Keyword):
     @property
     def structure(self):
         structure = []
+        structure.append(StringField("prop_title", 1, 10)) ##Added property title.
         # Line 1
         structure = match_type_append_line_struct(
             self,
