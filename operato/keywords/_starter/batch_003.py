@@ -34,9 +34,23 @@ from operato.keywords.common import (
 class Begin(Keyword):
     # All the variables referenced in the block
     runname: str
-    invers: Literal[90, 100, 110, 120, 130, 140, 2017, 2018, 2019, 2020, 2021, 2022] = (
-        2022
-    )
+    invers: Literal[
+        90,
+        100,
+        110,
+        120,
+        130,
+        140,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+    ] = 2025
     input_mass_unit: VALID_MASS_LITERALS = "kg"
     input_length_unit: VALID_LENGTH_LITERALS = "m"
     input_time_unit: VALID_TIME_LITERALS = "s"

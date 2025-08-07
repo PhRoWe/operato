@@ -113,14 +113,12 @@ class Ams(Keyword):
 @dataclass
 class Analy(Keyword):
     """Defines the type of analysis and sets analysis flags.
-    (https://2022.help.altair.com/2022/hwsolvers/rad/topics/solvers/rad/analy_starter_r.htm)
+    (https://help.altair.com/hwsolvers/rad/topics/solvers/rad/analy_starter_r.htm)
     """
 
     n_2D3D: Literal[0, 1, 2] = 0
     """Analysis type: 0: 3D, 1: Axisymmetric, 2: Plane Strain"""
     i_parith: Literal[0, 1, 2] = 0
-    i_subcycle: Literal[0, 2] = 0
-    # FIXME: i_subcycle removed in V2024!
     add_header: bool = True
 
     @property
@@ -138,22 +136,12 @@ class Analy(Keyword):
                 self.i_parith in {0, 1, 2},
                 "Pre-condtion `i_parith in {0, 1, 2} is violated.",
             ),
-            (
-                self.i_subcycle in {0, 2},
-                "Pre-condtion `i_subcycle in {0, 2} is violated.",
-            ),
         ]
 
     @property
     def structure(self):
 
-        structure = [
-            [
-                IntField("n_2D3D", 1),
-                IntField("i_parith", 3),
-                IntField("i_subcycle", 4),
-            ]
-        ]
+        structure = [[IntField("n_2D3D", 1), IntField("i_parith", 3)]]
         return structure
 
 
