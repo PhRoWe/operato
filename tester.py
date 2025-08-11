@@ -4,21 +4,19 @@ import operato.keywords.engine as en
 from operato.starter import Starter
 from operato.engine import Engine
 
+# Init starter, add necessary comment
 starter = Starter()
-
-starter.add(
-    st.XtraLineUser(
-        comment="#material and properties to be included via #include into the main deck"
-    )
-)
-mat_id = 1
-# this begin keyword will be ignored when included, but enables setting the file name
-
-starter.add(st.Begin(runname="matfile_include"))
+starter.add(st.XtraLineUser(comment="#RADIOSS STARTER"))
+starter.add(st.XtraLineUser(comment="#Test file to demonstrate how to use OPERATO"))
+# To set runname:
+starter.add(st.Begin(runname="run0"))
+# set analysis type:
+starter.add(st.Analy(n_2D3D=0, i_parith=0))
+# Add Keywords, e.g. MatLaw25
 starter.add(
     st.MatLaw25(
-        mat_id=mat_id,
-        mat_title="",
+        mat_id=1,
+        mat_title="blub",
         rho=7.8e-6,
         E11=2.1e2,
         E22=2.1e2,
@@ -31,9 +29,9 @@ starter.add(
         depsdt0=0.01,
     )
 )
-
 starter.add(
     st.PropType10(
+        prop_title="bla",
         prop_id=1,
         i_shell=12,
         i_smstr=0,
@@ -64,21 +62,16 @@ starter.add(
         node_ids=[0, 1, 2, 3], xc_yc_zc=[[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
     )
 )
-starter.add(st.Analy(n_2D3D=0, i_parith=0, i_subcycle=2))
-starter.add(
-    st.MatPlasJohns(
-        mat_id=2,
-        mat_title="steel",
-        rho_i=0.01,
-        E=2.1e2,
-        nu=0.3,
-        a=1e30,
-        b=1,
+starter.write(assume_yes=True)
+########################################################################################
+# create engine
+engine = Engine()
+engine.add(
+    en.Run(
+        runname="run0",
+        run_num=1,
+        t_stop=2,
     )
 )
-starter.add(st.PropType3(prop_id=1, area=0.1, i_yy=0.1, i_zz=0.1, i_xx=0.1, I_shear=1))
-starter.write(assume_yes=True)
-
-engine = Engine()
 engine.add(en.AnimDt(t_start=0, t_freq=2))
 engine.write()

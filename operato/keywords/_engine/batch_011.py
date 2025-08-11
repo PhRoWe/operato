@@ -39,8 +39,7 @@ class H3dDt(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            FloatField("t_start", 1),
-            FloatField("t_freq", 3),
+            [FloatField("t_start", 1), FloatField("t_freq", 3)]
         ]
 
         return structure

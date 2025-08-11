@@ -149,34 +149,35 @@ class MatLaw25(Keyword):
     # DEFAULTS:
     mat_title: str = ""
     unit_id: int | None = None
-    i_form: int | None = None
-    eps_f1: float | None = None
-    eps_f2: float | None = None
-    eps_t1: float | None = None
-    eps_m1: float | None = None
-    eps_t2: float | None = None
-    eps_m2: float | None = None
-    d_max: float | None = 0.999
-    W_p_max: float | None = None
-    W_p_ref: float | None = None
-    Ratio: float | None = None
-    b: float | None = 0.0
-    sig_1y_t: float| None = None
-    sig_2y_t: float| None = None
-    sig_1y_c: float| None = None
-    sig_2y_c: float| None = None
-    sig_12y_c: float| None = None
-    sig_12y_t: float| None = None
-    n: float | None = None
-    f_max: float | None = None
-    alpha: float | None = None
-    c: float | None = None
-    ICC: int | None = None
-    gamma_ini: float | None = None
-    gamma_max: float | None = None
-    d_3max: float | None = 1.0
-    F_smooth: int | None = 0
-    F_cut: float | None = None
+
+    i_form: int = 0
+    eps_f1: float = 1.2e20
+    eps_f2: float = 1.2e20
+    eps_t1: float = 1e20
+    eps_m1: float = 1.1e20
+    eps_t2: float = 1e20
+    eps_m2: float = 1.1e20
+    d_max: float = 0.999
+    W_p_max: float = 1e20
+    W_p_ref: float = 1.0
+    Ratio: float = 1.0
+    b: float = 0.0
+    n: float = 1.0
+    f_max: float = 1e20
+    sig_1y_t: float = 0.0
+    sig_2y_t: float = 0.0
+    sig_1y_c: float = 0.0
+    sig_2y_c: float = 0.0
+    sig_12y_t: float = 0.0
+    sig_12y_c: float = 0.0
+    alpha: float = 1.0
+    c: float = 0
+    ICC: int = 1
+    gamma_ini: float = 1e20
+    gamma_max: float = 1.1e20
+    d_3max: float = 1.0
+    F_smooth: int = 0
+    F_cut: float = 1e20
     add_header: bool = True
 
     @property
@@ -213,25 +214,38 @@ class MatLaw25(Keyword):
         structure.append(substructure)
         # line4
         structure = match_type_append_line_struct(
-            self, structure, ["eps_t1", "eps_m1", "eps_t2", "eps_m2", "d_max"]
+            self,
+            structure,
+            ["eps_t1", "eps_m1", "eps_t2", "eps_m2", "d_max"],
+            True,
         )
         if self.i_form == 0 or type(self.i_form) == None:
             # Composite Plasticity Hardening
             structure = match_type_append_line_struct(
-                self, structure, ["W_p_max", "W_p_ref", "i_off", "-","Ratio"] #Small typo
+                self,
+                structure,
+                ["W_p_max", "W_p_ref", "i_off", "-", "Ratio"],
+                print_even_if_empty=True,
             )
             structure = match_type_append_line_struct(
-                self, structure, ["b", "n", "f_max"]
+                self,
+                structure,
+                ["b", "n", "f_max"],
+                print_even_if_empty=True,
             )
             # Composite Yield Stress in Tension Compression
             structure = match_type_append_line_struct(
                 self,
                 structure,
                 ["sig_1y_t", "sig_2y_t", "sig_1y_c", "sig_2y_c", "alpha"],
+                print_even_if_empty=True,
             )
             # Yield Stress in Shear and Strain Rate
             structure = match_type_append_line_struct(
-                self, structure, ["sig_12y_c", "sig_12y_t", "c", "depsdt0", "ICC"]
+                self,
+                structure,
+                ["sig_12y_c", "sig_12y_t", "c", "depsdt0", "ICC"],
+                print_even_if_empty=True,
             )
 
         elif self.i_form == 1:
@@ -292,11 +306,17 @@ class MatLaw25(Keyword):
             )
         # Delamination
         structure = match_type_append_line_struct(
-            self, structure, ["gamma_ini", "gamma_max", "d_3max"]
+            self,
+            structure,
+            ["gamma_ini", "gamma_max", "d_3max"],
+            print_even_if_empty=True,
         )
         # Strain Rate Filtering
         structure = match_type_append_line_struct(
-            self, structure, ["F_cut", "F_smooth"]
+            self,
+            structure,
+            ["F_cut", "F_smooth"],
+            print_even_if_empty=True,
         )
         return structure
 

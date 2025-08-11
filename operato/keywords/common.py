@@ -329,7 +329,7 @@ def get_line_definition_type(line_definition) -> LineDefinitionType:
     raise RuntimeError("Invalid line definition (BUG)")
 
 
-def match_type_append_line_struct(key, struct, attrs):
+def match_type_append_line_struct(key, struct, attrs, print_even_if_empty=False):
     substruct = []
     pos = 0
     for i, attr in enumerate(attrs):
@@ -351,7 +351,7 @@ def match_type_append_line_struct(key, struct, attrs):
                 pos += 1
             case None:
                 continue
-    if len(substruct) != 0:
+    if len(substruct) != 0 or print_even_if_empty:
         struct.append(substruct)
     return struct
 
