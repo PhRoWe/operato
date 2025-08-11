@@ -45,7 +45,7 @@ class AnimGps2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/GPS2` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/GPS2` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class AnimGzip(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/GZIP` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/GZIP` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class AnimLsensor(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/LSENSOR` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/LSENSOR` is not implemented.")
 
     @property
     def keyword(self):
@@ -139,7 +139,7 @@ class AnimMat(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/MAT` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -164,7 +164,7 @@ class AnimNoda(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/NODA` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/NODA` is not implemented.")
 
     @property
     def keyword(self):
@@ -189,7 +189,7 @@ class AnimSensor(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SENSOR` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SENSOR` is not implemented.")
 
     @property
     def keyword(self):

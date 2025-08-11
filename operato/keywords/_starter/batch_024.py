@@ -26,7 +26,7 @@ class InterType6(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/TYPE6` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/TYPE6` is not implemented.")
 
     @property
     def keyword(self):
@@ -51,7 +51,7 @@ class InterType7(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/TYPE7` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/TYPE7` is not implemented.")
 
     @property
     def keyword(self):
@@ -76,7 +76,7 @@ class InterType8(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/TYPE8` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/TYPE8` is not implemented.")
 
     @property
     def keyword(self):
@@ -101,7 +101,7 @@ class InterType9(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/TYPE9` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/TYPE9` is not implemented.")
 
     @property
     def keyword(self):
@@ -126,7 +126,7 @@ class InterType10(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/TYPE10` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/TYPE10` is not implemented.")
 
     @property
     def keyword(self):
@@ -285,7 +285,7 @@ class InterType12(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/TYPE12` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/TYPE12` is not implemented.")
 
     @property
     def keyword(self):
@@ -310,7 +310,7 @@ class InterType14(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/TYPE14` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/TYPE14` is not implemented.")
 
     @property
     def keyword(self):

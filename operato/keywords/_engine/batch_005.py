@@ -20,7 +20,7 @@ class AnimShellPhi(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/PHI` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/PHI` is not implemented.")
 
     @property
     def keyword(self):
@@ -117,7 +117,7 @@ class AnimShellSig1h(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/SIG1H` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/SIG1H` is not implemented.")
 
     @property
     def keyword(self):
@@ -142,7 +142,7 @@ class AnimShellSig2h(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/SIG2H` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/SIG2H` is not implemented.")
 
     @property
     def keyword(self):
@@ -167,7 +167,7 @@ class AnimShellTdel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/TDEL` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/TDEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -192,7 +192,7 @@ class AnimShellTens(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/TENS` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/TENS` is not implemented.")
 
     @property
     def keyword(self):
@@ -284,7 +284,7 @@ class AnimVers(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/VERS` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/VERS` is not implemented.")
 
     @property
     def keyword(self):

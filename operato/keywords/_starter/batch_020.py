@@ -21,7 +21,7 @@ class Inish3OrthLoc(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISH3/ORTH_LOC` is not implemented.")
+        raise NotImplementedError("Keyword `/INISH3/ORTH_LOC` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class InisheOrtho(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISHE/ORTHO` is not implemented.")
+        raise NotImplementedError("Keyword `/INISHE/ORTHO` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class Inish3Ortho(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISH3/ORTHO` is not implemented.")
+        raise NotImplementedError("Keyword `/INISH3/ORTHO` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class InisheScaleYld(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISHE/SCALE_YLD` is not implemented.")
+        raise NotImplementedError("Keyword `/INISHE/SCALE_YLD` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class Inish3ScaleYld(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISH3/SCALE_YLD` is not implemented.")
+        raise NotImplementedError("Keyword `/INISH3/SCALE_YLD` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class InispriFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISPRI/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/INISPRI/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class InisheStraF(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISHE/STRA_F` is not implemented.")
+        raise NotImplementedError("Keyword `/INISHE/STRA_F` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class Inish3StraF(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISH3/STRA_F` is not implemented.")
+        raise NotImplementedError("Keyword `/INISH3/STRA_F` is not implemented.")
 
     @property
     def keyword(self):

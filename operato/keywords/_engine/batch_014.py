@@ -20,7 +20,7 @@ class ImplDynaDamp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/DYNA/DAMP` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/DYNA/DAMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class ImplGstifOff(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/GSTIF/OFF` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/GSTIF/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class ImplInterKcomp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/INTER/KCOMP` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/INTER/KCOMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class ImplInterKnonl(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/INTER/KNONL` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/INTER/KNONL` is not implemented.")
 
     @property
     def keyword(self):
@@ -166,7 +166,7 @@ class ImplLinearInter(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/LINEAR/INTER` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/LINEAR/INTER` is not implemented.")
 
     @property
     def keyword(self):
@@ -191,7 +191,7 @@ class ImplLrigrot(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/LRIGROT` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/LRIGROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -216,7 +216,7 @@ class ImplLsearchOff(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/LSEARCH/OFF` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/LSEARCH/OFF` is not implemented.")
 
     @property
     def keyword(self):

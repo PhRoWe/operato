@@ -60,7 +60,7 @@ class H3dSph(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/H3D/SPH` is not implemented.")
+        raise NotImplementedError("Keyword `/H3D/SPH` is not implemented.")
 
     @property
     def keyword(self):
@@ -85,7 +85,7 @@ class H3dSpring(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/H3D/SPRING` is not implemented.")
+        raise NotImplementedError("Keyword `/H3D/SPRING` is not implemented.")
 
     @property
     def keyword(self):
@@ -110,7 +110,7 @@ class H3dTitle(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/H3D/TITLE` is not implemented.")
+        raise NotImplementedError("Keyword `/H3D/TITLE` is not implemented.")
 
     @property
     def keyword(self):
@@ -135,7 +135,7 @@ class H3dTruss(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/H3D/TRUSS` is not implemented.")
+        raise NotImplementedError("Keyword `/H3D/TRUSS` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,7 +160,7 @@ class ImplAutospc(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/AUTOSPC` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/AUTOSPC` is not implemented.")
 
     @property
     def keyword(self):
@@ -185,7 +185,7 @@ class ImplBuckl1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/BUCKL/1` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/BUCKL/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -210,7 +210,7 @@ class ImplBuckl2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/BUCKL/2` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/BUCKL/2` is not implemented.")
 
     @property
     def keyword(self):

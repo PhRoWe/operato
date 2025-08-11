@@ -20,7 +20,7 @@ class ImplPstifOff(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/PSTIF/OFF` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/PSTIF/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class ImplQstat(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/QSTAT` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/QSTAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class ImplQstatDtscal(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/QSTAT/DTSCAL` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/QSTAT/DTSCAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class ImplQstatMrigm(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/QSTAT/MRIGM` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/QSTAT/MRIGM` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class ImplRrefInterfN(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/RREF/INTERF/n` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/RREF/INTERF/n` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class ImplRrefLimit(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/RREF/LIMIT` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/RREF/LIMIT` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class ImplRrefOff(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/RREF/OFF` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/RREF/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class ImplSbcsMsglv(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/SBCS/MSGLV` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/SBCS/MSGLV` is not implemented.")
 
     @property
     def keyword(self):

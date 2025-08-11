@@ -20,7 +20,7 @@ class Random(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RANDOM` is not implemented.")
+        raise NotImplementedError("Keyword `/RANDOM` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class Rbe2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RBE2` is not implemented.")
+        raise NotImplementedError("Keyword `/RBE2` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class Rbe3(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RBE3` is not implemented.")
+        raise NotImplementedError("Keyword `/RBE3` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class Rbody(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RBODY` is not implemented.")
+        raise NotImplementedError("Keyword `/RBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class RbodyLagmul(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RBODY/LAGMUL` is not implemented.")
+        raise NotImplementedError("Keyword `/RBODY/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class Refsta(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/REFSTA` is not implemented.")
+        raise NotImplementedError("Keyword `/REFSTA` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class RetractorSpring(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RETRACTOR/SPRING` is not implemented.")
+        raise NotImplementedError("Keyword `/RETRACTOR/SPRING` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class Rlink(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RLINK` is not implemented.")
+        raise NotImplementedError("Keyword `/RLINK` is not implemented.")
 
     @property
     def keyword(self):

@@ -20,7 +20,7 @@ class Lagmul(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/LAGMUL` is not implemented.")
+        raise NotImplementedError("Keyword `/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class LeakMat(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/LEAK/MAT` is not implemented.")
+        raise NotImplementedError("Keyword `/LEAK/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class Line(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/LINE` is not implemented.")
+        raise NotImplementedError("Keyword `/LINE` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class LoadCentri(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/LOAD/CENTRI` is not implemented.")
+        raise NotImplementedError("Keyword `/LOAD/CENTRI` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class LoadPblast(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/LOAD/PBLAST` is not implemented.")
+        raise NotImplementedError("Keyword `/LOAD/PBLAST` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class LoadPfluid(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/LOAD/PFLUID` is not implemented.")
+        raise NotImplementedError("Keyword `/LOAD/PFLUID` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class MadymoExfem(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MADYMO/EXFEM` is not implemented.")
+        raise NotImplementedError("Keyword `/MADYMO/EXFEM` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class MatBKEps(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/B-K-EPS` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/B-K-EPS` is not implemented.")
 
     @property
     def keyword(self):

@@ -20,7 +20,7 @@ class StateBeamAux(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/BEAM/AUX` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/BEAM/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class StateBeamFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/BEAM/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/BEAM/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class StateBrickAuxFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/BRICK/AUX/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/BRICK/AUX/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class StateBrickEref(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/BRICK/EREF` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/BRICK/EREF` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class StateBrickFail(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/BRICK/FAIL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/BRICK/FAIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class StateBrickOrtho(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/BRICK/ORTHO` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/BRICK/ORTHO` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class StateBrickStrainFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/BRICK/STRAIN/FULL` is not implemented."
         )
 
@@ -197,7 +197,7 @@ class StateBrickStrainGlobfull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/BRICK/STRAIN/GLOBFULL` is not implemented."
         )
 

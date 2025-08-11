@@ -21,7 +21,7 @@ class IniquaStress(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIQUA/STRESS` is not implemented.")
+        raise NotImplementedError("Keyword `/INIQUA/STRESS` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class InisheAux(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISHE/AUX` is not implemented.")
+        raise NotImplementedError("Keyword `/INISHE/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class Inish3Aux(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISH3/AUX` is not implemented.")
+        raise NotImplementedError("Keyword `/INISH3/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class InisheEpsp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISHE/EPSP` is not implemented.")
+        raise NotImplementedError("Keyword `/INISHE/EPSP` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class Inish3Epsp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISH3/EPSP` is not implemented.")
+        raise NotImplementedError("Keyword `/INISH3/EPSP` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class InisheEpspF(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISHE/EPSP_F` is not implemented.")
+        raise NotImplementedError("Keyword `/INISHE/EPSP_F` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class Inish3EpspF(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISH3/EPSP_F` is not implemented.")
+        raise NotImplementedError("Keyword `/INISH3/EPSP_F` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class InisheFail(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INISHE/FAIL` is not implemented.")
+        raise NotImplementedError("Keyword `/INISHE/FAIL` is not implemented.")
 
     @property
     def keyword(self):

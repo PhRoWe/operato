@@ -62,7 +62,7 @@ class Penta6(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PENTA6` is not implemented.")
+        raise NotImplementedError("Keyword `/PENTA6` is not implemented.")
 
     @property
     def keyword(self):
@@ -87,7 +87,7 @@ class Perturb(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PERTURB` is not implemented.")
+        raise NotImplementedError("Keyword `/PERTURB` is not implemented.")
 
     @property
     def keyword(self):
@@ -112,7 +112,7 @@ class PerturbFailBiquad(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PERTURB/FAIL/BIQUAD` is not implemented.")
+        raise NotImplementedError("Keyword `/PERTURB/FAIL/BIQUAD` is not implemented.")
 
     @property
     def keyword(self):
@@ -137,7 +137,7 @@ class PerturbPartShell(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PERTURB/PART/SHELL` is not implemented.")
+        raise NotImplementedError("Keyword `/PERTURB/PART/SHELL` is not implemented.")
 
     @property
     def keyword(self):
@@ -162,7 +162,7 @@ class PerturbPartSolid(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PERTURB/PART/SOLID` is not implemented.")
+        raise NotImplementedError("Keyword `/PERTURB/PART/SOLID` is not implemented.")
 
     @property
     def keyword(self):
@@ -236,7 +236,7 @@ class Ply(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PLY` is not implemented.")
+        raise NotImplementedError("Keyword `/PLY` is not implemented.")
 
     @property
     def keyword(self):

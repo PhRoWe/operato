@@ -27,7 +27,7 @@ class PropType16(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE16` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE16` is not implemented.")
 
     @property
     def keyword(self):
@@ -52,7 +52,7 @@ class PropType17(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE17` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE17` is not implemented.")
 
     @property
     def keyword(self):
@@ -196,7 +196,7 @@ class PropType19(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE19` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE19` is not implemented.")
 
     @property
     def keyword(self):
@@ -221,7 +221,7 @@ class PropType20(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE20` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE20` is not implemented.")
 
     @property
     def keyword(self):
@@ -246,7 +246,7 @@ class PropType21(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE21` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE21` is not implemented.")
 
     @property
     def keyword(self):
@@ -271,7 +271,7 @@ class PropType22(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE22` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE22` is not implemented.")
 
     @property
     def keyword(self):
@@ -296,7 +296,7 @@ class PropType23(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE23` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE23` is not implemented.")
 
     @property
     def keyword(self):

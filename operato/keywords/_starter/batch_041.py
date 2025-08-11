@@ -26,7 +26,7 @@ class PropInject1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/INJECT1` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/INJECT1` is not implemented.")
 
     @property
     def keyword(self):
@@ -51,7 +51,7 @@ class PropInject2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/INJECT2` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/INJECT2` is not implemented.")
 
     @property
     def keyword(self):
@@ -76,7 +76,7 @@ class PropPcompp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/PCOMPP` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/PCOMPP` is not implemented.")
 
     @property
     def keyword(self):
@@ -197,7 +197,7 @@ class PropType2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE2` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE2` is not implemented.")
 
     @property
     def keyword(self):
@@ -282,7 +282,7 @@ class PropType4(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE4` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE4` is not implemented.")
 
     @property
     def keyword(self):

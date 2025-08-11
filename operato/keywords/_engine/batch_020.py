@@ -51,7 +51,7 @@ class Rad2radOn(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RAD2RAD/ON` is not implemented.")
+        raise NotImplementedError("Keyword `/RAD2RAD/ON` is not implemented.")
 
     @property
     def keyword(self):
@@ -76,7 +76,7 @@ class Rbody(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RBODY` is not implemented.")
+        raise NotImplementedError("Keyword `/RBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -101,7 +101,7 @@ class Report(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/REPORT` is not implemented.")
+        raise NotImplementedError("Keyword `/REPORT` is not implemented.")
 
     @property
     def keyword(self):
@@ -126,7 +126,7 @@ class Rerun(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RERUN` is not implemented.")
+        raise NotImplementedError("Keyword `/RERUN` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class RfileOff(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RFILE/OFF` is not implemented.")
+        raise NotImplementedError("Keyword `/RFILE/OFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -176,7 +176,7 @@ class RfileN(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RFILE/n` is not implemented.")
+        raise NotImplementedError("Keyword `/RFILE/n` is not implemented.")
 
     @property
     def keyword(self):

@@ -29,7 +29,7 @@ class Grshel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRSHEL` is not implemented.")
+        raise NotImplementedError("Keyword `/GRSHEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -55,7 +55,7 @@ class Grspri(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRSPRI` is not implemented.")
+        raise NotImplementedError("Keyword `/GRSPRI` is not implemented.")
 
     @property
     def keyword(self):
@@ -81,7 +81,7 @@ class Grtria(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRTRIA` is not implemented.")
+        raise NotImplementedError("Keyword `/GRTRIA` is not implemented.")
 
     @property
     def keyword(self):
@@ -107,7 +107,7 @@ class Grtrus(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRTRUS` is not implemented.")
+        raise NotImplementedError("Keyword `/GRTRUS` is not implemented.")
 
     @property
     def keyword(self):
@@ -133,7 +133,7 @@ class HeatMat(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/HEAT/MAT` is not implemented.")
+        raise NotImplementedError("Keyword `/HEAT/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -255,7 +255,7 @@ class ImpdispFgeo(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPDISP/FGEO` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPDISP/FGEO` is not implemented.")
 
     @property
     def keyword(self):
@@ -281,7 +281,7 @@ class Impflux(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPFLUX` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPFLUX` is not implemented.")
 
     @property
     def keyword(self):

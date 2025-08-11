@@ -18,7 +18,7 @@ class VelRot(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/VEL/ROT` is not implemented.")
+        raise NotImplementedError("Keyword `/VEL/ROT` is not implemented.")
 
     @property
     def keyword(self):

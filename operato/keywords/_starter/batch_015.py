@@ -32,7 +32,7 @@ class GaugeSph(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GAUGE/SPH` is not implemented.")
+        raise NotImplementedError("Keyword `/GAUGE/SPH` is not implemented.")
 
     @property
     def keyword(self):
@@ -58,7 +58,7 @@ class Gjoint(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GJOINT` is not implemented.")
+        raise NotImplementedError("Keyword `/GJOINT` is not implemented.")
 
     @property
     def keyword(self):
@@ -84,7 +84,7 @@ class Grav(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRAV` is not implemented.")
+        raise NotImplementedError("Keyword `/GRAV` is not implemented.")
 
     @property
     def keyword(self):
@@ -356,7 +356,7 @@ class Grsh3n(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/GRSH3N` is not implemented.")
+        raise NotImplementedError("Keyword `/GRSH3N` is not implemented.")
 
     @property
     def keyword(self):

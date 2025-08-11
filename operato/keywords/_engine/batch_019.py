@@ -20,7 +20,7 @@ class Kerel1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/KEREL/1` is not implemented.")
+        raise NotImplementedError("Keyword `/KEREL/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class Kill(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/KILL` is not implemented.")
+        raise NotImplementedError("Keyword `/KILL` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class Madymo(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MADYMO` is not implemented.")
+        raise NotImplementedError("Keyword `/MADYMO` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class MassReset(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MASS/RESET` is not implemented.")
+        raise NotImplementedError("Keyword `/MASS/RESET` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class Mon(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MON` is not implemented.")
+        raise NotImplementedError("Keyword `/MON` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class Negvol(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/NEGVOL` is not implemented.")
+        raise NotImplementedError("Keyword `/NEGVOL` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class Outp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/OUTP` is not implemented.")
+        raise NotImplementedError("Keyword `/OUTP` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class OutputLsensor(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/OUTPUT/LSENSOR` is not implemented.")
+        raise NotImplementedError("Keyword `/OUTPUT/LSENSOR` is not implemented.")
 
     @property
     def keyword(self):

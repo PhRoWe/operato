@@ -21,7 +21,7 @@ class EbcsIniv(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/INIV` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/INIV` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class EbcsInlet(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/INLET` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/INLET` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class EbcsMonvol(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/MONVOL` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/MONVOL` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class EbcsNormv(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/NORMV` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/NORMV` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class EbcsNrf(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/NRF` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/NRF` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class EbcsPres(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/PRES` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/PRES` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class EbcsValvin(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/VALVIN` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/VALVIN` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class EbcsValvout(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/VALVOUT` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/VALVOUT` is not implemented.")
 
     @property
     def keyword(self):

@@ -20,7 +20,7 @@ class StateSpringFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/SPRING/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/SPRING/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class StateStrFile(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/STR_FILE` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/STR_FILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class StateTrussFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/TRUSS/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/TRUSS/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class Stop(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STOP` is not implemented.")
+        raise NotImplementedError("Keyword `/STOP` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class ThVers(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/TH/VERS` is not implemented.")
+        raise NotImplementedError("Keyword `/TH/VERS` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class Thermal(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/THERMAL` is not implemented.")
+        raise NotImplementedError("Keyword `/THERMAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -220,7 +220,7 @@ class Title(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/TITLE` is not implemented.")
+        raise NotImplementedError("Keyword `/TITLE` is not implemented.")
 
     @property
     def keyword(self):

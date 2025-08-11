@@ -26,7 +26,7 @@ class MatLaw21(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW21` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW21` is not implemented.")
 
     @property
     def keyword(self):
@@ -51,7 +51,7 @@ class MatLaw22(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW22` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW22` is not implemented.")
 
     @property
     def keyword(self):
@@ -76,7 +76,7 @@ class MatLaw23(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW23` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW23` is not implemented.")
 
     @property
     def keyword(self):
@@ -101,7 +101,7 @@ class MatLaw24(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW24` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW24` is not implemented.")
 
     @property
     def keyword(self):
@@ -328,7 +328,7 @@ class MatLaw26(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW26` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW26` is not implemented.")
 
     @property
     def keyword(self):
@@ -353,7 +353,7 @@ class MatLaw27(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW27` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW27` is not implemented.")
 
     @property
     def keyword(self):
@@ -378,7 +378,7 @@ class MatLaw28(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW28` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW28` is not implemented.")
 
     @property
     def keyword(self):

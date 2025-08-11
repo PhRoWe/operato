@@ -20,7 +20,7 @@ class RwallLagmul(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RWALL/LAGMUL` is not implemented.")
+        raise NotImplementedError("Keyword `/RWALL/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class RwallTherm(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/RWALL/THERM` is not implemented.")
+        raise NotImplementedError("Keyword `/RWALL/THERM` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class Sect(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SECT` is not implemented.")
+        raise NotImplementedError("Keyword `/SECT` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class SectCircle(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SECT/CIRCLE` is not implemented.")
+        raise NotImplementedError("Keyword `/SECT/CIRCLE` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class SectParal(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SECT/PARAL` is not implemented.")
+        raise NotImplementedError("Keyword `/SECT/PARAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class Sensor(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SENSOR` is not implemented.")
+        raise NotImplementedError("Keyword `/SENSOR` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class SensorAcce(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SENSOR/ACCE` is not implemented.")
+        raise NotImplementedError("Keyword `/SENSOR/ACCE` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class SensorAndOr(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SENSOR/AND_OR` is not implemented.")
+        raise NotImplementedError("Keyword `/SENSOR/AND_OR` is not implemented.")
 
     @property
     def keyword(self):

@@ -21,7 +21,7 @@ class EosMurnaghan(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/MURNAGHAN` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/MURNAGHAN` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class EosNasg(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/NASG` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/NASG` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class EosNobleAbel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/NOBLE-ABEL` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/NOBLE-ABEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class EosOsborne(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/OSBORNE` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/OSBORNE` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class EosPolynomial(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/POLYNOMIAL` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/POLYNOMIAL` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class EosPuff(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/PUFF` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/PUFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class EosSesame(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/SESAME` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/SESAME` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class EosStiffGas(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/STIFF-GAS` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/STIFF-GAS` is not implemented.")
 
     @property
     def keyword(self):

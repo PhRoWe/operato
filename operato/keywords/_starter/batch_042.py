@@ -22,7 +22,7 @@ class PropType8(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE8` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE8` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class PropType9(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE9` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE9` is not implemented.")
 
     @property
     def keyword(self):
@@ -160,7 +160,7 @@ class PropType11(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE11` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE11` is not implemented.")
 
     @property
     def keyword(self):
@@ -185,7 +185,7 @@ class PropType12(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE12` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE12` is not implemented.")
 
     @property
     def keyword(self):
@@ -210,7 +210,7 @@ class PropType13(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/PROP/TYPE13` is not implemented.")
+        raise NotImplementedError("Keyword `/PROP/TYPE13` is not implemented.")
 
     @property
     def keyword(self):

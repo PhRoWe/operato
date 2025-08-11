@@ -20,7 +20,7 @@ class InivAxisKeyword32(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/AXIS/Keyword3/2` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/AXIS/Keyword3/2` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class InivRot(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/ROT` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/ROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class InivRotKeyword31(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/ROT/Keyword3/1` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/ROT/Keyword3/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class InivRotKeyword32(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/ROT/Keyword3/2` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/ROT/Keyword3/2` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class InivTra(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/TRA` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/TRA` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class InivTraKeyword31(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/TRA/Keyword3/1` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/TRA/Keyword3/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class InivTraKeyword32(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/TRA/Keyword3/2` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/TRA/Keyword3/2` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class Inter(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER` is not implemented.")
 
     @property
     def keyword(self):

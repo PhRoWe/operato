@@ -20,7 +20,7 @@ class AnimShellEpsp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/EPSP` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/EPSP` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class AnimShellFldf(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/FLDF` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/FLDF` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class AnimShellFldz(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/FLDZ` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/FLDZ` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class AnimShellIdply(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/IDPLY` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,9 @@ class AnimShellIdplyDama(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY/DAMA` is not implemented.")
+        raise NotImplementedError(
+            "Keyword `/ANIM/SHELL/IDPLY/DAMA` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -145,7 +147,9 @@ class AnimShellIdplyEpsp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY/EPSP` is not implemented.")
+        raise NotImplementedError(
+            "Keyword `/ANIM/SHELL/IDPLY/EPSP` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -170,7 +174,7 @@ class AnimShellIdplyPhi(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ANIM/SHELL/IDPLY/PHI` is not implemented.")
+        raise NotImplementedError("Keyword `/ANIM/SHELL/IDPLY/PHI` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +199,7 @@ class AnimShellIdplyRestype(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/ANIM/SHELL/IDPLY/Restype` is not implemented."
         )
 

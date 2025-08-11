@@ -21,7 +21,7 @@ class Implicit(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPLICIT` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPLICIT` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class Imptemp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPTEMP` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPTEMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class Impvel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPVEL` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPVEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class ImpvelFgeo(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPVEL/FGEO` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPVEL/FGEO` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class ImpvelLagmul(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPVEL/LAGMUL` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPVEL/LAGMUL` is not implemented.")
 
     @property
     def keyword(self):
@@ -172,7 +172,7 @@ class InibeamAux(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIBEAM/AUX` is not implemented.")
+        raise NotImplementedError("Keyword `/INIBEAM/AUX` is not implemented.")
 
     @property
     def keyword(self):
@@ -198,7 +198,7 @@ class InibeamFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIBEAM/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/INIBEAM/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -224,7 +224,7 @@ class Inibri(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIBRI` is not implemented.")
+        raise NotImplementedError("Keyword `/INIBRI` is not implemented.")
 
     @property
     def keyword(self):

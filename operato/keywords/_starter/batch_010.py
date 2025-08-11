@@ -21,7 +21,7 @@ class Eref(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EREF` is not implemented.")
+        raise NotImplementedError("Keyword `/EREF` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class EulerMat(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EULER/MAT` is not implemented.")
+        raise NotImplementedError("Keyword `/EULER/MAT` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class Fail(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class FailAlter(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/ALTER` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/ALTER` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class FailBiquad(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/BIQUAD` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/BIQUAD` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class FailChang(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/CHANG` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/CHANG` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class FailCockcroft(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/COCKCROFT` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/COCKCROFT` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class FailConnect(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/CONNECT` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/CONNECT` is not implemented.")
 
     @property
     def keyword(self):

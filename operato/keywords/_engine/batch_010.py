@@ -26,7 +26,7 @@ class DynainShellStressFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/DYNAIN/SHELL/STRESS/FULL` is not implemented."
         )
 
@@ -53,7 +53,7 @@ class Dyrel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DYREL` is not implemented.")
+        raise NotImplementedError("Keyword `/DYREL` is not implemented.")
 
     @property
     def keyword(self):
@@ -78,7 +78,7 @@ class Dyrel1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DYREL/1` is not implemented.")
+        raise NotImplementedError("Keyword `/DYREL/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -128,7 +128,7 @@ class Funct(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FUNCT` is not implemented.")
+        raise NotImplementedError("Keyword `/FUNCT` is not implemented.")
 
     @property
     def keyword(self):
@@ -153,7 +153,7 @@ class FvmbagModif(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FVMBAG/MODIF` is not implemented.")
+        raise NotImplementedError("Keyword `/FVMBAG/MODIF` is not implemented.")
 
     @property
     def keyword(self):
@@ -178,7 +178,7 @@ class Fxinp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FXINP` is not implemented.")
+        raise NotImplementedError("Keyword `/FXINP` is not implemented.")
 
     @property
     def keyword(self):
@@ -233,7 +233,7 @@ class H3dCompress(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/H3D/COMPRESS` is not implemented.")
+        raise NotImplementedError("Keyword `/H3D/COMPRESS` is not implemented.")
 
     @property
     def keyword(self):

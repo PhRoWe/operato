@@ -20,7 +20,7 @@ class Atfile(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ATFILE` is not implemented.")
+        raise NotImplementedError("Keyword `/ATFILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class Atsymbolfile(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ATSYMBOLFILE` is not implemented.")
+        raise NotImplementedError("Keyword `/ATSYMBOLFILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,9 @@ class AtsymbolfileKeyword2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ATSYMBOLFILE/Keyword2` is not implemented.")
+        raise NotImplementedError(
+            "Keyword `/ATSYMBOLFILE/Keyword2` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -95,7 +97,7 @@ class BcsAle(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/BCS/ALE` is not implemented.")
+        raise NotImplementedError("Keyword `/BCS/ALE` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +122,7 @@ class BcsLag(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/BCS/LAG` is not implemented.")
+        raise NotImplementedError("Keyword `/BCS/LAG` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +147,7 @@ class BcsRot(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/BCS/ROT` is not implemented.")
+        raise NotImplementedError("Keyword `/BCS/ROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +172,7 @@ class BcsTra(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/BCS/TRA` is not implemented.")
+        raise NotImplementedError("Keyword `/BCS/TRA` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +197,7 @@ class BcsrAle(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/BCSR/ALE` is not implemented.")
+        raise NotImplementedError("Keyword `/BCSR/ALE` is not implemented.")
 
     @property
     def keyword(self):

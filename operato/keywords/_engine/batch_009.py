@@ -20,7 +20,7 @@ class DtTherm(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT/THERM` is not implemented.")
+        raise NotImplementedError("Keyword `/DT/THERM` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class Dt1BrickKeyword3Iflag(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/DT1/BRICK/Keyword3/Iflag` is not implemented."
         )
 
@@ -72,7 +72,7 @@ class Dt1Shell(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT1/SHELL` is not implemented.")
+        raise NotImplementedError("Keyword `/DT1/SHELL` is not implemented.")
 
     @property
     def keyword(self):
@@ -97,7 +97,7 @@ class Dt1tet10(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DT1TET10` is not implemented.")
+        raise NotImplementedError("Keyword `/DT1TET10` is not implemented.")
 
     @property
     def keyword(self):
@@ -122,7 +122,7 @@ class Dtix(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DTIX` is not implemented.")
+        raise NotImplementedError("Keyword `/DTIX` is not implemented.")
 
     @property
     def keyword(self):
@@ -147,7 +147,7 @@ class Dtsde(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DTSDE` is not implemented.")
+        raise NotImplementedError("Keyword `/DTSDE` is not implemented.")
 
     @property
     def keyword(self):
@@ -172,7 +172,7 @@ class Dttsh(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DTTSH` is not implemented.")
+        raise NotImplementedError("Keyword `/DTTSH` is not implemented.")
 
     @property
     def keyword(self):
@@ -197,7 +197,7 @@ class DynainDt(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DYNAIN/DT` is not implemented.")
+        raise NotImplementedError("Keyword `/DYNAIN/DT` is not implemented.")
 
     @property
     def keyword(self):

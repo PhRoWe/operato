@@ -21,7 +21,7 @@ class Inigrav(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIGRAV` is not implemented.")
+        raise NotImplementedError("Keyword `/INIGRAV` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class Inimap1d(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIMAP1D` is not implemented.")
+        raise NotImplementedError("Keyword `/INIMAP1D` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class Inimap1dFile(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIMAP1D/FILE` is not implemented.")
+        raise NotImplementedError("Keyword `/INIMAP1D/FILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class Inimap2d(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIMAP2D` is not implemented.")
+        raise NotImplementedError("Keyword `/INIMAP2D` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class Inimap2dFile(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIMAP2D/FILE` is not implemented.")
+        raise NotImplementedError("Keyword `/INIMAP2D/FILE` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class Iniqua(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIQUA` is not implemented.")
+        raise NotImplementedError("Keyword `/INIQUA` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class IniquaDens(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIQUA/DENS` is not implemented.")
+        raise NotImplementedError("Keyword `/INIQUA/DENS` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class IniquaEner(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIQUA/ENER` is not implemented.")
+        raise NotImplementedError("Keyword `/INIQUA/ENER` is not implemented.")
 
     @property
     def keyword(self):

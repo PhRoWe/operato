@@ -21,7 +21,7 @@ class BcsrRot(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/BCSR/ROT` is not implemented.")
+        raise NotImplementedError("Keyword `/BCSR/ROT` is not implemented.")
 
     @property
     def keyword(self):
@@ -46,7 +46,7 @@ class BcsrTra(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/BCSR/TRA` is not implemented.")
+        raise NotImplementedError("Keyword `/BCSR/TRA` is not implemented.")
 
     @property
     def keyword(self):
@@ -71,7 +71,7 @@ class Damp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DAMP` is not implemented.")
+        raise NotImplementedError("Keyword `/DAMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -96,7 +96,7 @@ class Del(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DEL` is not implemented.")
+        raise NotImplementedError("Keyword `/DEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -121,7 +121,7 @@ class DelEltyp1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DEL/Eltyp/1` is not implemented.")
+        raise NotImplementedError("Keyword `/DEL/Eltyp/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -146,7 +146,7 @@ class DelInter(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DEL/INTER` is not implemented.")
+        raise NotImplementedError("Keyword `/DEL/INTER` is not implemented.")
 
     @property
     def keyword(self):
@@ -171,7 +171,7 @@ class Delint(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DELINT` is not implemented.")
+        raise NotImplementedError("Keyword `/DELINT` is not implemented.")
 
     @property
     def keyword(self):

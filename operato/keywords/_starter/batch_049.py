@@ -29,7 +29,7 @@ class SensorSens(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SENSOR/SENS` is not implemented.")
+        raise NotImplementedError("Keyword `/SENSOR/SENS` is not implemented.")
 
     @property
     def keyword(self):
@@ -54,7 +54,7 @@ class SensorTime(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SENSOR/TIME` is not implemented.")
+        raise NotImplementedError("Keyword `/SENSOR/TIME` is not implemented.")
 
     @property
     def keyword(self):
@@ -79,7 +79,7 @@ class SensorVel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SENSOR/VEL` is not implemented.")
+        raise NotImplementedError("Keyword `/SENSOR/VEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -104,7 +104,7 @@ class SensorWork(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SENSOR/WORK` is not implemented.")
+        raise NotImplementedError("Keyword `/SENSOR/WORK` is not implemented.")
 
     @property
     def keyword(self):
@@ -129,7 +129,7 @@ class Set(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SET` is not implemented.")
+        raise NotImplementedError("Keyword `/SET` is not implemented.")
 
     @property
     def keyword(self):
@@ -154,7 +154,7 @@ class Sh3n(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SH3N` is not implemented.")
+        raise NotImplementedError("Keyword `/SH3N` is not implemented.")
 
     @property
     def keyword(self):
@@ -229,7 +229,7 @@ class Shel16(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/SHEL16` is not implemented.")
+        raise NotImplementedError("Keyword `/SHEL16` is not implemented.")
 
     @property
     def keyword(self):

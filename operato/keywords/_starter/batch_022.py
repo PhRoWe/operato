@@ -21,7 +21,7 @@ class Initemp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INITEMP` is not implemented.")
+        raise NotImplementedError("Keyword `/INITEMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class InitrussFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INITRUSS/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/INITRUSS/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class Inivel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIVEL` is not implemented.")
+        raise NotImplementedError("Keyword `/INIVEL` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class InivelAxis(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIVEL/AXIS` is not implemented.")
+        raise NotImplementedError("Keyword `/INIVEL/AXIS` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class InivelFvm(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIVEL/FVM` is not implemented.")
+        raise NotImplementedError("Keyword `/INIVEL/FVM` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class InivelNode(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIVEL/NODE` is not implemented.")
+        raise NotImplementedError("Keyword `/INIVEL/NODE` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class Inivol(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIVOL` is not implemented.")
+        raise NotImplementedError("Keyword `/INIVOL` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class InterHertzType17(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INTER/HERTZ/TYPE17` is not implemented.")
+        raise NotImplementedError("Keyword `/INTER/HERTZ/TYPE17` is not implemented.")
 
     @property
     def keyword(self):

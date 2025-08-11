@@ -20,7 +20,7 @@ class ImplDivergN(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/DIVERG/n` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/DIVERG/n` is not implemented.")
 
     @property
     def keyword(self):
@@ -113,7 +113,7 @@ class ImplDt3(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/DT/3` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/DT/3` is not implemented.")
 
     @property
     def keyword(self):
@@ -138,7 +138,7 @@ class ImplDtFixpoint(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/DT/FIXPOINT` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/DT/FIXPOINT` is not implemented.")
 
     @property
     def keyword(self):
@@ -163,7 +163,7 @@ class ImplDtStop(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/DT/STOP` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/DT/STOP` is not implemented.")
 
     @property
     def keyword(self):
@@ -215,7 +215,7 @@ class ImplDyna1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/DYNA/1` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/DYNA/1` is not implemented.")
 
     @property
     def keyword(self):
@@ -240,7 +240,7 @@ class ImplDyna2(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/DYNA/2` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/DYNA/2` is not implemented.")
 
     @property
     def keyword(self):

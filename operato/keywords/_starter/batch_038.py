@@ -20,7 +20,7 @@ class MatLaw200(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW200` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW200` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class MatPlasPredef(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/PLAS_PREDEF` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/PLAS_PREDEF` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class MatUserij(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/USERij` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/USERij` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class MergeRbody(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MERGE/RBODY` is not implemented.")
+        raise NotImplementedError("Keyword `/MERGE/RBODY` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class MonvolAirbag1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MONVOL/AIRBAG1` is not implemented.")
+        raise NotImplementedError("Keyword `/MONVOL/AIRBAG1` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class MonvolArea(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MONVOL/AREA` is not implemented.")
+        raise NotImplementedError("Keyword `/MONVOL/AREA` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class MonvolCommu1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MONVOL/COMMU1` is not implemented.")
+        raise NotImplementedError("Keyword `/MONVOL/COMMU1` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class MonvolFvmbag1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MONVOL/FVMBAG1` is not implemented.")
+        raise NotImplementedError("Keyword `/MONVOL/FVMBAG1` is not implemented.")
 
     @property
     def keyword(self):

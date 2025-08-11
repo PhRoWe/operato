@@ -20,7 +20,7 @@ class MatLaw66(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW66` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW66` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class MatLaw68(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW68` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW68` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class MatLaw69(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW69` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW69` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +95,7 @@ class MatLaw70(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW70` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW70` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +120,7 @@ class MatLaw71(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW71` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW71` is not implemented.")
 
     @property
     def keyword(self):
@@ -145,7 +145,7 @@ class MatLaw72(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW72` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW72` is not implemented.")
 
     @property
     def keyword(self):
@@ -170,7 +170,7 @@ class MatLaw73(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW73` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW73` is not implemented.")
 
     @property
     def keyword(self):
@@ -195,7 +195,7 @@ class MatLaw74(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW74` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW74` is not implemented.")
 
     @property
     def keyword(self):

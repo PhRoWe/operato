@@ -95,7 +95,7 @@ class Encrypt(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/ENCRYPT` is not implemented.")
+        raise NotImplementedError("Keyword `/ENCRYPT` is not implemented.")
 
     @property
     def keyword(self):
@@ -133,7 +133,7 @@ class EosCompaction(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/COMPACTION` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/COMPACTION` is not implemented.")
 
     @property
     def keyword(self):
@@ -159,7 +159,7 @@ class EosGruneisen(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/GRUNEISEN` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/GRUNEISEN` is not implemented.")
 
     @property
     def keyword(self):
@@ -185,7 +185,7 @@ class EosIdealGas(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/IDEAL-GAS` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/IDEAL-GAS` is not implemented.")
 
     @property
     def keyword(self):
@@ -211,7 +211,7 @@ class EosIdealGasVt(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/IDEAL-GAS-VT` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/IDEAL-GAS-VT` is not implemented.")
 
     @property
     def keyword(self):
@@ -237,7 +237,7 @@ class EosLinear(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EOS/LINEAR` is not implemented.")
+        raise NotImplementedError("Keyword `/EOS/LINEAR` is not implemented.")
 
     @property
     def keyword(self):

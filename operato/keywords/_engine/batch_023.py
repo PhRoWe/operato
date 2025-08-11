@@ -20,7 +20,7 @@ class StateShellAuxFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/SHELL/AUX/FULL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/SHELL/AUX/FULL` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,9 @@ class StateShellEpspFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/SHELL/EPSP/FULL` is not implemented.")
+        raise NotImplementedError(
+            "Keyword `/STATE/SHELL/EPSP/FULL` is not implemented."
+        )
 
     @property
     def keyword(self):
@@ -70,7 +72,7 @@ class StateShellFail(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/SHELL/FAIL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/SHELL/FAIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -95,7 +97,7 @@ class StateShellOrthl(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/SHELL/ORTHL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/SHELL/ORTHL` is not implemented.")
 
     @property
     def keyword(self):
@@ -120,7 +122,7 @@ class StateShellStrainFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/SHELL/STRAIN/FULL` is not implemented."
         )
 
@@ -147,7 +149,7 @@ class StateShellStrainGlobfull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/SHELL/STRAIN/GLOBFULL` is not implemented."
         )
 
@@ -174,7 +176,7 @@ class StateShellStressFull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/SHELL/STRESS/FULL` is not implemented."
         )
 
@@ -201,7 +203,7 @@ class StateShellStressGlobfull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/SHELL/STRESS/GLOBFULL` is not implemented."
         )
 

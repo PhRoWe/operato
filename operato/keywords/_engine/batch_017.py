@@ -20,7 +20,7 @@ class ImplSbcsOutcore(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/SBCS/OUTCORE` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/SBCS/OUTCORE` is not implemented.")
 
     @property
     def keyword(self):
@@ -45,7 +45,7 @@ class ImplShpoff(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/SHPOFF` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/SHPOFF` is not implemented.")
 
     @property
     def keyword(self):
@@ -70,7 +70,7 @@ class ImplShpon(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/SHPON` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/SHPON` is not implemented.")
 
     @property
     def keyword(self):
@@ -140,14 +140,14 @@ class ImplSolver(Keyword):
 
     @property
     def structure(self):
-        structure = [
-            
+        structure = (
+            [
                 IntField("i_prec", 1),
                 IntField("it_max", 2),
                 IntField("i_tol", 3),
                 FloatField("tol", 4),
             ],
-        
+        )
 
         return structure
 
@@ -160,7 +160,7 @@ class ImplSprback(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/SPRBACK` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/SPRBACK` is not implemented.")
 
     @property
     def keyword(self):
@@ -185,7 +185,7 @@ class ImplSpring(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/IMPL/SPRING` is not implemented.")
+        raise NotImplementedError("Keyword `/IMPL/SPRING` is not implemented.")
 
     @property
     def keyword(self):
@@ -210,7 +210,7 @@ class InivAxis(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/AXIS` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/AXIS` is not implemented.")
 
     @property
     def keyword(self):
@@ -235,7 +235,7 @@ class InivAxisKeyword31(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/INIV/AXIS/Keyword3/1` is not implemented.")
+        raise NotImplementedError("Keyword `/INIV/AXIS/Keyword3/1` is not implemented.")
 
     @property
     def keyword(self):

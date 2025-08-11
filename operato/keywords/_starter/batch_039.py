@@ -31,7 +31,7 @@ class MonvolGas(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MONVOL/GAS` is not implemented.")
+        raise NotImplementedError("Keyword `/MONVOL/GAS` is not implemented.")
 
     @property
     def keyword(self):
@@ -56,7 +56,7 @@ class MonvolLfluid(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MONVOL/LFLUID` is not implemented.")
+        raise NotImplementedError("Keyword `/MONVOL/LFLUID` is not implemented.")
 
     @property
     def keyword(self):
@@ -81,7 +81,7 @@ class MonvolPres(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MONVOL/PRES` is not implemented.")
+        raise NotImplementedError("Keyword `/MONVOL/PRES` is not implemented.")
 
     @property
     def keyword(self):
@@ -106,7 +106,7 @@ class MoveFunct(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MOVE_FUNCT` is not implemented.")
+        raise NotImplementedError("Keyword `/MOVE_FUNCT` is not implemented.")
 
     @property
     def keyword(self):
@@ -176,7 +176,7 @@ class Nbcs(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/NBCS` is not implemented.")
+        raise NotImplementedError("Keyword `/NBCS` is not implemented.")
 
     @property
     def keyword(self):
@@ -250,7 +250,7 @@ class NonlocalMat(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/NONLOCAL/MAT` is not implemented.")
+        raise NotImplementedError("Keyword `/NONLOCAL/MAT` is not implemented.")
 
     @property
     def keyword(self):

@@ -219,7 +219,7 @@ class MatPlasZeril(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/PLAS_ZERIL` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/PLAS_ZERIL` is not implemented.")
 
     @property
     def keyword(self):
@@ -244,7 +244,7 @@ class MatLaw3(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW3` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW3` is not implemented.")
 
     @property
     def keyword(self):
@@ -269,7 +269,7 @@ class MatLaw4(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW4` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW4` is not implemented.")
 
     @property
     def keyword(self):
@@ -294,7 +294,7 @@ class MatLaw5(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW5` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW5` is not implemented.")
 
     @property
     def keyword(self):
@@ -319,7 +319,7 @@ class MatLaw6(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/MAT/LAW6` is not implemented.")
+        raise NotImplementedError("Keyword `/MAT/LAW6` is not implemented.")
 
     @property
     def keyword(self):

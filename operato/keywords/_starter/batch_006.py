@@ -130,7 +130,7 @@ class DfsLaser(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DFS/LASER` is not implemented.")
+        raise NotImplementedError("Keyword `/DFS/LASER` is not implemented.")
 
     @property
     def keyword(self):
@@ -156,7 +156,7 @@ class DfsWavSha(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DFS/WAV_SHA` is not implemented.")
+        raise NotImplementedError("Keyword `/DFS/WAV_SHA` is not implemented.")
 
     @property
     def keyword(self):
@@ -182,7 +182,7 @@ class Drape(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/DRAPE` is not implemented.")
+        raise NotImplementedError("Keyword `/DRAPE` is not implemented.")
 
     @property
     def keyword(self):
@@ -208,7 +208,7 @@ class EbcsFluxout(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/FLUXOUT` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/FLUXOUT` is not implemented.")
 
     @property
     def keyword(self):
@@ -234,7 +234,7 @@ class EbcsGradp0(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/EBCS/GRADP0` is not implemented.")
+        raise NotImplementedError("Keyword `/EBCS/GRADP0` is not implemented.")
 
     @property
     def keyword(self):

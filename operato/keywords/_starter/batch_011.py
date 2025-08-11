@@ -21,7 +21,7 @@ class FailEnergy(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/ENERGY` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/ENERGY` is not implemented.")
 
     @property
     def keyword(self):
@@ -47,7 +47,7 @@ class FailFabric(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/FABRIC` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/FABRIC` is not implemented.")
 
     @property
     def keyword(self):
@@ -73,7 +73,7 @@ class FailFld(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/FLD` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/FLD` is not implemented.")
 
     @property
     def keyword(self):
@@ -99,7 +99,7 @@ class FailGene1(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/GENE1` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/GENE1` is not implemented.")
 
     @property
     def keyword(self):
@@ -125,7 +125,7 @@ class FailGurson(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/GURSON` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/GURSON` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class FailHashin(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/HASHIN` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/HASHIN` is not implemented.")
 
     @property
     def keyword(self):
@@ -177,7 +177,7 @@ class FailHcDsse(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/HC_DSSE` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/HC_DSSE` is not implemented.")
 
     @property
     def keyword(self):
@@ -203,7 +203,7 @@ class FailJohnson(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/FAIL/JOHNSON` is not implemented.")
+        raise NotImplementedError("Keyword `/FAIL/JOHNSON` is not implemented.")
 
     @property
     def keyword(self):

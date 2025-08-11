@@ -20,7 +20,7 @@ class StateBrickStresGlobfull(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/BRICK/STRES/GLOBFULL` is not implemented."
         )
 
@@ -47,7 +47,7 @@ class StateDt(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/DT` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/DT` is not implemented.")
 
     @property
     def keyword(self):
@@ -72,7 +72,7 @@ class StateInimap1dKeyword3(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/INIMAP1D/Keyword3` is not implemented."
         )
 
@@ -99,7 +99,7 @@ class StateInimap2dKeyword3(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError(
+        raise NotImplementedError(
             "Keyword `/STATE/INIMAP2D/Keyword3` is not implemented."
         )
 
@@ -126,7 +126,7 @@ class StateLsensor(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/LSENSOR` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/LSENSOR` is not implemented.")
 
     @property
     def keyword(self):
@@ -151,7 +151,7 @@ class StateNodeBcs(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/NODE/BCS` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/NODE/BCS` is not implemented.")
 
     @property
     def keyword(self):
@@ -176,7 +176,7 @@ class StateNodeTemp(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/NODE/TEMP` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/NODE/TEMP` is not implemented.")
 
     @property
     def keyword(self):
@@ -201,7 +201,7 @@ class StateNodeVel(Keyword):
 
     def __post_init__(self):
         # TODO: Implementation
-        raiseNotImplementedError("Keyword `/STATE/NODE/VEL` is not implemented.")
+        raise NotImplementedError("Keyword `/STATE/NODE/VEL` is not implemented.")
 
     @property
     def keyword(self):
