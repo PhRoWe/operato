@@ -73,7 +73,7 @@ class PropType10(Keyword):
     https://help.altair.com/hwsolvers/rad/topics/solvers/rad/prop_type10_sh_comp_starter_r.htm
 
     """
-
+    
     prop_id: int
     Thick: float
     phi: List[float]
@@ -99,7 +99,6 @@ class PropType10(Keyword):
     skew_id: int | None = None
     i_pos: int = 0
     i_p: int | None = None
-
     # lines added for readability of input deck
     line00: str = "#/PROP/TYPE10/prop_ID/unit_ID\n"
     add_header: bool = True
