@@ -149,6 +149,7 @@ class MatLaw25(Keyword):
     # DEFAULTS:
     mat_title: str = ""
     unit_id: int | None = None
+
     i_form: int = 0
     eps_f1: float = 1.2e20
     eps_f2: float = 1.2e20
@@ -223,7 +224,7 @@ class MatLaw25(Keyword):
             structure = match_type_append_line_struct(
                 self,
                 structure,
-                ["W_p_max", "W_p_ref", "i_off", "-" "Ratio"],
+                ["W_p_max", "W_p_ref", "i_off", "-", "Ratio"],
                 print_even_if_empty=True,
             )
             structure = match_type_append_line_struct(
