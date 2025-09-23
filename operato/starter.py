@@ -79,6 +79,7 @@ class Starter:
 
         # Serialize the keywords
         with open(filepath, "w") as fd:
+            fd.write("#RADIOSS STARTER")
             if self.add_header:
                 now = datetime.now().isoformat()
                 fd.write("#\n")
