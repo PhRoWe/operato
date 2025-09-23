@@ -25,12 +25,10 @@ from operato.keywords.common import (
 class MatLaw0(Keyword):
     mat_id: int
     mat_title: str
-    rho_i: float
-    E: float
-    nu: float
+    rho_i: float| None = None
+    E: float| None = None
+    nu: float| None = None
     unit_id: int | None = None
-    # line added for readability
-    line: str = "#              RHO                  E                  nu"
     add_separator: bool = True
     add_header: bool = True
 
@@ -48,9 +46,10 @@ class MatLaw0(Keyword):
     @property
     def structure(self):
         structure: KeywordStructureType = [
-            StringField("mat_title", 1, 10),
-            [FloatField("rho_i", 1), FloatField("E", 3), FloatField("nu", 5)],
+            StringField("mat_title", 1, 10)
         ]
+        if self.rho_i is not None and self.E is not None and self.nu is not None:
+            structure.append(  [FloatField("rho_i", 1), FloatField("E", 3), FloatField("nu", 5)],)
 
         return structure
 
