@@ -306,17 +306,14 @@ class PropType14(Keyword):
                 FloatField("aps_max", 7),
                 FloatField("col_min", 9),
             ],
-        ]
-        if self.Ndir is not None and self.sphpart_id is not None:
-            structure.append(
-                [
+            [
                     IntField("Ndir", 1),
                     IntField(
                         "sphpart_id",
                         2,
                     ),
                 ]
-            )
+        ]
         return structure
 
 
